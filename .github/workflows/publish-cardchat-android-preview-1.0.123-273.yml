@@ -1,0 +1,71 @@
+name: Publish CardChat Android preview 1.0.123 (273)
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/publish-cardchat-android-preview-1.0.123-273.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Download, rebuild, and verify APK
+        env:
+          PART_URLS: |
+            https://temp.sh/DGOkU/part-aa
+            https://temp.sh/SkCCb/part-ab
+            https://temp.sh/DSxxM/part-ac
+            https://temp.sh/pvwYU/part-ad
+            https://temp.sh/UImld/part-ae
+            https://temp.sh/eIMvC/part-af
+            https://temp.sh/oUAzl/part-ag
+            https://temp.sh/qtDRi/part-ah
+          APK_SHA256: db926130d7526b39d83092d74c8c6be61428ffe86190332890cffb24f9622455
+          APK_SIZE: 427711513
+          APK_NAME: CardChat-1.0.123-273-scan-control-preview-arm64.apk
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir apk-parts
+          part_index=0
+          pids=()
+          while IFS= read -r part_url; do
+            [ -n "$part_url" ] || continue
+            printf -v part_name 'apk-parts/part-%02d' "$part_index"
+            curl --fail --silent --show-error --location --retry 5 --retry-all-errors --request POST "$part_url" --output "$part_name" &
+            pids+=("$!")
+            part_index=$((part_index + 1))
+          done <<< "$PART_URLS"
+          for pid in "${pids[@]}"; do
+            wait "$pid"
+          done
+          cat apk-parts/part-* > "$APK_NAME"
+          test "$(stat -c%s "$APK_NAME")" = "$APK_SIZE"
+          echo "$APK_SHA256  $APK_NAME" | sha256sum --check
+
+      - name: Publish GitHub prerelease
+        env:
+          GH_TOKEN: ${{ github.token }}
+          APK_NAME: CardChat-1.0.123-273-scan-control-preview-arm64.apk
+          RELEASE_TAG: cardchat-android-preview-1.0.123-273
+          RELEASE_NOTES: |
+            CardChat Android Preview 测试包，用于验收扫描控制功能。
+
+            - 版本：1.0.123（构建号 273）
+            - 包名：com.cardchat.app
+            - ABI：仅 arm64-v8a
+            - 渠道：preview / cn
+            - APK SHA-256：db926130d7526b39d83092d74c8c6be61428ffe86190332890cffb24f9622455
+            - 签名证书 SHA-256：4fcc595c5747b69bcd5156df62c6e976384f344ac5b0aca4f638b8565aca3294
+
+            本次重点验收：扫描控制与眼控互斥；屏幕拍击与外接开关；点击防抖；开启滚动按钮后四个滚动按钮进入扫描顺序。
+
+            这是开发测试包，不是应用商店正式发布版本。
+        run: |
+          gh release create "$RELEASE_TAG" "$APK_NAME" --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --title "CardChat Android Preview 1.0.123 (273) — 扫描控制" --notes "$RELEASE_NOTES" --prerelease

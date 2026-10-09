@@ -1,0 +1,44 @@
+name: Publish ARASAAC classified preview
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/publish-arasaac-classified-preview.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Download and verify archive
+        env:
+          ARCHIVE_URL: https://temp.sh/irIUk/arasaac-classified-preview-128px-utf8-v2-2026-10-09.zip
+          ARCHIVE_SHA256: 605585453ae54c832f89dc7686c115af1c28664fd99c58bf98b163f7df658928
+          ARCHIVE_NAME: arasaac-classified-preview-128px-2026-10-09.zip
+        run: |
+          curl --fail --silent --show-error --location --retry 5 --retry-all-errors --request POST "$ARCHIVE_URL" --output "$ARCHIVE_NAME"
+          echo "$ARCHIVE_SHA256  $ARCHIVE_NAME" | sha256sum --check
+
+      - name: Publish GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ARCHIVE_NAME: arasaac-classified-preview-128px-2026-10-09.zip
+          RELEASE_NOTES: |
+            供手机查看和人工审核的 ARASAAC 分类预览包。
+
+            - 12,846 张最长边不超过 128px 的 JPEG 预览图
+            - 22 个自动粗分类，目录及图片统一采用“中文@英文原文”命名
+            - 每类分为“较高置信”和“待人工复核”两个子目录
+            - 附图片索引 CSV、分类统计 CSV、说明和原许可文件
+            - SHA-256: 605585453ae54c832f89dc7686c115af1c28664fd99c58bf98b163f7df658928
+
+            注意：分类和部分中文名由机器辅助生成，正式制作素材前必须人工复核。
+
+            图形作者：Sergio Palao；来源：ARASAAC（https://arasaac.org/）；许可：CC BY-NC-SA。仅限非商业用途并须署名、相同方式共享。此预览包不代表取得 CardChat 或其他商业软件的使用授权。
+        run: |
+          gh release create "arasaac-classified-preview-2026-10-09" "$ARCHIVE_NAME" --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --title "ARASAAC 分类预览（128px）" --notes "$RELEASE_NOTES"

@@ -1,0 +1,51 @@
+name: Publish CardChat Android preview 1.0.123 (274)
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/publish-cardchat-android-preview-1.0.123-274.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Download and verify APK
+        env:
+          APK_URL: https://temp.sh/EZwbS/cardchat-preview-local-20261009-185812.apk
+          APK_SHA256: 8c49c8033ae45de877afca9b1bdcd3c77a40b16f4edaf8786285a48e6833839c
+          APK_SIZE: 427732793
+          APK_NAME: CardChat-1.0.123-274-scan-control-preview-arm64.apk
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --silent --show-error --location --retry 5 --retry-all-errors --request POST "$APK_URL" --output "$APK_NAME"
+          test "$(stat -c%s "$APK_NAME")" = "$APK_SIZE"
+          echo "$APK_SHA256  $APK_NAME" | sha256sum --check
+
+      - name: Publish GitHub prerelease
+        env:
+          GH_TOKEN: ${{ github.token }}
+          APK_NAME: CardChat-1.0.123-274-scan-control-preview-arm64.apk
+          RELEASE_TAG: cardchat-android-preview-1.0.123-274
+          RELEASE_NOTES: |
+            CardChat Android Preview 测试包，用于验收扫描控制功能。
+
+            - 版本：1.0.123（构建号 274）
+            - 包名：com.cardchat.app
+            - ABI：仅 arm64-v8a
+            - 渠道：preview / cn
+            - APK 大小：427,732,793 bytes
+            - APK SHA-256：8c49c8033ae45de877afca9b1bdcd3c77a40b16f4edaf8786285a48e6833839c
+            - 签名证书 SHA-256：4fcc595c5747b69bcd5156df62c6e976384f344ac5b0aca4f638b8565aca3294
+
+            本次重点验收：单按钮/双按钮模式、拍打屏幕与外接开关、分区和行级扫描、自动滚动、顶部暂停/恢复、左上角手动操作、点击防抖及底部滚动按钮。
+
+            这是开发测试包，不是应用商店正式发布版本。
+        run: |
+          gh release create "$RELEASE_TAG" "$APK_NAME" --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --title "CardChat Android Preview 1.0.123 (274) — 扫描控制修复" --notes "$RELEASE_NOTES" --prerelease

@@ -1,0 +1,52 @@
+name: Publish CardChat Android preview 1.0.123 (276)
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/publish-cardchat-android-preview-1.0.123-276.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Download and verify APK
+        env:
+          APK_URL: https://temp.sh/CwCwV/cardchat-preview-local-20261010-scan-control-order.apk
+          APK_SHA256: 21cddb53d7cec180fa171fab035539aa7d3c9fbe901015456626539dddcc238f
+          APK_SIZE: 427762974
+          APK_NAME: CardChat-1.0.123-276-scan-control-preview-arm64.apk
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --silent --show-error --location --retry 5 --retry-all-errors --max-time 2400 --request POST "$APK_URL" --output "$APK_NAME"
+          test "$(stat -c%s "$APK_NAME")" = "$APK_SIZE"
+          echo "$APK_SHA256  $APK_NAME" | sha256sum --check
+
+      - name: Publish GitHub prerelease
+        env:
+          GH_TOKEN: ${{ github.token }}
+          APK_NAME: CardChat-1.0.123-276-scan-control-preview-arm64.apk
+          RELEASE_TAG: cardchat-android-preview-1.0.123-276
+          RELEASE_NOTES: |
+            CardChat Android Preview 测试包，用于验收扫描控制修复。
+
+            - 版本：1.0.123（构建号 276）
+            - 包名：com.cardchat.app
+            - ABI：仅 arm64-v8a
+            - 渠道：preview / cn
+            - APK 大小：427,762,974 bytes
+            - APK SHA-256：21cddb53d7cec180fa171fab035539aa7d3c9fbe901015456626539dddcc238f
+            - 签名证书 SHA-256：4fcc595c5747b69bcd5156df62c6e976384f344ac5b0aca4f638b8565aca3294
+
+            本版修复 Android 扫描高亮坐标和外接按钮测试弹窗；扫描顺序调整为 grid → toolbar → correction（仅有真实结果时）→ sidebar；加入 0.75 秒区域切换缓冲；扫描期间纠错行不可收起，且纠错小图标不进入扫描。
+
+            这是开发测试包，不是应用商店正式发布版本。
+        run: |
+          gh release create "$RELEASE_TAG" "$APK_NAME" --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --title "CardChat Android Preview 1.0.123 (276) — 扫描顺序与高亮修复" --notes "$RELEASE_NOTES" --prerelease
+

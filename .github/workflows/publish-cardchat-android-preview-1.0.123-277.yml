@@ -1,0 +1,52 @@
+name: Publish CardChat Android preview 1.0.123 (277)
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/publish-cardchat-android-preview-1.0.123-277.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Download and verify APK
+        env:
+          APK_URL: https://temp.sh/MXMJG/CardChat-1.0.123-277-scan-control-preview-arm64.apk
+          APK_SHA256: 7759d47dea59897d9d05f684eb1839ebd95ec03aef1262dbd231d43b5d134222
+          APK_SIZE: 427766230
+          APK_NAME: CardChat-1.0.123-277-scan-control-preview-arm64.apk
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --silent --show-error --location --retry 5 --retry-all-errors --max-time 2400 --request POST "$APK_URL" --output "$APK_NAME"
+          test "$(stat -c%s "$APK_NAME")" = "$APK_SIZE"
+          echo "$APK_SHA256  $APK_NAME" | sha256sum --check
+
+      - name: Publish GitHub prerelease
+        env:
+          GH_TOKEN: ${{ github.token }}
+          APK_NAME: CardChat-1.0.123-277-scan-control-preview-arm64.apk
+          RELEASE_TAG: cardchat-android-preview-1.0.123-277
+          RELEASE_NOTES: |
+            CardChat Android Preview 测试包，用于验收扫描控制功能。
+
+            - 版本：1.0.123（构建号 277）
+            - 包名：com.cardchat.app
+            - ABI：仅 arm64-v8a
+            - 渠道：preview / cn
+            - 对应源码提交：167a5246
+            - APK 大小：427,766,230 bytes
+            - APK SHA-256：7759d47dea59897d9d05f684eb1839ebd95ec03aef1262dbd231d43b5d134222
+            - 签名证书 SHA-256：4fcc595c5747b69bcd5156df62c6e976384f344ac5b0aca4f638b8565aca3294
+
+            本版包含扫描控制完整实现与近期修复：外接按钮/拍打屏幕单双按钮配置、设备连接教程入口、扫描区域与子项轮播、自动滚动、纠错行条件轮播、播放期间暂停、扫描音效，以及 Android 多指拍打与外接按钮发声兼容处理。
+
+            这是开发测试包，不是应用商店正式发布版本。
+        run: |
+          gh release create "$RELEASE_TAG" "$APK_NAME" --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --title "CardChat Android Preview 1.0.123 (277) — 扫描控制验收包" --notes "$RELEASE_NOTES" --prerelease

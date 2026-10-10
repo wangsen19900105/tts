@@ -1,0 +1,8002 @@
+{
+  "schemaVersion": 1,
+  "policyName": "ARASAAC practical compact AAC v4",
+  "generatedAt": "2026-10-10T00:00:00Z",
+  "principles": [
+    "只按明确白名单合并，不做全局去 s、去标点或忽略大小写",
+    "多数单复数、包装和份量差异按用户偏好压缩为一个实用概念",
+    "冷门地域文化、过细物种、专名和专业课程词移出核心包",
+    "错误共图别名删除；常用词误配图片时改用同库中更接近的画面",
+    "旧版较高置信只代表自动规则命中，本版不再输出该子目录"
+  ],
+  "removeTerms": [
+    {
+      "term": "100 euros",
+      "reason": "固定欧元面额具有地区性；通用 money、price、payment 已足够。"
+    },
+    {
+      "term": "20 euros",
+      "reason": "固定欧元面额具有地区性；通用 money、price、payment 已足够。"
+    },
+    {
+      "term": "200 euros",
+      "reason": "固定欧元面额具有地区性；通用 money、price、payment 已足够。"
+    },
+    {
+      "term": "5 euros",
+      "reason": "固定欧元面额具有地区性；通用 money、price、payment 已足够。"
+    },
+    {
+      "term": "50 euros",
+      "reason": "固定欧元面额具有地区性；通用 money、price、payment 已足够。"
+    },
+    {
+      "term": "500 euros",
+      "reason": "固定欧元面额具有地区性；通用 money、price、payment 已足够。"
+    },
+    {
+      "term": "A",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "a-one (fem.)",
+      "reason": "生硬、残缺或误拼的教学/符号词条，不能直接作为可靠 AAC 标签"
+    },
+    {
+      "term": "Adam and Eve",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "Alava",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Albacete",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Alcal",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Alicante",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Aljaferia Castle",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Almeria",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "almond toffee",
+      "reason": "地域性或过细食品、包装食品；已有更通用食物词"
+    },
+    {
+      "term": "almond toffees",
+      "reason": "地域性或过细的食品、包装和菜名；核心库保留通用食物名称"
+    },
+    {
+      "term": "ammonite",
+      "reason": "过细动物、植物或鱼类物种；保留上位通用词"
+    },
+    {
+      "term": "ammonites",
+      "reason": "过细的地理、建筑或自然科学教材词，不属于日常核心 AAC"
+    },
+    {
+      "term": "amphoras",
+      "reason": "过细的地理、建筑或自然科学教材词，不属于日常核心 AAC"
+    },
+    {
+      "term": "Andalusia",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "aqueducts",
+      "reason": "过细的地理、建筑或自然科学教材词，不属于日常核心 AAC"
+    },
+    {
+      "term": "aquifer",
+      "reason": "专业课程、地理或旧技术术语；不属于实用 AAC 核心词"
+    },
+    {
+      "term": "aquifers",
+      "reason": "过细的地理、建筑或自然科学教材词，不属于日常核心 AAC"
+    },
+    {
+      "term": "Aragon",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Aragon coat of arms",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Aragon flag",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Aragonese Parliament",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "association of employers",
+      "reason": "人工复核：低频、过细或含义含糊，不纳入实用 AAC 核心包"
+    },
+    {
+      "term": "associations of employers",
+      "reason": "人工复核：低频、过细或含义含糊，不纳入实用 AAC 核心包"
+    },
+    {
+      "term": "Asturias",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "atmospheric phenomena",
+      "reason": "专业课程、地理或旧技术术语；不属于实用 AAC 核心词"
+    },
+    {
+      "term": "atmospheric phenomenon",
+      "reason": "专业课程、地理或旧技术术语；不属于实用 AAC 核心词"
+    },
+    {
+      "term": "Atomium",
+      "reason": "具体地标专名；紧凑 AAC 词库保留通用场所词即可"
+    },
+    {
+      "term": "Augustus",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "Avila",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "B",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "b",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "Baby Jesus",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "Badajoz",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Balearic Islands",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Balthasar",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "bar",
+      "reason": "错误共图别名：image is a chocolate bar, not a pub/bar"
+    },
+    {
+      "term": "barbel",
+      "reason": "过细动物、植物或鱼类物种；保留上位通用词"
+    },
+    {
+      "term": "barbels",
+      "reason": "非常细分的物种或园艺名称；核心库保留常见动物、植物及上位词"
+    },
+    {
+      "term": "Barbie",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "Barbies",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "Barcelo",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Basque Country",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Batman",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "bellflower",
+      "reason": "过细动物、植物或鱼类物种；保留上位通用词"
+    },
+    {
+      "term": "bellflowers",
+      "reason": "非常细分的物种或园艺名称；核心库保留常见动物、植物及上位词"
+    },
+    {
+      "term": "BG meters",
+      "reason": "专业课程、地理或旧技术术语；不属于实用 AAC 核心词"
+    },
+    {
+      "term": "biceps",
+      "reason": "临床或解剖教材级细分词；核心库保留通用身体部位和症状"
+    },
+    {
+      "term": "Big Ben",
+      "reason": "具体地标专名；紧凑 AAC 词库保留通用场所词即可"
+    },
+    {
+      "term": "bingo",
+      "reason": "用户明确要求删除：低频博彩/宾果游戏"
+    },
+    {
+      "term": "biosphere",
+      "reason": "专业课程、地理或旧技术术语；不属于实用 AAC 核心词"
+    },
+    {
+      "term": "Biscay",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "black pudding",
+      "reason": "地域性或过细食品、包装食品；已有更通用食物词"
+    },
+    {
+      "term": "blacksmith's wife",
+      "reason": "过细的行政、法律或机构术语，不是日常沟通核心词"
+    },
+    {
+      "term": "Blind man's buff",
+      "reason": "非常小众或地域性的游戏项目；核心库已有“游戏/棋盘游戏/球类”等上位词"
+    },
+    {
+      "term": "blood sugar",
+      "reason": "错误共图别名：image is table sugar; blood glucose is a different concept"
+    },
+    {
+      "term": "boardrooms",
+      "reason": "过细的行政、法律或机构术语，不是日常沟通核心词"
+    },
+    {
+      "term": "bodywork",
+      "reason": "车辆或船舶的过细零件词；核心库保留车、船、轮、刹车等常用概念"
+    },
+    {
+      "term": "bombarde",
+      "reason": "西班牙地域节庆或民俗专有词，通用 AAC 使用概率极低"
+    },
+    {
+      "term": "bookseller",
+      "reason": "地域性、过细职业或错误复合词；保留 seller、shopkeeper、driver、social worker 等通用概念。"
+    },
+    {
+      "term": "bore",
+      "reason": "错误英文别名：画面是疲倦的人，原 manifest 已有同图别名 to get tired；不是钻孔。"
+    },
+    {
+      "term": "bore hole",
+      "reason": "人工复核：低频、过细或含义含糊，不纳入实用 AAC 核心包"
+    },
+    {
+      "term": "box office clerk",
+      "reason": "地域性、过细职业或错误复合词；保留 seller、shopkeeper、driver、social worker 等通用概念。"
+    },
+    {
+      "term": "box plant",
+      "reason": "过细动物、植物或鱼类物种；保留上位通用词"
+    },
+    {
+      "term": "box plants",
+      "reason": "非常细分的物种或园艺名称；核心库保留常见动物、植物及上位词"
+    },
+    {
+      "term": "Brandenburg Gate",
+      "reason": "具体地标专名；紧凑 AAC 词库保留通用场所词即可"
+    },
+    {
+      "term": "breats",
+      "reason": "错误英文别名：原 manifest 已有同图别名 chicken breast，且 breats 拼写错误。"
+    },
+    {
+      "term": "brood",
+      "reason": "动物孵蛋/育雏的专门动词，日常 AAC 使用率低"
+    },
+    {
+      "term": "buffoon",
+      "reason": "过细、陈旧或生硬的文娱职业/栏目词，不适合作为紧凑核心词库"
+    },
+    {
+      "term": "bull fighter",
+      "reason": "地域性、过细职业或错误复合词；保留 seller、shopkeeper、driver、social worker 等通用概念。"
+    },
+    {
+      "term": "bullfighter",
+      "reason": "地域性、过细职业或错误复合词；保留 seller、shopkeeper、driver、social worker 等通用概念。"
+    },
+    {
+      "term": "bullring",
+      "reason": "地域文化或非常具体的建筑/游乐子型；用户已明确点名 igloo 一类应删除。"
+    },
+    {
+      "term": "bun",
+      "reason": "错误共图别名：image shows buttocks, not hair bun or bread bun"
+    },
+    {
+      "term": "Burgos",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "C",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "c",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "Caceres",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Cadiz",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "café's kitchen",
+      "reason": "地域性或过细食品、包装食品；已有更通用食物词"
+    },
+    {
+      "term": "caganer",
+      "reason": "西班牙地域节庆或民俗专有词，通用 AAC 使用概率极低"
+    },
+    {
+      "term": "cajon drum",
+      "reason": "西班牙地域节庆或民俗专有词，通用 AAC 使用概率极低"
+    },
+    {
+      "term": "cajon drums",
+      "reason": "西班牙地域节庆或民俗专有词，通用 AAC 使用概率极低"
+    },
+    {
+      "term": "cala lilies",
+      "reason": "人工复核：低频、过细或含义含糊，不纳入实用 AAC 核心包"
+    },
+    {
+      "term": "cala lily",
+      "reason": "人工复核：低频、过细或含义含糊，不纳入实用 AAC 核心包"
+    },
+    {
+      "term": "calamari sandwich",
+      "reason": "地域性或过细食品、包装食品；已有更通用食物词"
+    },
+    {
+      "term": "calamari sandwiches",
+      "reason": "地域性或过细的食品、包装和菜名；核心库保留通用食物名称"
+    },
+    {
+      "term": "calf muscles",
+      "reason": "临床或解剖教材级细分词；核心库保留通用身体部位和症状"
+    },
+    {
+      "term": "can",
+      "reason": "错误共图别名：image is a jar of pickles, not modal can or a generic empty can"
+    },
+    {
+      "term": "can of anchovies",
+      "reason": "地域性或过细食品、包装食品；已有更通用食物词"
+    },
+    {
+      "term": "can of asparragus",
+      "reason": "地域性或过细食品、包装食品；已有更通用食物词"
+    },
+    {
+      "term": "can of black olives",
+      "reason": "地域性或过细食品、包装食品；已有更通用食物词"
+    },
+    {
+      "term": "can of clams",
+      "reason": "地域性或过细食品、包装食品；已有更通用食物词"
+    },
+    {
+      "term": "can of cockles",
+      "reason": "地域性或过细食品、包装食品；已有更通用食物词"
+    },
+    {
+      "term": "can of green olives",
+      "reason": "地域性或过细食品、包装食品；已有更通用食物词"
+    },
+    {
+      "term": "can of mussels",
+      "reason": "地域性或过细食品、包装食品；已有更通用食物词"
+    },
+    {
+      "term": "can of sardines",
+      "reason": "地域性或过细食品、包装食品；已有更通用食物词"
+    },
+    {
+      "term": "can of stuffed olives",
+      "reason": "地域性或过细食品、包装食品；已有更通用食物词"
+    },
+    {
+      "term": "can of tuna",
+      "reason": "地域性或过细食品、包装食品；已有更通用食物词"
+    },
+    {
+      "term": "canape",
+      "reason": "地域性或过细食品、包装食品；已有更通用食物词"
+    },
+    {
+      "term": "Canary Islands",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "candelabras",
+      "reason": "人工复核：低频、过细或含义含糊，不纳入实用 AAC 核心包"
+    },
+    {
+      "term": "cans of asparragus",
+      "reason": "地域性或过细的食品、包装和菜名；核心库保留通用食物名称"
+    },
+    {
+      "term": "cans of cockles",
+      "reason": "地域性或过细食品、包装食品；已有更通用食物词"
+    },
+    {
+      "term": "Cantabria",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Capitol",
+      "reason": "具体地标专名；紧凑 AAC 词库保留通用场所词即可"
+    },
+    {
+      "term": "carers' room",
+      "reason": "特定学校制度、专门教室/课程或低频器材；通用 book、school、room、teacher 等已覆盖。"
+    },
+    {
+      "term": "Carmen Gate",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "carpenter planes",
+      "reason": "过细的工业、木工或施工器具；核心库保留锤子、锯、扳手等通用工具"
+    },
+    {
+      "term": "carpenter's ruler",
+      "reason": "过细的工业、木工或施工器具；核心库保留锤子、锯、扳手等通用工具"
+    },
+    {
+      "term": "Castañada",
+      "reason": "西班牙地方节庆或习俗；地域性过强"
+    },
+    {
+      "term": "Castellon",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Castile and Leon",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Castile-Leon",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Castille-La Mancha",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Catalonia",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Catedral de la Seo",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "CD players",
+      "reason": "专业课程、地理或旧技术术语；不属于实用 AAC 核心词"
+    },
+    {
+      "term": "CD-Rom",
+      "reason": "人工复核：低频、过细或含义含糊，不纳入实用 AAC 核心包"
+    },
+    {
+      "term": "CD-Roms",
+      "reason": "专业课程、地理或旧技术术语；不属于实用 AAC 核心词"
+    },
+    {
+      "term": "CDRoms",
+      "reason": "专业课程、地理或旧技术术语；不属于实用 AAC 核心词"
+    },
+    {
+      "term": "Cervantes",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "Ceuta",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "chalices",
+      "reason": "非常小众或仪式性的器物，通用 AAC 中优先级很低"
+    },
+    {
+      "term": "chestnut seller",
+      "reason": "西班牙地域节庆或民俗专有词，通用 AAC 使用概率极低"
+    },
+    {
+      "term": "chicken seller",
+      "reason": "地域性、过细职业或错误复合词；保留 seller、shopkeeper、driver、social worker 等通用概念。"
+    },
+    {
+      "term": "chicken shop",
+      "reason": "过细房间、商店或物件组合，可由更通用的房间/商店/桌子词表达。"
+    },
+    {
+      "term": "chinese box",
+      "reason": "特定学校制度、专门教室/课程或低频器材；通用 book、school、room、teacher 等已覆盖。"
+    },
+    {
+      "term": "Chinese Wall",
+      "reason": "具体地标专名；紧凑 AAC 词库保留通用场所词即可"
+    },
+    {
+      "term": "chiropodist",
+      "reason": "过细的专科诊疗或生殖医学术语；核心库保留医生、检查、治疗等上位词"
+    },
+    {
+      "term": "Christ",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "Christ the Redeemer",
+      "reason": "具体地标专名；紧凑 AAC 词库保留通用场所词即可"
+    },
+    {
+      "term": "chupinazo",
+      "reason": "西班牙地域节庆或民俗专有词，通用 AAC 使用概率极低"
+    },
+    {
+      "term": "chupinazos",
+      "reason": "西班牙地域节庆或民俗专有词，通用 AAC 使用概率极低"
+    },
+    {
+      "term": "cigarette and government stamp shop",
+      "reason": "过细房间、商店或物件组合，可由更通用的房间/商店/桌子词表达。"
+    },
+    {
+      "term": "Cinderella",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "citadels",
+      "reason": "过细的地理、建筑或自然科学教材词，不属于日常核心 AAC"
+    },
+    {
+      "term": "Ciudad Real",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "civil guard",
+      "reason": "地域性、过细职业或错误复合词；保留 seller、shopkeeper、driver、social worker 等通用概念。"
+    },
+    {
+      "term": "close parenthesis sign",
+      "reason": "生硬、残缺或误拼的教学/符号词条，不能直接作为可靠 AAC 标签"
+    },
+    {
+      "term": "clutch",
+      "reason": "车辆或船舶的过细零件词；核心库保留车、船、轮、刹车等常用概念"
+    },
+    {
+      "term": "coastal relief",
+      "reason": "专业课程、地理或旧技术术语；不属于实用 AAC 核心词"
+    },
+    {
+      "term": "coca",
+      "reason": "地域性或过细食品、包装食品；已有更通用食物词"
+    },
+    {
+      "term": "cockle",
+      "reason": "用户明确要求删除同类：过细贝类词"
+    },
+    {
+      "term": "cocktail snacks",
+      "reason": "地域性或过细的食品、包装和菜名；核心库保留通用食物名称"
+    },
+    {
+      "term": "cold chisel",
+      "reason": "过细的工业、木工或施工器具；核心库保留锤子、锯、扳手等通用工具"
+    },
+    {
+      "term": "concessionaire",
+      "reason": "过细的行政、法律或机构术语，不是日常沟通核心词"
+    },
+    {
+      "term": "Conference Halls",
+      "reason": "专业课程、地理或旧技术术语；不属于实用 AAC 核心词"
+    },
+    {
+      "term": "Cordoba",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "cormorant",
+      "reason": "过细动物、植物或鱼类物种；保留上位通用词"
+    },
+    {
+      "term": "corn cake",
+      "reason": "地域性或过细食品、包装食品；已有更通用食物词"
+    },
+    {
+      "term": "cornea",
+      "reason": "临床或解剖教材级细分词；核心库保留通用身体部位和症状"
+    },
+    {
+      "term": "covered wagon",
+      "reason": "陈旧、幻想或非常专门的交通工具/活动，不属于日常出行核心词"
+    },
+    {
+      "term": "cranium",
+      "reason": "临床或解剖教材级细分词；核心库保留通用身体部位和症状"
+    },
+    {
+      "term": "crematorium",
+      "reason": "低频且曾被错误归入动作分类；移出实用 AAC 核心包"
+    },
+    {
+      "term": "crematoriums",
+      "reason": "低频场所的复数重复；移出实用 AAC 核心包"
+    },
+    {
+      "term": "Cremà",
+      "reason": "西班牙地方节庆或习俗；地域性过强"
+    },
+    {
+      "term": "crook",
+      "reason": "牧羊杖在日常 AAC 中使用率很低；不应与双拐合并"
+    },
+    {
+      "term": "crotchet",
+      "reason": "过细的乐理、乐器或表演术语；日常 AAC 可用“音乐/音符/乐器/表演”表达"
+    },
+    {
+      "term": "cruet",
+      "reason": "非常小众或仪式性的器物，通用 AAC 中优先级很低"
+    },
+    {
+      "term": "Cuenca",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Cupid",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "Cupids",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "customized itinerary for insertion",
+      "reason": "过细的行政、法律或机构术语，不是日常沟通核心词"
+    },
+    {
+      "term": "cypress tree",
+      "reason": "过细动物、植物或鱼类物种；保留上位通用词"
+    },
+    {
+      "term": "cypresses",
+      "reason": "非常细分的物种或园艺名称；核心库保留常见动物、植物及上位词"
+    },
+    {
+      "term": "D",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "d",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "Dali",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "dance from Aragon",
+      "reason": "西班牙地方节庆或习俗；地域性过强"
+    },
+    {
+      "term": "dependents' exit",
+      "reason": "过细的行政、法律或机构术语，不是日常沟通核心词"
+    },
+    {
+      "term": "didactic playroom warehouse",
+      "reason": "过细的行政、法律或机构术语，不是日常沟通核心词"
+    },
+    {
+      "term": "director of studies",
+      "reason": "特定学校制度、专门教室/课程或低频器材；通用 book、school、room、teacher 等已覆盖。"
+    },
+    {
+      "term": "disabilited",
+      "reason": "名称冗长、过时或带有不合适称谓，不宜进入核心 AAC 词库"
+    },
+    {
+      "term": "dishes store",
+      "reason": "过细房间、商店或物件组合，可由更通用的房间/商店/桌子词表达。"
+    },
+    {
+      "term": "divorce lawsuit",
+      "reason": "过细的行政、法律或机构术语，不是日常沟通核心词"
+    },
+    {
+      "term": "divorce sentence",
+      "reason": "过细的行政、法律或机构术语，不是日常沟通核心词"
+    },
+    {
+      "term": "Do key",
+      "reason": "生硬、残缺或误拼的教学/符号词条，不能直接作为可靠 AAC 标签"
+    },
+    {
+      "term": "Don Quixote",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "doser",
+      "reason": "过细的工业、木工或施工器具；核心库保留锤子、锯、扳手等通用工具"
+    },
+    {
+      "term": "dressmaker's measure",
+      "reason": "过细的工业、木工或施工器具；核心库保留锤子、锯、扳手等通用工具"
+    },
+    {
+      "term": "driver - pilot",
+      "reason": "地域性、过细职业或错误复合词；保留 seller、shopkeeper、driver、social worker 等通用概念。"
+    },
+    {
+      "term": "Dulcinea",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "DVD player",
+      "reason": "陈旧或过细的电子、通信媒介，不适合作为现代紧凑核心词库"
+    },
+    {
+      "term": "E",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "e",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "Eiffel Tower",
+      "reason": "具体地标专名；紧凑 AAC 词库保留通用场所词即可"
+    },
+    {
+      "term": "El Hierro",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "electro",
+      "reason": "过细的专科诊疗或生殖医学术语；核心库保留医生、检查、治疗等上位词"
+    },
+    {
+      "term": "electrocardiogram",
+      "reason": "过细的专科诊疗或生殖医学术语；核心库保留医生、检查、治疗等上位词"
+    },
+    {
+      "term": "emperor penguin",
+      "reason": "过细动物、植物或鱼类物种；保留上位通用词"
+    },
+    {
+      "term": "employment, equality, co-operation and communication unit",
+      "reason": "过细的行政、法律或机构术语，不是日常沟通核心词"
+    },
+    {
+      "term": "Epiphany",
+      "reason": "宗教节庆中的具体人物或仪式细项；核心库保留通用节日词即可"
+    },
+    {
+      "term": "escaroles",
+      "reason": "人工复核：低频、过细或含义含糊，不纳入实用 AAC 核心包"
+    },
+    {
+      "term": "excursionist",
+      "reason": "过细、陈旧或生硬的文娱职业/栏目词，不适合作为紧凑核心词库"
+    },
+    {
+      "term": "exhaust pipe",
+      "reason": "车辆或船舶的过细零件词；核心库保留车、船、轮、刹车等常用概念"
+    },
+    {
+      "term": "F",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "f",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "fa syllable",
+      "reason": "生硬、残缺或误拼的教学/符号词条，不能直接作为可靠 AAC 标签"
+    },
+    {
+      "term": "falla",
+      "reason": "西班牙地方节庆或习俗；地域性过强"
+    },
+    {
+      "term": "fallas",
+      "reason": "西班牙地方节庆或习俗；地域性过强"
+    },
+    {
+      "term": "falleras",
+      "reason": "西班牙地域节庆或民俗专有词，通用 AAC 使用概率极低"
+    },
+    {
+      "term": "falleros",
+      "reason": "西班牙地域节庆或民俗专有词，通用 AAC 使用概率极低"
+    },
+    {
+      "term": "family school",
+      "reason": "特定学校制度、专门教室/课程或低频器材；通用 book、school、room、teacher 等已覆盖。"
+    },
+    {
+      "term": "FAO",
+      "reason": "国际机构缩写；日常沟通使用率低"
+    },
+    {
+      "term": "faxes",
+      "reason": "陈旧或过细的电子、通信媒介，不适合作为现代紧凑核心词库"
+    },
+    {
+      "term": "femur",
+      "reason": "临床或解剖教材级细分词；核心库保留通用身体部位和症状"
+    },
+    {
+      "term": "fertilization",
+      "reason": "过细的专科诊疗或生殖医学术语；核心库保留医生、检查、治疗等上位词"
+    },
+    {
+      "term": "fibula",
+      "reason": "临床或解剖教材级细分词；核心库保留通用身体部位和症状"
+    },
+    {
+      "term": "fideua",
+      "reason": "地域性或过细食品、包装食品；已有更通用食物词"
+    },
+    {
+      "term": "fillet (fish)",
+      "reason": "错误共图别名：image is red meat/steak, not fish fillet"
+    },
+    {
+      "term": "fish in green sauce",
+      "reason": "地域性或过细食品、包装食品；已有更通用食物词"
+    },
+    {
+      "term": "fishmonger",
+      "reason": "地域性、过细职业或错误复合词；保留 seller、shopkeeper、driver、social worker 等通用概念。"
+    },
+    {
+      "term": "Flag of Aragon",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "flamenco",
+      "reason": "西班牙地域节庆或民俗专有词，通用 AAC 使用概率极低"
+    },
+    {
+      "term": "flamenco dancer",
+      "reason": "西班牙地域节庆或民俗专有词，通用 AAC 使用概率极低"
+    },
+    {
+      "term": "flare",
+      "reason": "人工复核：低频、过细或含义含糊，不纳入实用 AAC 核心包"
+    },
+    {
+      "term": "flares",
+      "reason": "人工复核：低频、过细或含义含糊，不纳入实用 AAC 核心包"
+    },
+    {
+      "term": "flat cold chisel",
+      "reason": "过细的工业、木工或施工器具；核心库保留锤子、锯、扳手等通用工具"
+    },
+    {
+      "term": "flower offering",
+      "reason": "西班牙地方节庆或习俗；地域性过强"
+    },
+    {
+      "term": "flying saucer",
+      "reason": "陈旧、幻想或非常专门的交通工具/活动，不属于日常出行核心词"
+    },
+    {
+      "term": "Formentera",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Francisco de Goya y Lucientes",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "Frankenstein",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "fronton racket",
+      "reason": "西班牙地域节庆或民俗专有词，通用 AAC 使用概率极低"
+    },
+    {
+      "term": "Fuerteventura",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "funeral employee",
+      "reason": "地域性、过细职业或错误复合词；保留 seller、shopkeeper、driver、social worker 等通用概念。"
+    },
+    {
+      "term": "G",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "g",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "Galicia",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Games, Sport and Free time's books",
+      "reason": "过细、陈旧或生硬的文娱职业/栏目词，不适合作为紧凑核心词库"
+    },
+    {
+      "term": "gas pedal",
+      "reason": "车辆或船舶的过细零件词；核心库保留车、船、轮、刹车等常用概念"
+    },
+    {
+      "term": "gas welding torch",
+      "reason": "过细的工业、木工或施工器具；核心库保留锤子、锯、扳手等通用工具"
+    },
+    {
+      "term": "Gaspar",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "gearshift",
+      "reason": "车辆或船舶的过细零件词；核心库保留车、船、轮、刹车等常用概念"
+    },
+    {
+      "term": "geosphere",
+      "reason": "专业课程、地理或旧技术术语；不属于实用 AAC 核心词"
+    },
+    {
+      "term": "Gerona",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "ghost train",
+      "reason": "地域文化或非常具体的建筑/游乐子型；用户已明确点名 igloo 一类应删除。"
+    },
+    {
+      "term": "giant turtle",
+      "reason": "稀有动物细分；紧凑词库保留 tortoise/turtle 即可"
+    },
+    {
+      "term": "gilthead",
+      "reason": "过细动物、植物或鱼类物种；保留上位通用词"
+    },
+    {
+      "term": "giltheads",
+      "reason": "地域性或过细的食品、包装和菜名；核心库保留通用食物名称"
+    },
+    {
+      "term": "girdles",
+      "reason": "人工复核：低频、过细或含义含糊，不纳入实用 AAC 核心包"
+    },
+    {
+      "term": "gladioli",
+      "reason": "非常细分的物种或园艺名称；核心库保留常见动物、植物及上位词"
+    },
+    {
+      "term": "gladiolus",
+      "reason": "过细动物、植物或鱼类物种；保留上位通用词"
+    },
+    {
+      "term": "glass of wine",
+      "reason": "错误共图别名：image shows an empty stemmed glass with no wine"
+    },
+    {
+      "term": "glassware shop",
+      "reason": "过细房间、商店或物件组合，可由更通用的房间/商店/桌子词表达。"
+    },
+    {
+      "term": "glowworms",
+      "reason": "非常细分的物种或园艺名称；核心库保留常见动物、植物及上位词"
+    },
+    {
+      "term": "gluteus",
+      "reason": "临床或解剖教材级细分词；核心库保留通用身体部位和症状"
+    },
+    {
+      "term": "googles",
+      "reason": "生硬、残缺或误拼的教学/符号词条，不能直接作为可靠 AAC 标签"
+    },
+    {
+      "term": "Goya",
+      "reason": "具体历史、文学、影视或品牌专名，不属于通用沟通词"
+    },
+    {
+      "term": "Gran Canaria",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Granada",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "grenade",
+      "reason": "错误共图别名：image is pomegranate; grenade is an English false friend"
+    },
+    {
+      "term": "groups of pressure",
+      "reason": "过细的行政、法律或机构术语，不是日常沟通核心词"
+    },
+    {
+      "term": "Guadalajara",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Guipuzcoa",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "H",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "h",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "hake finger",
+      "reason": "地域性或过细食品、包装食品；已有更通用食物词"
+    },
+    {
+      "term": "half note",
+      "reason": "过细的乐理、乐器或表演术语；日常 AAC 可用“音乐/音符/乐器/表演”表达"
+    },
+    {
+      "term": "handbrake",
+      "reason": "车辆或船舶的过细零件词；核心库保留车、船、轮、刹车等常用概念"
+    },
+    {
+      "term": "hanging platforms",
+      "reason": "过细的工业、木工或施工器具；核心库保留锤子、锯、扳手等通用工具"
+    },
+    {
+      "term": "Hansel and Gretel",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "hardhat (drink made from tiger nuts)",
+      "reason": "地域性或过细食品、包装食品；已有更通用食物词"
+    },
+    {
+      "term": "hardware dealer",
+      "reason": "地域性、过细职业或错误复合词；保留 seller、shopkeeper、driver、social worker 等通用概念。"
+    },
+    {
+      "term": "harpsichord",
+      "reason": "人工复核：低频、过细或含义含糊，不纳入实用 AAC 核心包"
+    },
+    {
+      "term": "harpsichords",
+      "reason": "人工复核：低频、过细或含义含糊，不纳入实用 AAC 核心包"
+    },
+    {
+      "term": "heifers",
+      "reason": "非常细分的物种或园艺名称；核心库保留常见动物、植物及上位词"
+    },
+    {
+      "term": "hemicycle",
+      "reason": "过细房间、商店或物件组合，可由更通用的房间/商店/桌子词表达。"
+    },
+    {
+      "term": "Hispanic Day",
+      "reason": "西班牙地方节庆或习俗；地域性过强"
+    },
+    {
+      "term": "hoopoe",
+      "reason": "过细动物、植物或鱼类物种；保留上位通用词"
+    },
+    {
+      "term": "hot flush",
+      "reason": "错误共图别名：image shows generic heat; symptom and emotional action are distinct"
+    },
+    {
+      "term": "Huelva",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Huesca",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Huesca province",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "humerus",
+      "reason": "临床或解剖教材级细分词；核心库保留通用身体部位和症状"
+    },
+    {
+      "term": "hydrosphere",
+      "reason": "专业课程、地理或旧技术术语；不属于实用 AAC 核心词"
+    },
+    {
+      "term": "hymnal",
+      "reason": "过细的乐理、乐器或表演术语；日常 AAC 可用“音乐/音符/乐器/表演”表达"
+    },
+    {
+      "term": "i",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "Ibiza",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "ice-cream seller",
+      "reason": "地域性、过细职业或错误复合词；保留 seller、shopkeeper、driver、social worker 等通用概念。"
+    },
+    {
+      "term": "igloo",
+      "reason": "百科型低频场所；日常 AAC 使用率低"
+    },
+    {
+      "term": "IHO",
+      "reason": "国际机构缩写；日常沟通使用率低"
+    },
+    {
+      "term": "ILO",
+      "reason": "国际机构缩写；日常沟通使用率低"
+    },
+    {
+      "term": "IMF",
+      "reason": "国际机构缩写；日常沟通使用率低"
+    },
+    {
+      "term": "intellectual property",
+      "reason": "过细的行政、法律或机构术语，不是日常沟通核心词"
+    },
+    {
+      "term": "ironmonger",
+      "reason": "地域性、过细职业或错误复合词；保留 seller、shopkeeper、driver、social worker 等通用概念。"
+    },
+    {
+      "term": "isthmuses",
+      "reason": "过细的地理、建筑或自然科学教材词，不属于日常核心 AAC"
+    },
+    {
+      "term": "ivf",
+      "reason": "过细的专科诊疗或生殖医学术语；核心库保留医生、检查、治疗等上位词"
+    },
+    {
+      "term": "J",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "j",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "Jaen",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "jai alai",
+      "reason": "西班牙地域节庆或民俗专有词，通用 AAC 使用概率极低"
+    },
+    {
+      "term": "John Dory",
+      "reason": "过细动物、植物或鱼类物种；保留上位通用词"
+    },
+    {
+      "term": "John the Baptist",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "join threads",
+      "reason": "陈旧或过细的电子、通信媒介，不适合作为现代紧凑核心词库"
+    },
+    {
+      "term": "joist (wood)",
+      "reason": "过细的工业、木工或施工器具；核心库保留锤子、锯、扳手等通用工具"
+    },
+    {
+      "term": "Joseph",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "junket",
+      "reason": "地域性或过细食品、包装食品；已有更通用食物词"
+    },
+    {
+      "term": "K",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "k",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "kiosk vendor",
+      "reason": "地域性、过细职业或错误复合词；保留 seller、shopkeeper、driver、social worker 等通用概念。"
+    },
+    {
+      "term": "knife grinders",
+      "reason": "过细的工业、木工或施工器具；核心库保留锤子、锯、扳手等通用工具"
+    },
+    {
+      "term": "L",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "l",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "La Coruña",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "La Gomera",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "La Palma",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "La Rioja",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Lanzarote",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "LCD screens",
+      "reason": "专业课程、地理或旧技术术语；不属于实用 AAC 核心词"
+    },
+    {
+      "term": "legislative chamber",
+      "reason": "过细的行政、法律或机构术语，不是日常沟通核心词"
+    },
+    {
+      "term": "Lerida",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "León",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Little Miss Goldilocks",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "Little Red Riding Hood",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "living beings",
+      "reason": "专业课程、地理或旧技术术语；不属于实用 AAC 核心词"
+    },
+    {
+      "term": "Loarre castle",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "lotus flower",
+      "reason": "过细动物、植物或鱼类物种；保留上位通用词"
+    },
+    {
+      "term": "Lugo",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "lunar phase",
+      "reason": "专业课程、地理或旧技术术语；不属于实用 AAC 核心词"
+    },
+    {
+      "term": "M",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "Machu Picchu",
+      "reason": "具体地标专名；紧凑 AAC 词库保留通用场所词即可"
+    },
+    {
+      "term": "Madrid",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Majorca",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Malaga",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Malaga's Cathedral",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Malaga's Exhibition and Congress Centre",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "manger",
+      "reason": "宗教节庆中的具体人物或仪式细项；核心库保留通用节日词即可"
+    },
+    {
+      "term": "manta",
+      "reason": "过细动物、植物或鱼类物种；保留上位通用词"
+    },
+    {
+      "term": "Maria",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "marinated pork loin",
+      "reason": "地域性或过细食品、包装食品；已有更通用食物词"
+    },
+    {
+      "term": "marinated pork loin slices",
+      "reason": "地域性或过细的食品、包装和菜名；核心库保留通用食物名称"
+    },
+    {
+      "term": "mascletá",
+      "reason": "西班牙地域节庆或民俗专有词，通用 AAC 使用概率极低"
+    },
+    {
+      "term": "megrims",
+      "reason": "地域性或过细的食品、包装和菜名；核心库保留通用食物名称"
+    },
+    {
+      "term": "Melchior",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "Melilla",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "member states",
+      "reason": "过细的行政、法律或机构术语，不是日常沟通核心词"
+    },
+    {
+      "term": "memory workshop",
+      "reason": "地域性、过细职业或错误复合词；保留 seller、shopkeeper、driver、social worker 等通用概念。"
+    },
+    {
+      "term": "menorahs",
+      "reason": "人工复核：低频、过细或含义含糊，不纳入实用 AAC 核心包"
+    },
+    {
+      "term": "Merida",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "metronome",
+      "reason": "过细的乐理、乐器或表演术语；日常 AAC 可用“音乐/音符/乐器/表演”表达"
+    },
+    {
+      "term": "milometer",
+      "reason": "车辆或船舶的过细零件词；核心库保留车、船、轮、刹车等常用概念"
+    },
+    {
+      "term": "minarets",
+      "reason": "过细的地理、建筑或自然科学教材词，不属于日常核心 AAC"
+    },
+    {
+      "term": "Minorca",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "miter saw",
+      "reason": "过细的工业、木工或施工器具；核心库保留锤子、锯、扳手等通用工具"
+    },
+    {
+      "term": "monkfish",
+      "reason": "过细动物、植物或鱼类物种；保留上位通用词"
+    },
+    {
+      "term": "monotap",
+      "reason": "过细的工业、木工或施工器具；核心库保留锤子、锯、扳手等通用工具"
+    },
+    {
+      "term": "moon eclipse",
+      "reason": "专业课程、地理或旧技术术语；不属于实用 AAC 核心词"
+    },
+    {
+      "term": "Moses",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "motorcycle races",
+      "reason": "陈旧、幻想或非常专门的交通工具/活动，不属于日常出行核心词"
+    },
+    {
+      "term": "motorized pump",
+      "reason": "过细的工业、木工或施工器具；核心库保留锤子、锯、扳手等通用工具"
+    },
+    {
+      "term": "motorized pumps",
+      "reason": "过细的工业、木工或施工器具；核心库保留锤子、锯、扳手等通用工具"
+    },
+    {
+      "term": "Mount Teide",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "mp3",
+      "reason": "陈旧或过细的电子、通信媒介，不适合作为现代紧凑核心词库"
+    },
+    {
+      "term": "Murcia",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "muzzle (dog, wolf)",
+      "reason": "过细动物、植物或鱼类物种；保留上位通用词"
+    },
+    {
+      "term": "N",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "n",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "nativity",
+      "reason": "宗教节庆中的具体人物或仪式细项；核心库保留通用节日词即可"
+    },
+    {
+      "term": "Nativity scene",
+      "reason": "宗教节庆中的具体人物或仪式细项；核心库保留通用节日词即可"
+    },
+    {
+      "term": "nativity scene",
+      "reason": "宗教节庆中的具体人物或仪式细项；核心库保留通用节日词即可"
+    },
+    {
+      "term": "NATO",
+      "reason": "国际机构缩写；日常沟通使用率低"
+    },
+    {
+      "term": "Navarre",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Nefertiti",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "Noah",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "Noah's Ark",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "northern hemisphere",
+      "reason": "专业课程、地理或旧技术术语；不属于实用 AAC 核心词"
+    },
+    {
+      "term": "noteboard",
+      "reason": "错误英文别名：修正非标准英文。"
+    },
+    {
+      "term": "notions store's shopkeeper",
+      "reason": "过细房间、商店或物件组合，可由更通用的房间/商店/桌子词表达。"
+    },
+    {
+      "term": "Nutella",
+      "reason": "品牌或商标专名；通用词库不单独收录"
+    },
+    {
+      "term": "OAP Day Care Centre",
+      "reason": "地区性缩写，离开原体系后含义不透明；通用词库不保留缩写画面。"
+    },
+    {
+      "term": "observation tower",
+      "reason": "过细的地理、建筑或自然科学教材词，不属于日常核心 AAC"
+    },
+    {
+      "term": "observation towers",
+      "reason": "过细的地理、建筑或自然科学教材词，不属于日常核心 AAC"
+    },
+    {
+      "term": "ocean liner",
+      "reason": "陈旧、幻想或非常专门的交通工具/活动，不属于日常出行核心词"
+    },
+    {
+      "term": "ois",
+      "reason": "地区性缩写，离开原体系后含义不透明；通用词库不保留缩写画面。"
+    },
+    {
+      "term": "open air mine",
+      "reason": "过细的工业、木工或施工器具；核心库保留锤子、锯、扳手等通用工具"
+    },
+    {
+      "term": "open parenthesis sign",
+      "reason": "生硬、残缺或误拼的教学/符号词条，不能直接作为可靠 AAC 标签"
+    },
+    {
+      "term": "ophthalmologist",
+      "reason": "过细的专科诊疗或生殖医学术语；核心库保留医生、检查、治疗等上位词"
+    },
+    {
+      "term": "Orense",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "organ music",
+      "reason": "过细的乐理、乐器或表演术语；日常 AAC 可用“音乐/音符/乐器/表演”表达"
+    },
+    {
+      "term": "orientation department",
+      "reason": "特定学校制度、专门教室/课程或低频器材；通用 book、school、room、teacher 等已覆盖。"
+    },
+    {
+      "term": "ornamental fountain",
+      "reason": "过细动物、植物或鱼类物种；保留上位通用词"
+    },
+    {
+      "term": "ossicles",
+      "reason": "临床或解剖教材级细分词；核心库保留通用身体部位和症状"
+    },
+    {
+      "term": "ots",
+      "reason": "地区性缩写，离开原体系后含义不透明；通用词库不保留缩写画面。"
+    },
+    {
+      "term": "oviparous",
+      "reason": "专业课程、地理或旧技术术语；不属于实用 AAC 核心词"
+    },
+    {
+      "term": "ovule",
+      "reason": "临床或解剖教材级细分词；核心库保留通用身体部位和症状"
+    },
+    {
+      "term": "P",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "p",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "Pac man",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "paella dish",
+      "reason": "地域性或过细的食品、包装和菜名；核心库保留通用食物名称"
+    },
+    {
+      "term": "paella dishes",
+      "reason": "地域性或过细的食品、包装和菜名；核心库保留通用食物名称"
+    },
+    {
+      "term": "paints",
+      "reason": "错误英文别名：原 manifest 已有同图别名 coloured pencils，画面也不是颜料。"
+    },
+    {
+      "term": "Palencia",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Palmas Door",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "panellets",
+      "reason": "地域性或过细食品、包装食品；已有更通用食物词"
+    },
+    {
+      "term": "papillas",
+      "reason": "临床或解剖教材级细分词；核心库保留通用身体部位和症状"
+    },
+    {
+      "term": "paragliding",
+      "reason": "陈旧、幻想或非常专门的交通工具/活动，不属于日常出行核心词"
+    },
+    {
+      "term": "patens",
+      "reason": "非常小众或仪式性的器物，通用 AAC 中优先级很低"
+    },
+    {
+      "term": "pawpaws",
+      "reason": "非常细分的物种或园艺名称；核心库保留常见动物、植物及上位词"
+    },
+    {
+      "term": "pectoral",
+      "reason": "临床或解剖教材级细分词；核心库保留通用身体部位和症状"
+    },
+    {
+      "term": "pelota court",
+      "reason": "西班牙地域节庆或民俗专有词，通用 AAC 使用概率极低"
+    },
+    {
+      "term": "periscope",
+      "reason": "车辆或船舶的过细零件词；核心库保留车、船、轮、刹车等常用概念"
+    },
+    {
+      "term": "petanque",
+      "reason": "非常小众或地域性的游戏项目；核心库已有“游戏/棋盘游戏/球类”等上位词"
+    },
+    {
+      "term": "phalanxes",
+      "reason": "临床或解剖教材级细分词；核心库保留通用身体部位和症状"
+    },
+    {
+      "term": "Physically Handicapped People Rehabilitation Center",
+      "reason": "专业课程、地理或旧技术术语；不属于实用 AAC 核心词"
+    },
+    {
+      "term": "Picasso",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "pigeonhole",
+      "reason": "过细房间、商店或物件组合，可由更通用的房间/商店/桌子词表达。"
+    },
+    {
+      "term": "Pinocchio",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "pirate boat",
+      "reason": "陈旧、幻想或非常专门的交通工具/活动，不属于日常出行核心词"
+    },
+    {
+      "term": "plastering room",
+      "reason": "过细房间、商店或物件组合，可由更通用的房间/商店/桌子词表达。"
+    },
+    {
+      "term": "plastic and visual education",
+      "reason": "特定学校制度、专门教室/课程或低频器材；通用 book、school、room、teacher 等已覆盖。"
+    },
+    {
+      "term": "Poetry and Art's books",
+      "reason": "特定学校制度、专门教室/课程或低频器材；通用 book、school、room、teacher 等已覆盖。"
+    },
+    {
+      "term": "point and comma",
+      "reason": "生硬、残缺或误拼的教学/符号词条，不能直接作为可靠 AAC 标签"
+    },
+    {
+      "term": "polony (UK)",
+      "reason": "地域性或过细的食品、包装和菜名；核心库保留通用食物名称"
+    },
+    {
+      "term": "Pontevedra",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "pontifical blessing",
+      "reason": "专业课程、地理或旧技术术语；不属于实用 AAC 核心词"
+    },
+    {
+      "term": "popcorn twists bags",
+      "reason": "地域性或过细的食品、包装和菜名；核心库保留通用食物名称"
+    },
+    {
+      "term": "poplars",
+      "reason": "非常细分的物种或园艺名称；核心库保留常见动物、植物及上位词"
+    },
+    {
+      "term": "pork rinds",
+      "reason": "地域性或过细食品、包装食品；已有更通用食物词"
+    },
+    {
+      "term": "potatoes in hot sauce",
+      "reason": "地域性或过细食品、包装食品；已有更通用食物词"
+    },
+    {
+      "term": "potatoes with chorizo",
+      "reason": "地域性或过细食品、包装食品；已有更通用食物词"
+    },
+    {
+      "term": "precipitations",
+      "reason": "专业课程、地理或旧技术术语；不属于实用 AAC 核心词"
+    },
+    {
+      "term": "President of Aragon",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "pressure groups",
+      "reason": "过细的行政、法律或机构术语，不是日常沟通核心词"
+    },
+    {
+      "term": "prison dodgeball",
+      "reason": "非常小众或地域性的游戏项目；核心库已有“游戏/棋盘游戏/球类”等上位词"
+    },
+    {
+      "term": "Province of Zaragoza (Saragossa)",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "psychomotor ability",
+      "reason": "特定学校制度、专门教室/课程或低频器材；通用 book、school、room、teacher 等已覆盖。"
+    },
+    {
+      "term": "psychomotricity room",
+      "reason": "特定学校制度、专门教室/课程或低频器材；通用 book、school、room、teacher 等已覆盖。"
+    },
+    {
+      "term": "Pyrenees",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Q",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "q",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "quadriceps",
+      "reason": "临床或解剖教材级细分词；核心库保留通用身体部位和症状"
+    },
+    {
+      "term": "quantity surveyor",
+      "reason": "地域性、过细职业或错误复合词；保留 seller、shopkeeper、driver、social worker 等通用概念。"
+    },
+    {
+      "term": "quaver",
+      "reason": "过细的乐理、乐器或表演术语；日常 AAC 可用“音乐/音符/乐器/表演”表达"
+    },
+    {
+      "term": "queimada",
+      "reason": "西班牙地方节庆或习俗；地域性过强"
+    },
+    {
+      "term": "queimadas",
+      "reason": "西班牙地方节庆或习俗；地域性过强"
+    },
+    {
+      "term": "R",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "r",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "radio CD",
+      "reason": "陈旧或过细的电子、通信媒介，不适合作为现代紧凑核心词库"
+    },
+    {
+      "term": "radius",
+      "reason": "临床或解剖教材级细分词；核心库保留通用身体部位和症状"
+    },
+    {
+      "term": "rally car",
+      "reason": "陈旧、幻想或非常专门的交通工具/活动，不属于日常出行核心词"
+    },
+    {
+      "term": "razor clam",
+      "reason": "过细动物、植物或鱼类物种；保留上位通用词"
+    },
+    {
+      "term": "razor shell",
+      "reason": "过细动物、植物或鱼类物种；保留上位通用词"
+    },
+    {
+      "term": "recipes",
+      "reason": "错误共图别名：image is a physical recipe book, while recipes is broader content"
+    },
+    {
+      "term": "record player",
+      "reason": "陈旧或过细的电子、通信媒介，不适合作为现代紧凑核心词库"
+    },
+    {
+      "term": "representation of a giant in processions",
+      "reason": "西班牙地域节庆或民俗专有词，通用 AAC 使用概率极低"
+    },
+    {
+      "term": "retina",
+      "reason": "临床或解剖教材级细分词；核心库保留通用身体部位和症状"
+    },
+    {
+      "term": "rhea",
+      "reason": "过细动物、植物或鱼类物种；保留上位通用词"
+    },
+    {
+      "term": "right clic",
+      "reason": "陈旧或过细的电子、通信媒介，不适合作为现代紧凑核心词库"
+    },
+    {
+      "term": "rim",
+      "reason": "车辆或船舶的过细零件词；核心库保留车、船、轮、刹车等常用概念"
+    },
+    {
+      "term": "River Ebro",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "ro staple",
+      "reason": "生硬、残缺或误拼的教学/符号词条，不能直接作为可靠 AAC 标签"
+    },
+    {
+      "term": "Rome Coliseum",
+      "reason": "具体地标专名；紧凑 AAC 词库保留通用场所词即可"
+    },
+    {
+      "term": "roof rack",
+      "reason": "车辆或船舶的过细零件词；核心库保留车、船、轮、刹车等常用概念"
+    },
+    {
+      "term": "rotation",
+      "reason": "专业课程、地理或旧技术术语；不属于实用 AAC 核心词"
+    },
+    {
+      "term": "round table with heather underneath",
+      "reason": "过细房间、商店或物件组合，可由更通用的房间/商店/桌子词表达。"
+    },
+    {
+      "term": "rounds of escape",
+      "reason": "过细的行政、法律或机构术语，不是日常沟通核心词"
+    },
+    {
+      "term": "Rubik's Cube",
+      "reason": "品牌或商标专名；通用词库不单独收录"
+    },
+    {
+      "term": "rudder",
+      "reason": "车辆或船舶的过细零件词；核心库保留车、船、轮、刹车等常用概念"
+    },
+    {
+      "term": "russian salad",
+      "reason": "地域性或过细食品、包装食品；已有更通用食物词"
+    },
+    {
+      "term": "S",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "s",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "saccharin jar",
+      "reason": "地域性或过细的食品、包装和菜名；核心库保留通用食物名称"
+    },
+    {
+      "term": "saffron flowers",
+      "reason": "非常细分的物种或园艺名称；核心库保留常见动物、植物及上位词"
+    },
+    {
+      "term": "Sagrada Familia",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Saint George",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "Saint George and the Dragon",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "Saint John's day",
+      "reason": "西班牙地方节庆或习俗；地域性过强"
+    },
+    {
+      "term": "Saint Lawrence",
+      "reason": "西班牙地方节庆或习俗；地域性过强"
+    },
+    {
+      "term": "Salamanca",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Sancho Panza",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "sandbags",
+      "reason": "特定学校制度、专门教室/课程或低频器材；通用 book、school、room、teacher 等已覆盖。"
+    },
+    {
+      "term": "Saragossa",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "sardina",
+      "reason": "过细动物、植物或鱼类物种；保留上位通用词"
+    },
+    {
+      "term": "sashes",
+      "reason": "人工复核：低频、过细或含义含糊，不纳入实用 AAC 核心包"
+    },
+    {
+      "term": "Science's books",
+      "reason": "特定学校制度、专门教室/课程或低频器材；通用 book、school、room、teacher 等已覆盖。"
+    },
+    {
+      "term": "sclera",
+      "reason": "临床或解剖教材级细分词；核心库保留通用身体部位和症状"
+    },
+    {
+      "term": "sea basses",
+      "reason": "过细动物、植物或鱼类物种；保留上位通用词"
+    },
+    {
+      "term": "sea bream",
+      "reason": "过细动物、植物或鱼类物种；保留上位通用词"
+    },
+    {
+      "term": "sea breams",
+      "reason": "过细动物、植物或鱼类物种；保留上位通用词"
+    },
+    {
+      "term": "sea horses",
+      "reason": "过细动物、植物或鱼类物种；保留上位通用词"
+    },
+    {
+      "term": "seasoning",
+      "reason": "错误共图别名：image is a bottle of olive oil; seasoning is too broad"
+    },
+    {
+      "term": "second in command",
+      "reason": "过细的行政、法律或机构术语，不是日常沟通核心词"
+    },
+    {
+      "term": "Segovia",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Sellotape",
+      "reason": "品牌或商标专名；通用词库不单独收录"
+    },
+    {
+      "term": "semibreve",
+      "reason": "过细的乐理、乐器或表演术语；日常 AAC 可用“音乐/音符/乐器/表演”表达"
+    },
+    {
+      "term": "semolina packets",
+      "reason": "地域性或过细的食品、包装和菜名；核心库保留通用食物名称"
+    },
+    {
+      "term": "Seville",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "sewage treatment plants",
+      "reason": "过细的地理、建筑或自然科学教材词，不属于日常核心 AAC"
+    },
+    {
+      "term": "sheet opener",
+      "reason": "过细的工业、木工或施工器具；核心库保留锤子、锯、扳手等通用工具"
+    },
+    {
+      "term": "Sleeping Beauty",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "Snow White",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "so syllable",
+      "reason": "生硬、残缺或误拼的教学/符号词条，不能直接作为可靠 AAC 标签"
+    },
+    {
+      "term": "social intervention instructor",
+      "reason": "地域性、过细职业或错误复合词；保留 seller、shopkeeper、driver、social worker 等通用概念。"
+    },
+    {
+      "term": "Social Sciences' books",
+      "reason": "特定学校制度、专门教室/课程或低频器材；通用 book、school、room、teacher 等已覆盖。"
+    },
+    {
+      "term": "socio cultural dinamizator",
+      "reason": "过细、陈旧或生硬的文娱职业/栏目词，不适合作为紧凑核心词库"
+    },
+    {
+      "term": "soft fruit candy",
+      "reason": "地域性或过细食品、包装食品；已有更通用食物词"
+    },
+    {
+      "term": "soft spicy sausage",
+      "reason": "地域性或过细的食品、包装和菜名；核心库保留通用食物名称"
+    },
+    {
+      "term": "Soria",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Souther hemisphere",
+      "reason": "专业课程、地理或旧技术术语；不属于实用 AAC 核心词"
+    },
+    {
+      "term": "special activities senior technician",
+      "reason": "过细的行政、法律或机构术语，不是日常沟通核心词"
+    },
+    {
+      "term": "spermatozoid",
+      "reason": "临床或解剖教材级细分词；核心库保留通用身体部位和症状"
+    },
+    {
+      "term": "Spiderman",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "spiral-shaped pastry",
+      "reason": "地域性或过细食品、包装食品；已有更通用食物词"
+    },
+    {
+      "term": "spoke",
+      "reason": "车辆或船舶的过细零件词；核心库保留车、船、轮、刹车等常用概念"
+    },
+    {
+      "term": "sport activities trainer",
+      "reason": "过细、陈旧或生硬的文娱职业/栏目词，不适合作为紧凑核心词库"
+    },
+    {
+      "term": "spread",
+      "reason": "错误共图别名：image specifically shows applying sun lotion; generic spread is ambiguous"
+    },
+    {
+      "term": "stagecoach",
+      "reason": "陈旧、幻想或非常专门的交通工具/活动，不属于日常出行核心词"
+    },
+    {
+      "term": "Statue of Liberty",
+      "reason": "具体地标专名；紧凑 AAC 词库保留通用场所词即可"
+    },
+    {
+      "term": "stave",
+      "reason": "过细的乐理、乐器或表演术语；日常 AAC 可用“音乐/音符/乐器/表演”表达"
+    },
+    {
+      "term": "steal the bacon",
+      "reason": "非常小众或地域性的游戏项目；核心库已有“游戏/棋盘游戏/球类”等上位词"
+    },
+    {
+      "term": "sternum",
+      "reason": "临床或解剖教材级细分词；核心库保留通用身体部位和症状"
+    },
+    {
+      "term": "stockholding",
+      "reason": "过细的行政、法律或机构术语，不是日常沟通核心词"
+    },
+    {
+      "term": "strip of fried dough",
+      "reason": "地域性或过细的食品、包装和菜名；核心库保留通用食物名称"
+    },
+    {
+      "term": "student's representatives office",
+      "reason": "特定学校制度、专门教室/课程或低频器材；通用 book、school、room、teacher 等已覆盖。"
+    },
+    {
+      "term": "sun eclipse",
+      "reason": "专业课程、地理或旧技术术语；不属于实用 AAC 核心词"
+    },
+    {
+      "term": "Superman",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "sweet seller",
+      "reason": "地域性、过细职业或错误复合词；保留 seller、shopkeeper、driver、social worker 等通用概念。"
+    },
+    {
+      "term": "switchboard room",
+      "reason": "过细房间、商店或物件组合，可由更通用的房间/商店/桌子词表达。"
+    },
+    {
+      "term": "switchboards",
+      "reason": "陈旧或过细的电子、通信媒介，不适合作为现代紧凑核心词库"
+    },
+    {
+      "term": "T",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "t",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "tabernacles",
+      "reason": "非常小众或仪式性的器物，通用 AAC 中优先级很低"
+    },
+    {
+      "term": "Taj Mahal",
+      "reason": "具体地标专名；紧凑 AAC 词库保留通用场所词即可"
+    },
+    {
+      "term": "tamer",
+      "reason": "过细、陈旧或生硬的文娱职业/栏目词，不适合作为紧凑核心词库"
+    },
+    {
+      "term": "tapeworm",
+      "reason": "过细的专科诊疗或生殖医学术语；核心库保留医生、检查、治疗等上位词"
+    },
+    {
+      "term": "Tarragona",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "telephone cabin",
+      "reason": "陈旧或过细的电子、通信媒介，不适合作为现代紧凑核心词库"
+    },
+    {
+      "term": "Tenerife",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "tepee",
+      "reason": "地域文化或非常具体的建筑/游乐子型；用户已明确点名 igloo 一类应删除。"
+    },
+    {
+      "term": "Teruel",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Teruel province",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Tetris",
+      "reason": "具体历史、文学、影视或品牌专名，不属于通用沟通词"
+    },
+    {
+      "term": "the (fem.)",
+      "reason": "生硬、残缺或误拼的教学/符号词条，不能直接作为可靠 AAC 标签"
+    },
+    {
+      "term": "The Puss in Boots",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "thin red paprika sausage",
+      "reason": "地域性或过细食品、包装食品；已有更通用食物词"
+    },
+    {
+      "term": "thistle",
+      "reason": "人工复核：低频、过细或含义含糊，不纳入实用 AAC 核心包"
+    },
+    {
+      "term": "thistles",
+      "reason": "人工复核：低频、过细或含义含糊，不纳入实用 AAC 核心包"
+    },
+    {
+      "term": "thoroughfare",
+      "reason": "人工复核：低频、过细或含义含糊，不纳入实用 AAC 核心包"
+    },
+    {
+      "term": "three quartes to",
+      "reason": "生硬、残缺或误拼的教学/符号词条，不能直接作为可靠 AAC 标签"
+    },
+    {
+      "term": "Three Wise Men",
+      "reason": "宗教节庆中的具体人物或仪式细项；核心库保留通用节日词即可"
+    },
+    {
+      "term": "tibia",
+      "reason": "临床或解剖教材级细分词；核心库保留通用身体部位和症状"
+    },
+    {
+      "term": "tightrope walker",
+      "reason": "过细、陈旧或生硬的文娱职业/栏目词，不适合作为紧凑核心词库"
+    },
+    {
+      "term": "Tió de nadal",
+      "reason": "西班牙地方节庆或习俗；地域性过强"
+    },
+    {
+      "term": "to blow (someone) a raspberry",
+      "reason": "用户明确要求删除：低频俚语动作"
+    },
+    {
+      "term": "to cremate",
+      "reason": "低频火葬动作；与火葬场同组移出核心包"
+    },
+    {
+      "term": "to get worked up",
+      "reason": "错误共图别名：image shows generic heat; symptom and emotional action are distinct"
+    },
+    {
+      "term": "to machine-sawing",
+      "reason": "过细的工业、木工或施工器具；核心库保留锤子、锯、扳手等通用工具"
+    },
+    {
+      "term": "Toledo",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Tom Thumb",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "tomantic",
+      "reason": "生硬、残缺或误拼的教学/符号词条，不能直接作为可靠 AAC 标签"
+    },
+    {
+      "term": "toy race car",
+      "reason": "陈旧、幻想或非常专门的交通工具/活动，不属于日常出行核心词"
+    },
+    {
+      "term": "training workshop",
+      "reason": "特定学校制度、专门教室/课程或低频器材；通用 book、school、room、teacher 等已覆盖。"
+    },
+    {
+      "term": "transaction room",
+      "reason": "过细房间、商店或物件组合，可由更通用的房间/商店/桌子词表达。"
+    },
+    {
+      "term": "transverse flute",
+      "reason": "过细的乐理、乐器或表演术语；日常 AAC 可用“音乐/音符/乐器/表演”表达"
+    },
+    {
+      "term": "trapezius",
+      "reason": "临床或解剖教材级细分词；核心库保留通用身体部位和症状"
+    },
+    {
+      "term": "traslation",
+      "reason": "生硬、残缺或误拼的教学/符号词条，不能直接作为可靠 AAC 标签"
+    },
+    {
+      "term": "triceps",
+      "reason": "临床或解剖教材级细分词；核心库保留通用身体部位和症状"
+    },
+    {
+      "term": "turbot",
+      "reason": "过细动物、植物或鱼类物种；保留上位通用词"
+    },
+    {
+      "term": "turbots",
+      "reason": "地域性或过细的食品、包装和菜名；核心库保留通用食物名称"
+    },
+    {
+      "term": "turkey cold meat",
+      "reason": "地域性或过细食品、包装食品；已有更通用食物词"
+    },
+    {
+      "term": "turron (candy)",
+      "reason": "地域性或过细的食品、包装和菜名；核心库保留通用食物名称"
+    },
+    {
+      "term": "Tutankhamon",
+      "reason": "人物、童话或影视角色专名；不作为通用 AAC 核心词"
+    },
+    {
+      "term": "type of mandolin",
+      "reason": "过细的乐理、乐器或表演术语；日常 AAC 可用“音乐/音符/乐器/表演”表达"
+    },
+    {
+      "term": "U",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "u",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "ulna",
+      "reason": "临床或解剖教材级细分词；核心库保留通用身体部位和症状"
+    },
+    {
+      "term": "UN",
+      "reason": "国际机构缩写；日常沟通使用率低"
+    },
+    {
+      "term": "UNESCO",
+      "reason": "国际机构缩写；日常沟通使用率低"
+    },
+    {
+      "term": "UNHCR",
+      "reason": "国际机构缩写；日常沟通使用率低"
+    },
+    {
+      "term": "UNICEF",
+      "reason": "国际机构缩写；日常沟通使用率低"
+    },
+    {
+      "term": "upon - to the",
+      "reason": "生硬、残缺或误拼的教学/符号词条，不能直接作为可靠 AAC 标签"
+    },
+    {
+      "term": "V",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "v",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "Valencia",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Valencia Region",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Valladolid",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "vertebras",
+      "reason": "临床或解剖教材级细分词；核心库保留通用身体部位和症状"
+    },
+    {
+      "term": "vertebrate",
+      "reason": "专业课程、地理或旧技术术语；不属于实用 AAC 核心词"
+    },
+    {
+      "term": "video tape",
+      "reason": "陈旧或过细的电子、通信媒介，不适合作为现代紧凑核心词库"
+    },
+    {
+      "term": "videotapes",
+      "reason": "陈旧或过细的电子、通信媒介，不适合作为现代紧凑核心词库"
+    },
+    {
+      "term": "viviparous",
+      "reason": "专业课程、地理或旧技术术语；不属于实用 AAC 核心词"
+    },
+    {
+      "term": "W",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "w",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "wall lizard",
+      "reason": "过细动物、植物或鱼类物种；保留上位通用词"
+    },
+    {
+      "term": "WBG",
+      "reason": "国际机构缩写；日常沟通使用率低"
+    },
+    {
+      "term": "weeping willow tree",
+      "reason": "过细动物、植物或鱼类物种；保留上位通用词"
+    },
+    {
+      "term": "WFP",
+      "reason": "国际机构缩写；日常沟通使用率低"
+    },
+    {
+      "term": "wickerwork",
+      "reason": "非常小众或仪式性的器物，通用 AAC 中优先级很低"
+    },
+    {
+      "term": "windshield wipers",
+      "reason": "车辆或船舶的过细零件词；核心库保留车、船、轮、刹车等常用概念"
+    },
+    {
+      "term": "wineskins",
+      "reason": "非常小众或仪式性的器物，通用 AAC 中优先级很低"
+    },
+    {
+      "term": "wireless telephones",
+      "reason": "陈旧或过细的电子、通信媒介，不适合作为现代紧凑核心词库"
+    },
+    {
+      "term": "wooden dowel",
+      "reason": "过细的工业、木工或施工器具；核心库保留锤子、锯、扳手等通用工具"
+    },
+    {
+      "term": "work",
+      "reason": "错误英文别名：所选画面是装框风景画，且原 manifest 已把 painting 记录为同图别名；不是职业/工作。"
+    },
+    {
+      "term": "workshop room",
+      "reason": "特定学校制度、专门教室/课程或低频器材；通用 book、school、room、teacher 等已覆盖。"
+    },
+    {
+      "term": "workshop teacher",
+      "reason": "特定学校制度、专门教室/课程或低频器材；通用 book、school、room、teacher 等已覆盖。"
+    },
+    {
+      "term": "X",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "x",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "Y",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "York ham",
+      "reason": "地域性或过细食品、包装食品；已有更通用食物词"
+    },
+    {
+      "term": "young hake",
+      "reason": "过细动物、植物或鱼类物种；保留上位通用词"
+    },
+    {
+      "term": "young hakes",
+      "reason": "非常细分的物种或园艺名称；核心库保留常见动物、植物及上位词"
+    },
+    {
+      "term": "Z",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "z",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "zambomba (traditional drum)",
+      "reason": "西班牙地域节庆或民俗专有词，通用 AAC 使用概率极低"
+    },
+    {
+      "term": "Zamora",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "Zaragoza's Conference Hall",
+      "reason": "西班牙地方地名、行政区或机构；不属于通用日常 AAC 核心词"
+    },
+    {
+      "term": "zils",
+      "reason": "过细的乐理、乐器或表演术语；日常 AAC 可用“音乐/音符/乐器/表演”表达"
+    },
+    {
+      "term": "Ñ",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    },
+    {
+      "term": "ñ",
+      "reason": "这批是西班牙字母大小写卡，不是日常 AAC 图片词；翻译中的字母序号还互相冲突。一次删除 48 张。"
+    }
+  ],
+  "semanticMergeGroups": [
+    {
+      "canonicalTerm": "a pinch",
+      "mergedTerms": [
+        "bit"
+      ],
+      "reason": "最终同名复核：基础词库中均表示一点、少量"
+    },
+    {
+      "canonicalTerm": "abacus",
+      "mergedTerms": [
+        "abaci"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面"
+    },
+    {
+      "canonicalTerm": "absent-minded",
+      "mergedTerms": [
+        "absentminded"
+      ],
+      "reason": "hyphenation variant"
+    },
+    {
+      "canonicalTerm": "accident",
+      "mergedTerms": [
+        "accidents",
+        "crash",
+        "train accident"
+      ],
+      "reason": "紧凑核心安全词库保留通用 accident。；同一中文名称“事故”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "accordion",
+      "mergedTerms": [
+        "accordions"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“手风琴”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "actress",
+      "mergedTerms": [
+        "actresses"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“女演员”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "adventure",
+      "mergedTerms": [
+        "adventures"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“冒险”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "air bed",
+      "mergedTerms": [
+        "airbed"
+      ],
+      "reason": "spacing variant"
+    },
+    {
+      "canonicalTerm": "air conditioning",
+      "mergedTerms": [
+        "air-conditioning"
+      ],
+      "reason": "hyphenation variant"
+    },
+    {
+      "canonicalTerm": "airliner",
+      "mergedTerms": [
+        "airliners"
+      ],
+      "reason": "同一中文名称“客机”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "airport",
+      "mergedTerms": [
+        "airports"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“机场”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "alarm",
+      "mergedTerms": [
+        "alarms"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“警报”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "allergy",
+      "mergedTerms": [
+        "allergies"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“过敏”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "almond",
+      "mergedTerms": [
+        "almonds"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“杏仁”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "although",
+      "mergedTerms": [
+        "even though"
+      ],
+      "reason": "same conjunction meaning"
+    },
+    {
+      "canonicalTerm": "ambulance",
+      "mergedTerms": [
+        "ambulances"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“救护车”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "and that is the end of the story",
+      "mergedTerms": [
+        "And they all lived happily ever after"
+      ],
+      "reason": "人工复核：中文同名且画面语义等价"
+    },
+    {
+      "canonicalTerm": "angel",
+      "mergedTerms": [
+        "angels"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“天使”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "animal",
+      "mergedTerms": [
+        "animals"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“动物”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "anorak",
+      "mergedTerms": [
+        "anoraks"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“风衣”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "antenna",
+      "mergedTerms": [
+        "aerials"
+      ],
+      "reason": "最终同名复核：英美同义词，均为天线"
+    },
+    {
+      "canonicalTerm": "archer",
+      "mergedTerms": [
+        "archers"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“弓箭手”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "architect",
+      "mergedTerms": [
+        "architects"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“建筑师”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "armadillo",
+      "mergedTerms": [
+        "armadillos"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“犰狳”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "artery",
+      "mergedTerms": [
+        "arteries"
+      ],
+      "reason": "同一中文名称“动脉”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "ashtray",
+      "mergedTerms": [
+        "ashtrays"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“烟灰缸”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "astronaut",
+      "mergedTerms": [
+        "astronauts",
+        "cosmonauts"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；最终同名复核：同义职业称呼及数量变体；同一中文名称“宇航员”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "atheist",
+      "mergedTerms": [
+        "atheists"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“无神论者”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "athlete",
+      "mergedTerms": [
+        "athlets"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面"
+    },
+    {
+      "canonicalTerm": "attic",
+      "mergedTerms": [
+        "attics"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“阁楼”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "aubergine",
+      "mergedTerms": [
+        "aubergines"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“茄子”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "autist",
+      "mergedTerms": [
+        "autists"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；同一中文名称“自闭症患者”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "avocado",
+      "mergedTerms": [
+        "avocados"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“鳄梨”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "baby",
+      "mergedTerms": [
+        "babies"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“婴儿”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "baby's bottle",
+      "mergedTerms": [
+        "feeding bottles"
+      ],
+      "reason": "最终同名复核：同义词及数量变体，都是奶瓶"
+    },
+    {
+      "canonicalTerm": "bacterium",
+      "mergedTerms": [
+        "bacteria"
+      ],
+      "reason": "基础 AAC 不细分微生物单复数术语。；同一中文名称“细菌”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "balloon",
+      "mergedTerms": [
+        "balloons"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“气球”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "banana",
+      "mergedTerms": [
+        "bananas"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“香蕉”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "bank",
+      "mergedTerms": [
+        "banks"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“银行”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "bank transfer",
+      "mergedTerms": [
+        "bank transfers"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“银行转账”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "baptism",
+      "mergedTerms": [
+        "baptisms"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“洗礼”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "barbecue",
+      "mergedTerms": [
+        "barbecues"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“烧烤”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "basket",
+      "mergedTerms": [
+        "baskets",
+        "laundry basket",
+        "laundry baskets"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“篮子”的英文单复数重复；同一中文名称“洗衣篮”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "basketball",
+      "mergedTerms": [
+        "balls",
+        "basket ball",
+        "basketballs"
+      ],
+      "reason": "spacing variant；最终同名复核：画面均表达篮球；同一中文名称“篮球”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "basketball court",
+      "mergedTerms": [
+        "basketball courts"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“篮球场”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "battery",
+      "mergedTerms": [
+        "batteries"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“电池”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "bays",
+      "mergedTerms": [
+        "gulf"
+      ],
+      "reason": "最终同名复核：紧凑词库统一为海湾"
+    },
+    {
+      "canonicalTerm": "be",
+      "mergedTerms": [
+        "is"
+      ],
+      "reason": "最终同名复核：be 与 is 是同一系动词的变形"
+    },
+    {
+      "canonicalTerm": "bed",
+      "mergedTerms": [
+        "beds"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“床”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "bee",
+      "mergedTerms": [
+        "bees"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“蜜蜂”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "beer",
+      "mergedTerms": [
+        "beers"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“啤酒”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "bell",
+      "mergedTerms": [
+        "electric bell"
+      ],
+      "reason": "最终同名复核：过细子型合并为铃"
+    },
+    {
+      "canonicalTerm": "bell tower",
+      "mergedTerms": [
+        "bell towers"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“钟楼”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "belt",
+      "mergedTerms": [
+        "belts"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“腰带”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "bench",
+      "mergedTerms": [
+        "benches"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“长凳”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "bib",
+      "mergedTerms": [
+        "bibs"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“围兜”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "bible",
+      "mergedTerms": [
+        "Bibles"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“圣经”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "bidet",
+      "mergedTerms": [
+        "bidets"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“坐浴盆”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "bike",
+      "mergedTerms": [
+        "bicycle",
+        "bicycles",
+        "bikes"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“自行车”的英文单复数重复；同一中文名称“自行车”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "bikini",
+      "mergedTerms": [
+        "bikinis"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“比基尼”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "birthday cake",
+      "mergedTerms": [
+        "birthday cakes"
+      ],
+      "reason": "同一中文名称“生日蛋糕”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "biscuit",
+      "mergedTerms": [
+        "biscuit packet",
+        "biscuit packets",
+        "biscuits"
+      ],
+      "reason": "packaging detail intentionally ignored；packaging and quantity details intentionally ignored；same category and Chinese label; quantity distinction intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“饼干”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "blacksmith",
+      "mergedTerms": [
+        "blacksmiths"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“铁匠”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "blessing",
+      "mergedTerms": [
+        "blessings"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“祝福”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "blocks",
+      "mergedTerms": [
+        "construction kit"
+      ],
+      "reason": "两图都表达拼搭积木。"
+    },
+    {
+      "canonicalTerm": "blog",
+      "mergedTerms": [
+        "binnacle",
+        "binnacles",
+        "blogs"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“博客”的英文单复数重复；同一中文名称“罗经柜”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "bomb",
+      "mergedTerms": [
+        "bombs"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“炸弹”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "bongo",
+      "mergedTerms": [
+        "bongos"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“邦戈鼓”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "book",
+      "mergedTerms": [
+        "books"
+      ],
+      "reason": "紧凑 AAC 词库不保留纯数量变化。"
+    },
+    {
+      "canonicalTerm": "bottle",
+      "mergedTerms": [
+        "bottles"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“瓶子”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "bow",
+      "mergedTerms": [
+        "bows"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“弓”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "box",
+      "mergedTerms": [
+        "boxes"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“盒子”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "boxer",
+      "mergedTerms": [
+        "boxers"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“拳击手”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "brain",
+      "mergedTerms": [
+        "brains"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“大脑”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "bread",
+      "mergedTerms": [
+        "bread loaf"
+      ],
+      "reason": "form detail intentionally ignored；人工复核：中文同名且画面语义等价"
+    },
+    {
+      "canonicalTerm": "breadstick",
+      "mergedTerms": [
+        "bread stick"
+      ],
+      "reason": "spacing variant"
+    },
+    {
+      "canonicalTerm": "breast",
+      "mergedTerms": [
+        "boobs",
+        "breasts"
+      ],
+      "reason": "neutral and informal synonym；同一中文名称“乳房”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "broad bean",
+      "mergedTerms": [
+        "broad beans"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“蚕豆”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "broccoli",
+      "mergedTerms": [
+        "broccolis"
+      ],
+      "reason": "同一中文名称“西兰花”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "broom",
+      "mergedTerms": [
+        "brooms"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“扫帚”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "building",
+      "mergedTerms": [
+        "buildings"
+      ],
+      "reason": "同一中文名称“建筑物”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "bullet",
+      "mergedTerms": [
+        "bullets"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“子弹”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "burn",
+      "mergedTerms": [
+        "burns"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“烧伤”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "businesswoman",
+      "mergedTerms": [
+        "businesswomen"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面"
+    },
+    {
+      "canonicalTerm": "butcher",
+      "mergedTerms": [
+        "butchers"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“屠夫”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "butterfly",
+      "mergedTerms": [
+        "butterflies"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“蝴蝶”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "button",
+      "mergedTerms": [
+        "buttons"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“按钮”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "bycicle lane",
+      "mergedTerms": [
+        "cycle paths"
+      ],
+      "reason": "最终同名复核：同义的自行车道名称及数量变体"
+    },
+    {
+      "canonicalTerm": "cabbage",
+      "mergedTerms": [
+        "cabbages"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“卷心菜”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "cabin",
+      "mergedTerms": [
+        "cabins",
+        "huts"
+      ],
+      "reason": "基础 AAC 用一个小屋概念即可。；同一中文名称“小屋”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "cactus",
+      "mergedTerms": [
+        "cacti"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“仙人掌”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "calculator",
+      "mergedTerms": [
+        "calculators"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“计算器”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "calendar",
+      "mergedTerms": [
+        "almanac",
+        "calendars"
+      ],
+      "reason": "紧凑词库保留更常用 calendar。；同一中文名称“日历”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "camel",
+      "mergedTerms": [
+        "camels"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“骆驼”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "camera",
+      "mergedTerms": [
+        "cameras"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“相机”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "camp",
+      "mergedTerms": [
+        "camps"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“营地”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "canal",
+      "mergedTerms": [
+        "canals"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“运河”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "canary",
+      "mergedTerms": [
+        "canaries"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“金丝雀”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "candle",
+      "mergedTerms": [
+        "candles"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“蜡烛”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "canoe",
+      "mergedTerms": [
+        "canoes"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“独木舟”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "canoeist",
+      "mergedTerms": [
+        "canoeists"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“独木舟运动员”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "canteen",
+      "mergedTerms": [
+        "canteens"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“食堂”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "capsule",
+      "mergedTerms": [
+        "capsules"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“胶囊”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "captain",
+      "mergedTerms": [
+        "captains"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“队长”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "car",
+      "mergedTerms": [
+        "automobiles",
+        "cars"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；最终同名复核：car 与 automobile 是同义词；同一中文名称“汽车”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "carbohydrate",
+      "mergedTerms": [
+        "carbohydrates"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“碳水化合物”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "carnation",
+      "mergedTerms": [
+        "carnations"
+      ],
+      "reason": "同一中文名称“康乃馨”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "carousel",
+      "mergedTerms": [
+        "carousels"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“旋转木马”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "carp",
+      "mergedTerms": [
+        "carps"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“鲤鱼”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "carpenter",
+      "mergedTerms": [
+        "carpenters"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“木匠”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "carpentry",
+      "mergedTerms": [
+        "carpentries"
+      ],
+      "reason": "非自然复数重复。；同一中文名称“木工”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "carpet",
+      "mergedTerms": [
+        "carpets"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“地毯”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "carriage",
+      "mergedTerms": [
+        "horsecar",
+        "horsecars"
+      ],
+      "reason": "最终同名复核：紧凑词库统一为马车；同一中文名称“马车”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "castanet",
+      "mergedTerms": [
+        "castanets"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“响板”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "castle",
+      "mergedTerms": [
+        "castles"
+      ],
+      "reason": "紧凑词库以 castle 覆盖城堡/堡垒子型。；同一中文名称“城堡”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "cat",
+      "mergedTerms": [
+        "black cat"
+      ],
+      "reason": "人工复核：中文同名且画面语义等价"
+    },
+    {
+      "canonicalTerm": "cave man",
+      "mergedTerms": [
+        "cave men",
+        "caveman",
+        "cavemen"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“穴居人”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "celery",
+      "mergedTerms": [
+        "celeries"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“芹菜”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "cemetery",
+      "mergedTerms": [
+        "cemeteries"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“墓地”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "chain",
+      "mergedTerms": [
+        "chains"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“链条”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "chameleon",
+      "mergedTerms": [
+        "chameleons"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“变色龙”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "change",
+      "mergedTerms": [
+        "alter"
+      ],
+      "reason": "最终同名复核：同义的改变动作"
+    },
+    {
+      "canonicalTerm": "changing room",
+      "mergedTerms": [
+        "dressing rooms"
+      ],
+      "reason": "最终同名复核：同义场所及数量变体"
+    },
+    {
+      "canonicalTerm": "charger",
+      "mergedTerms": [
+        "chargers"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“充电器”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "cheap",
+      "mergedTerms": [
+        "inexpensive"
+      ],
+      "reason": "same compact-vocabulary meaning；人工复核：中文同名且画面语义等价"
+    },
+    {
+      "canonicalTerm": "cheese",
+      "mergedTerms": [
+        "pieces of cheese",
+        "slices of cheese"
+      ],
+      "reason": "portion detail intentionally ignored；人工复核：中文同名且画面语义等价"
+    },
+    {
+      "canonicalTerm": "chef",
+      "mergedTerms": [
+        "chefs",
+        "cook",
+        "cooks"
+      ],
+      "reason": "人工复核：中文同名且画面语义等价；最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“厨师”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "cheque",
+      "mergedTerms": [
+        "cheques"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“支票”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "cherry",
+      "mergedTerms": [
+        "cherries"
+      ],
+      "reason": "忽略单复数，并改用果实画面而非树木画面；same category and Chinese label; quantity distinction intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“樱桃”的英文单复数重复",
+      "imageTerm": "cherries"
+    },
+    {
+      "canonicalTerm": "chest of drawers",
+      "mergedTerms": [
+        "chests of drawers"
+      ],
+      "reason": "最终同名复核：英文单复数重复"
+    },
+    {
+      "canonicalTerm": "chicken",
+      "mergedTerms": [
+        "chickens"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“鸡”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "chickpea",
+      "mergedTerms": [
+        "chickpeas"
+      ],
+      "reason": "同一中文名称“鹰嘴豆”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "chin",
+      "mergedTerms": [
+        "chins"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“下巴”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "chocolate",
+      "mergedTerms": [
+        "chocolate box",
+        "chocolates"
+      ],
+      "reason": "packaging detail intentionally ignored；same category and Chinese label; quantity distinction intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“巧克力”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "Christmas decorations",
+      "mergedTerms": [
+        "chirstmas decorations"
+      ],
+      "reason": "最终同名复核：明显拼写错误，都是圣诞装饰品"
+    },
+    {
+      "canonicalTerm": "Christmas tree",
+      "mergedTerms": [
+        "christmas trees"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数与大小写重复。；同一中文名称“圣诞树”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "chrysalis",
+      "mergedTerms": [
+        "chrysalides"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“蛹”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "cicada",
+      "mergedTerms": [
+        "cicadas"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“蝉”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "cinema",
+      "mergedTerms": [
+        "cinemas"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“电影院”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "circuit",
+      "mergedTerms": [
+        "circuits",
+        "electronic circuit"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数和电子电路子型合并。；同一中文名称“电路”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "city",
+      "mergedTerms": [
+        "cities"
+      ],
+      "reason": "同一中文名称“城市”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "clarinet",
+      "mergedTerms": [
+        "clarinets"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“单簧管”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "clean the window",
+      "mergedTerms": [
+        "clean the windows",
+        "to clean the window",
+        "to clean the windows"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；只差单复数或不定式写法。；同一中文名称“擦窗户”的英文单复数重复；同一中文名称“清洁窗户”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "climber",
+      "mergedTerms": [
+        "mountaineer"
+      ],
+      "reason": "人工复核：中文同名且画面语义等价"
+    },
+    {
+      "canonicalTerm": "clothes hanger",
+      "mergedTerms": [
+        "coat hanger"
+      ],
+      "reason": "same object in compact vocabulary；人工复核：中文同名且画面语义等价"
+    },
+    {
+      "canonicalTerm": "clothes store",
+      "mergedTerms": [
+        "boutique",
+        "clothes shop"
+      ],
+      "reason": "最终同名复核：紧凑词库统一为服装店；最终同名复核：同义的服装店名称"
+    },
+    {
+      "canonicalTerm": "coat",
+      "mergedTerms": [
+        "coats",
+        "dress",
+        "dresses"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“外套”的英文单复数重复；同一中文名称“连衣裙”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "cocktail",
+      "mergedTerms": [
+        "cocktails"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“鸡尾酒”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "cocoa bean",
+      "mergedTerms": [
+        "cocoa beans"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“可可豆”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "coconut",
+      "mergedTerms": [
+        "coconuts"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“椰子”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "coconut palm",
+      "mergedTerms": [
+        "coconut palms"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“椰子树”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "cod",
+      "mergedTerms": [
+        "cods"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“鳕鱼”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "code",
+      "mergedTerms": [
+        "codes"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；两图都是条码，仅多复数标记。；同一中文名称“代码”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "coffee",
+      "mergedTerms": [
+        "coffee cup",
+        "coffee packet",
+        "coffee packets",
+        "coffees"
+      ],
+      "reason": "packaging detail intentionally ignored；serving container intentionally ignored；packaging and quantity details intentionally ignored；人工复核：中文同名且画面语义等价；最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“咖啡”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "coffee maker",
+      "mergedTerms": [
+        "coffee-maker"
+      ],
+      "reason": "hyphenation variant；人工复核：中文同名且画面语义等价"
+    },
+    {
+      "canonicalTerm": "colour",
+      "mergedTerms": [
+        "colours"
+      ],
+      "reason": "同一中文名称“颜色”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "comet",
+      "mergedTerms": [
+        "comets"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“彗星”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "condensed milk",
+      "mergedTerms": [
+        "condensed milk cans"
+      ],
+      "reason": "packaging and quantity details intentionally ignored"
+    },
+    {
+      "canonicalTerm": "conference",
+      "mergedTerms": [
+        "convention"
+      ],
+      "reason": "最终同名复核：紧凑词库统一为大会"
+    },
+    {
+      "canonicalTerm": "constellation",
+      "mergedTerms": [
+        "constellations"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“星座”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "control",
+      "mergedTerms": [
+        "controls",
+        "remote control",
+        "remote controls"
+      ],
+      "reason": "两图都是控制器，单复数重复。；同一中文名称“控制”的英文单复数重复；同一中文名称“遥控器”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "corridor",
+      "mergedTerms": [
+        "corridors"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“走廊”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "cotton bud",
+      "mergedTerms": [
+        "cotton swab"
+      ],
+      "reason": "最终同名复核：英美用词，都是棉签"
+    },
+    {
+      "canonicalTerm": "courgette",
+      "mergedTerms": [
+        "courgettes"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“西葫芦”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "couturier",
+      "mergedTerms": [
+        "couturiers"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“女装设计师”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "cove",
+      "mergedTerms": [
+        "bay",
+        "coves"
+      ],
+      "reason": "人工复核：中文同名且画面语义等价；同一中文名称“小海湾”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "cover",
+      "mergedTerms": [
+        "covers"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“封面”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "crab",
+      "mergedTerms": [
+        "crabs"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“螃蟹”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "crafts",
+      "mergedTerms": [
+        "hand-made products"
+      ],
+      "reason": "最终同名复核：均表达手工制品"
+    },
+    {
+      "canonicalTerm": "crane",
+      "mergedTerms": [
+        "cranes"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“鹤”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "cricket",
+      "mergedTerms": [
+        "crickets"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“蟋蟀”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "crocodile",
+      "mergedTerms": [
+        "crocodiles"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“鳄鱼”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "crown",
+      "mergedTerms": [
+        "crowns"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“皇冠”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "crutch",
+      "mergedTerms": [
+        "crutches"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“双拐”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "cucumber",
+      "mergedTerms": [
+        "cucumbers"
+      ],
+      "reason": "同一中文名称“黄瓜”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "cupboard",
+      "mergedTerms": [
+        "cupboards"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“橱柜”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "cushion",
+      "mergedTerms": [
+        "cushions"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“坐垫”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "custard apple",
+      "mergedTerms": [
+        "custard apples"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“番荔枝”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "cut down forest",
+      "mergedTerms": [
+        "cut down forests"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“砍伐森林”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "daisy",
+      "mergedTerms": [
+        "daisies"
+      ],
+      "reason": "同一中文名称“雏菊”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "dancer",
+      "mergedTerms": [
+        "dancers"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“舞者”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "danger",
+      "mergedTerms": [
+        "dangers"
+      ],
+      "reason": "同一中文名称“危险”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "dark",
+      "mergedTerms": [
+        "darkness"
+      ],
+      "reason": "基础 AAC 中均表达黑暗/没有光。"
+    },
+    {
+      "canonicalTerm": "dart",
+      "mergedTerms": [
+        "darts"
+      ],
+      "reason": "单复数重复。；同一中文名称“飞镖”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "deck",
+      "mergedTerms": [
+        "decks"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“甲板”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "deer",
+      "mergedTerms": [
+        "deers"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“鹿”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "demonstration",
+      "mergedTerms": [
+        "demonstrations"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“示威”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "detergent",
+      "mergedTerms": [
+        "detergent box"
+      ],
+      "reason": "packaging detail intentionally ignored"
+    },
+    {
+      "canonicalTerm": "dining room",
+      "mergedTerms": [
+        "dining-room"
+      ],
+      "reason": "hyphenation variant"
+    },
+    {
+      "canonicalTerm": "dinner",
+      "mergedTerms": [
+        "dinners"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“晚餐”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "dinosaur",
+      "mergedTerms": [
+        "dinosaurs"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“恐龙”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "dirty",
+      "mergedTerms": [
+        "filthy"
+      ],
+      "reason": "人工复核：中文同名且画面语义等价"
+    },
+    {
+      "canonicalTerm": "disabled subsidy",
+      "mergedTerms": [
+        "disabled subsidies"
+      ],
+      "reason": "同一中文名称“残疾人补贴”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "disasters",
+      "mergedTerms": [
+        "catastrophe",
+        "catastrophes"
+      ],
+      "reason": "最终同名复核：同义的灾祸概念及数量变体；同一中文名称“灾祸”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "dispenser",
+      "mergedTerms": [
+        "dispensers"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“分配器”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "diver",
+      "mergedTerms": [
+        "divers"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“潜水员”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "diving board",
+      "mergedTerms": [
+        "springboards"
+      ],
+      "reason": "最终同名复核：同义设施及数量变体，都是跳板"
+    },
+    {
+      "canonicalTerm": "doll",
+      "mergedTerms": [
+        "dolls"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“娃娃”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "door knocker",
+      "mergedTerms": [
+        "door knockers"
+      ],
+      "reason": "单复数重复。"
+    },
+    {
+      "canonicalTerm": "double bass",
+      "mergedTerms": [
+        "double basses",
+        "musical instrument",
+        "musical instruments"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“低音提琴”的英文单复数重复；同一中文名称“乐器”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "doughnut",
+      "mergedTerms": [
+        "donut"
+      ],
+      "reason": "spelling variant；人工复核：中文同名且画面语义等价"
+    },
+    {
+      "canonicalTerm": "drawer",
+      "mergedTerms": [
+        "drawers"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“抽屉”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "dried fruit",
+      "mergedTerms": [
+        "dried fruits"
+      ],
+      "reason": "同一中文名称“干果”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "drink",
+      "mergedTerms": [
+        "drinks"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“饮料”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "drum",
+      "mergedTerms": [
+        "drums"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“鼓”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "drummer",
+      "mergedTerms": [
+        "drummers"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“鼓手”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "dummy",
+      "mergedTerms": [
+        "dummies"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复，语义为安抚奶嘴。；同一中文名称“假人”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "dungaree",
+      "mergedTerms": [
+        "dungarees"
+      ],
+      "reason": "同一服装的单复数写法。；同一中文名称“工装裤”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "ear canal",
+      "mergedTerms": [
+        "ear canals"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“耳道”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "easel",
+      "mergedTerms": [
+        "easels"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“画架”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "eel",
+      "mergedTerms": [
+        "eels"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“鳗鱼”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "egg",
+      "mergedTerms": [
+        "egg box"
+      ],
+      "reason": "packaging detail intentionally ignored"
+    },
+    {
+      "canonicalTerm": "ejaculation",
+      "mergedTerms": [
+        "ejaculations"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“射精”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "electric toothbrush",
+      "mergedTerms": [
+        "electric toothbrushes"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“电动牙刷”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "employment",
+      "mergedTerms": [
+        "labour market"
+      ],
+      "reason": "画面表达均为就业/劳动者群体；紧凑词库保留更常用词。"
+    },
+    {
+      "canonicalTerm": "end",
+      "mergedTerms": [
+        "to wrap up"
+      ],
+      "reason": "最终同名复核：同义的结束概念"
+    },
+    {
+      "canonicalTerm": "engineer",
+      "mergedTerms": [
+        "technical engineer"
+      ],
+      "reason": "technical engineer 是过细子型，且其画面是用户不偏好的火柴人；保留彩色平涂 engineer。"
+    },
+    {
+      "canonicalTerm": "entrance",
+      "mergedTerms": [
+        "entrances"
+      ],
+      "reason": "同一中文名称“入口”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "environment",
+      "mergedTerms": [
+        "environments"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“环境”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "erection",
+      "mergedTerms": [
+        "erections"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“勃起”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "euro",
+      "mergedTerms": [
+        "euros"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“欧元”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "excrement",
+      "mergedTerms": [
+        "poo"
+      ],
+      "reason": "formal and familiar synonym"
+    },
+    {
+      "canonicalTerm": "extractor hood",
+      "mergedTerms": [
+        "extractor hoods"
+      ],
+      "reason": "同一中文名称“抽油烟机”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "eye",
+      "mergedTerms": [
+        "eyes"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“眼睛”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "eyebrow",
+      "mergedTerms": [
+        "eyebrows"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“眉毛”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "farmer",
+      "mergedTerms": [
+        "farmers",
+        "peasant",
+        "peasants"
+      ],
+      "reason": "现代基础词库用 farmer，peasant 不再单列画面。；最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“农民”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "farming house",
+      "mergedTerms": [
+        "farming houses"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“农舍”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "farmworker",
+      "mergedTerms": [
+        "farmworkers"
+      ],
+      "reason": "同一中文名称“农场工人”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "fat",
+      "mergedTerms": [
+        "obese"
+      ],
+      "reason": "最终同名复核：均表达肥胖这一描述"
+    },
+    {
+      "canonicalTerm": "feel",
+      "mergedTerms": [
+        "feeling"
+      ],
+      "reason": "最终同名复核：同一感觉概念的词形变体"
+    },
+    {
+      "canonicalTerm": "fence",
+      "mergedTerms": [
+        "railings"
+      ],
+      "reason": "紧凑词库用通用的围栏概念即可。"
+    },
+    {
+      "canonicalTerm": "fertilizer",
+      "mergedTerms": [
+        "fertilizers"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“肥料”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "field",
+      "mergedTerms": [
+        "fields"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“领域”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "fig",
+      "mergedTerms": [
+        "figs"
+      ],
+      "reason": "同一中文名称“无花果”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "file",
+      "mergedTerms": [
+        "document",
+        "documents"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；最终同名复核：紧凑词库统一为文件；同一中文名称“文件”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "fin",
+      "mergedTerms": [
+        "fins"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“鳍”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "find",
+      "mergedTerms": [
+        "to find"
+      ],
+      "reason": "最终同名复核：to+动词与裸动词是同一寻找动作"
+    },
+    {
+      "canonicalTerm": "finishing line",
+      "mergedTerms": [
+        "finishing lines"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“终点线”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "fire truck",
+      "mergedTerms": [
+        "fire trucks",
+        "fire-engine"
+      ],
+      "reason": "regional synonym；英美同义词。；最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“消防车”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "firefighter",
+      "mergedTerms": [
+        "fireman",
+        "firemen"
+      ],
+      "reason": "同一职业，保留性别中性的现代名称。；最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面"
+    },
+    {
+      "canonicalTerm": "fish tank",
+      "mergedTerms": [
+        "aquarium",
+        "fishbowl"
+      ],
+      "reason": "最终同名复核：当前画面都是同一鱼缸概念；最终同名复核：紧凑词库中均表达鱼缸"
+    },
+    {
+      "canonicalTerm": "fisher",
+      "mergedTerms": [
+        "fisherman"
+      ],
+      "reason": "same occupation; gender-neutral canonical；同义职业词，保留性别中性名称。"
+    },
+    {
+      "canonicalTerm": "fishing boat",
+      "mergedTerms": [
+        "fishing boats"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“渔船”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "fist",
+      "mergedTerms": [
+        "fists"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“拳头”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "flag",
+      "mergedTerms": [
+        "flags"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“旗帜”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "flip-flop",
+      "mergedTerms": [
+        "flip-flops"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。"
+    },
+    {
+      "canonicalTerm": "flower",
+      "mergedTerms": [
+        "flowers"
+      ],
+      "reason": "同一中文名称“花”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "flowerpot",
+      "mergedTerms": [
+        "flower pot"
+      ],
+      "reason": "spacing variant"
+    },
+    {
+      "canonicalTerm": "folder",
+      "mergedTerms": [
+        "folders"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“文件夹”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "football",
+      "mergedTerms": [
+        "play football"
+      ],
+      "reason": "最终同名复核：均表达踢足球这项活动"
+    },
+    {
+      "canonicalTerm": "football field",
+      "mergedTerms": [
+        "football fields"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“足球场”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "footprint",
+      "mergedTerms": [
+        "footprints"
+      ],
+      "reason": "同一中文名称“脚印”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "foreigner",
+      "mergedTerms": [
+        "foreigners"
+      ],
+      "reason": "同一中文名称“外国人”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "forest",
+      "mergedTerms": [
+        "forests"
+      ],
+      "reason": "同一中文名称“森林”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "fork",
+      "mergedTerms": [
+        "forks"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“叉子”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "fossil",
+      "mergedTerms": [
+        "fossils"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“化石”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "fridge",
+      "mergedTerms": [
+        "fridge freezer"
+      ],
+      "reason": "冰箱冷冻组合是过细子型。"
+    },
+    {
+      "canonicalTerm": "friend",
+      "mergedTerms": [
+        "friends"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“朋友”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "fruit",
+      "mergedTerms": [
+        "fruit bowl",
+        "fruit bowls",
+        "fruits"
+      ],
+      "reason": "serving container intentionally ignored；serving container and quantity details intentionally ignored；same category and Chinese label; quantity distinction intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“水果”的英文单复数重复；同一中文名称“水果盘”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "fruit tree",
+      "mergedTerms": [
+        "fruit trees"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“果树,复数”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "game",
+      "mergedTerms": [
+        "match"
+      ],
+      "reason": "基础沟通中均指比赛/游戏。"
+    },
+    {
+      "canonicalTerm": "garage",
+      "mergedTerms": [
+        "garages"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“车库”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "garbage",
+      "mergedTerms": [
+        "rubbish"
+      ],
+      "reason": "regional synonym"
+    },
+    {
+      "canonicalTerm": "garment",
+      "mergedTerms": [
+        "garments"
+      ],
+      "reason": "同一中文名称“衣物”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "gas",
+      "mergedTerms": [
+        "gases"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“气体”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "gas burner",
+      "mergedTerms": [
+        "burner"
+      ],
+      "reason": "同一便携燃烧器。"
+    },
+    {
+      "canonicalTerm": "gift",
+      "mergedTerms": [
+        "presents"
+      ],
+      "reason": "最终同名复核：同义词及数量变体，都是礼物"
+    },
+    {
+      "canonicalTerm": "girl",
+      "mergedTerms": [
+        "girls",
+        "little girl"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数和年龄修饰版本；基础词库保留通用 girl。；同一中文名称“女孩”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "glasses case",
+      "mergedTerms": [
+        "glasses cases"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“眼镜盒”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "glove",
+      "mergedTerms": [
+        "gloves"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“手套”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "glucose meter",
+      "mergedTerms": [
+        "BG meter"
+      ],
+      "reason": "人工复核：中文同名且画面语义等价"
+    },
+    {
+      "canonicalTerm": "goat",
+      "mergedTerms": [
+        "goats"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“山羊”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "golf course",
+      "mergedTerms": [
+        "golf courses"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“高尔夫球场”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "good",
+      "mergedTerms": [
+        "good!"
+      ],
+      "reason": "trailing punctuation variant"
+    },
+    {
+      "canonicalTerm": "governor",
+      "mergedTerms": [
+        "governors"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“州长”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "grandfather",
+      "mergedTerms": [
+        "grandpa"
+      ],
+      "reason": "formal and familiar synonym；同义称呼。"
+    },
+    {
+      "canonicalTerm": "grandma",
+      "mergedTerms": [
+        "grandmas",
+        "grandmother",
+        "granny"
+      ],
+      "reason": "formal and familiar synonyms；同一中文名称“奶奶”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "grapes",
+      "mergedTerms": [
+        "bunch"
+      ],
+      "reason": "人工复核：中文同名且画面语义等价"
+    },
+    {
+      "canonicalTerm": "guitarist",
+      "mergedTerms": [
+        "guitarists"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“吉他手”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "hair",
+      "mergedTerms": [
+        "hairs"
+      ],
+      "reason": "同一中文名称“头发”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "hairbrush",
+      "mergedTerms": [
+        "hairbrushes"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“发刷”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "hamburger",
+      "mergedTerms": [
+        "hamburgers"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“汉堡包”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "hammock",
+      "mergedTerms": [
+        "hammocks"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“吊床”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "hand",
+      "mergedTerms": [
+        "hands"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“手”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "hand brush",
+      "mergedTerms": [
+        "brushes"
+      ],
+      "reason": "最终同名复核：均为手持刷子及数量变体"
+    },
+    {
+      "canonicalTerm": "hand soap",
+      "mergedTerms": [
+        "hand soaps"
+      ],
+      "reason": "同一中文名称“洗手液”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "handbag",
+      "mergedTerms": [
+        "purses"
+      ],
+      "reason": "最终同名复核：紧凑词库统一为手提包"
+    },
+    {
+      "canonicalTerm": "handball court",
+      "mergedTerms": [
+        "handball fields"
+      ],
+      "reason": "最终同名复核：同义场地名称及数量变体"
+    },
+    {
+      "canonicalTerm": "handcuff",
+      "mergedTerms": [
+        "handcuffs"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“手铐”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "happiness",
+      "mergedTerms": [
+        "happyness"
+      ],
+      "reason": "standard spelling and misspelling"
+    },
+    {
+      "canonicalTerm": "hare",
+      "mergedTerms": [
+        "hares"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“野兔”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "harp",
+      "mergedTerms": [
+        "harps"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“竖琴”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "hazelnut",
+      "mergedTerms": [
+        "hazelnuts"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“榛子”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "head",
+      "mergedTerms": [
+        "heads"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“头”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "hearing aid",
+      "mergedTerms": [
+        "hearing aids"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“助听器”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "hearse",
+      "mergedTerms": [
+        "hearses"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“灵车”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "helmet",
+      "mergedTerms": [
+        "helmets"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“头盔”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "highway",
+      "mergedTerms": [
+        "highways"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“高速公路”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "hoe",
+      "mergedTerms": [
+        "hoes"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“锄头”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "hole",
+      "mergedTerms": [
+        "holes"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“洞”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "homosexual",
+      "mergedTerms": [
+        "homosexuals"
+      ],
+      "reason": "同一中文名称“同性恋的”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "hook",
+      "mergedTerms": [
+        "hooks"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“钩子”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "horse",
+      "mergedTerms": [
+        "horses"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“马”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "host",
+      "mergedTerms": [
+        "hosts"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“圣饼”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "how are you",
+      "mergedTerms": [
+        "how are you doing"
+      ],
+      "reason": "人工复核：中文同名且画面语义等价"
+    },
+    {
+      "canonicalTerm": "hummingbird",
+      "mergedTerms": [
+        "hummingbirds"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“蜂鸟”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "hunter",
+      "mergedTerms": [
+        "hunters"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“猎人”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "hyena",
+      "mergedTerms": [
+        "hyenas"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“鬣狗”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "I",
+      "mergedTerms": [
+        "me"
+      ],
+      "reason": "人工复核：中文同名且画面语义等价"
+    },
+    {
+      "canonicalTerm": "iguana",
+      "mergedTerms": [
+        "iguanas"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“鬣蜥”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "illness",
+      "mergedTerms": [
+        "illnesses"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“疾病”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "incense",
+      "mergedTerms": [
+        "incenses"
+      ],
+      "reason": "不可数名词的伪复数重复。；同一中文名称“香”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "insect",
+      "mergedTerms": [
+        "insects"
+      ],
+      "reason": "同一中文名称“昆虫”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "inspector",
+      "mergedTerms": [
+        "inspectors"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“检查员”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "insurance",
+      "mergedTerms": [
+        "life insurance"
+      ],
+      "reason": "人寿保险是过细子型。"
+    },
+    {
+      "canonicalTerm": "island",
+      "mergedTerms": [
+        "islands",
+        "islet"
+      ],
+      "reason": "人工复核：中文同名且画面语义等价；最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“岛屿”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "jacket",
+      "mergedTerms": [
+        "jackets"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“夹克”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "joke",
+      "mergedTerms": [
+        "jokes"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“笑话”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "judge",
+      "mergedTerms": [
+        "judges"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“法官”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "juice",
+      "mergedTerms": [
+        "juices"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“果汁”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "kaleidoscope",
+      "mergedTerms": [
+        "kaleidoscopes"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“万花筒”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "kangaroo",
+      "mergedTerms": [
+        "kangaroos"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“袋鼠”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "katana",
+      "mergedTerms": [
+        "katanas"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“武士刀”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "key",
+      "mergedTerms": [
+        "keys"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“钥匙”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "keyboard player",
+      "mergedTerms": [
+        "keyboard players"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“键盘手”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "kiwi",
+      "mergedTerms": [
+        "kiwis"
+      ],
+      "reason": "同一中文名称“猕猴桃”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "knife",
+      "mergedTerms": [
+        "knives"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“刀”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "knob",
+      "mergedTerms": [
+        "knob -round door handle"
+      ],
+      "reason": "后者是前者的冗长解释性名称。"
+    },
+    {
+      "canonicalTerm": "lancet",
+      "mergedTerms": [
+        "lancets"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“柳叶刀”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "larva",
+      "mergedTerms": [
+        "larvas"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“幼虫”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "laundry",
+      "mergedTerms": [
+        "laundries"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“洗衣店”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "lawyer",
+      "mergedTerms": [
+        "lawyers"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“律师”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "leg",
+      "mergedTerms": [
+        "legs"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“腿”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "lemon",
+      "mergedTerms": [
+        "slice of lemon"
+      ],
+      "reason": "portion detail intentionally ignored"
+    },
+    {
+      "canonicalTerm": "library",
+      "mergedTerms": [
+        "libraries"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“图书馆”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "life jacket",
+      "mergedTerms": [
+        "lifejackets"
+      ],
+      "reason": "最终同名复核：拼写和数量变体，均为救生衣"
+    },
+    {
+      "canonicalTerm": "lift",
+      "mergedTerms": [
+        "lifts"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“电梯”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "ligament",
+      "mergedTerms": [
+        "ligaments"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“韧带”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "lion",
+      "mergedTerms": [
+        "lions"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“狮子”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "lipstick",
+      "mergedTerms": [
+        "lip stick",
+        "lipsticks"
+      ],
+      "reason": "spacing variant；同一中文名称“口红”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "lock",
+      "mergedTerms": [
+        "locks",
+        "padlock"
+      ],
+      "reason": "挂锁是 lock 的具体子型。；同一中文名称“锁”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "lollipop",
+      "mergedTerms": [
+        "lollies",
+        "lollipops"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“棒棒糖”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "lorry",
+      "mergedTerms": [
+        "trucks"
+      ],
+      "reason": "最终同名复核：英美用词及数量变体，都是卡车"
+    },
+    {
+      "canonicalTerm": "macaroni",
+      "mergedTerms": [
+        "macaroni packet",
+        "macaroni packets"
+      ],
+      "reason": "packaging detail intentionally ignored；packaging and quantity details intentionally ignored；人工复核：中文同名且画面语义等价"
+    },
+    {
+      "canonicalTerm": "machine",
+      "mergedTerms": [
+        "machines"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复；保留单一机器画面。；同一中文名称“机器”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "magazine",
+      "mergedTerms": [
+        "magazines"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“杂志”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "maize",
+      "mergedTerms": [
+        "corncob"
+      ],
+      "reason": "原玉米词误配豆类画面，改用玉米穗画面",
+      "imageTerm": "corncob"
+    },
+    {
+      "canonicalTerm": "mammal",
+      "mergedTerms": [
+        "mammals"
+      ],
+      "reason": "同一中文名称“哺乳动物”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "map",
+      "mergedTerms": [
+        "maps"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“地图”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "margarine",
+      "mergedTerms": [
+        "margarines"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“人造黄油”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "mask",
+      "mergedTerms": [
+        "masks"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“面具”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "masturbation",
+      "mergedTerms": [
+        "masturbations"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“手淫”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "mat",
+      "mergedTerms": [
+        "mats"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“垫子”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "material",
+      "mergedTerms": [
+        "cloth"
+      ],
+      "reason": "最终同名复核：当前画面均表达布料"
+    },
+    {
+      "canonicalTerm": "mattresses",
+      "mergedTerms": [
+        "matress"
+      ],
+      "reason": "最终同名复核：单复数及明显拼写错误，都是床垫"
+    },
+    {
+      "canonicalTerm": "meat",
+      "mergedTerms": [
+        "flesh",
+        "meats",
+        "steak",
+        "steaks"
+      ],
+      "reason": "原图是通用红肉画面；紧凑词库以 meat 为规范名并合并 steak 复数组；最终同名复核：紧凑词库统一为肉；同一中文名称“牛排”的英文单复数重复；同一中文名称“肉”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "meat pasty",
+      "mergedTerms": [
+        "meat pasties"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“小馅饼”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "medicine chest",
+      "mergedTerms": [
+        "medicine chests"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“药箱”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "merchant ship",
+      "mergedTerms": [
+        "merchant ships"
+      ],
+      "reason": "同一中文名称“商船”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "metal shears",
+      "mergedTerms": [
+        "shears"
+      ],
+      "reason": "同一工具且一张只多了复数标记；保留无语法标记画面。"
+    },
+    {
+      "canonicalTerm": "metre",
+      "mergedTerms": [
+        "m"
+      ],
+      "reason": "最终同名复核：完整单位名与缩写是同一米制单位"
+    },
+    {
+      "canonicalTerm": "milk",
+      "mergedTerms": [
+        "glass of milk"
+      ],
+      "reason": "serving container intentionally ignored"
+    },
+    {
+      "canonicalTerm": "minister",
+      "mergedTerms": [
+        "ministers"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“部长”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "miracle",
+      "mergedTerms": [
+        "miracles"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“奇迹”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "mistreatment",
+      "mergedTerms": [
+        "mistreatments"
+      ],
+      "reason": "同一中文名称“虐待”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "mitten",
+      "mergedTerms": [
+        "mittens"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“巴掌手套”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "mixer",
+      "mergedTerms": [
+        "mixers"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；台式/手持子型合并为通用 mixer。；同一中文名称“搅拌机”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "mobile phone",
+      "mergedTerms": [
+        "mobile phones",
+        "mobiles"
+      ],
+      "reason": "同义和单复数重复。；最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“手机”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "mocha coffee",
+      "mergedTerms": [
+        "mocha coffees"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“摩卡咖啡”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "mollusk",
+      "mergedTerms": [
+        "mollusks"
+      ],
+      "reason": "同一中文名称“软体动物”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "mommy",
+      "mergedTerms": [
+        "mummies"
+      ],
+      "reason": "最终同名复核：原词 mommy 已被现有规则纠正显示为 mummy；与复数 mummies 为同一木乃伊概念；同一中文名称“木乃伊”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "monitor",
+      "mergedTerms": [
+        "monitors"
+      ],
+      "reason": "同一中文名称“监视器”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "mosque",
+      "mergedTerms": [
+        "mosques"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“清真寺”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "mother",
+      "mergedTerms": [
+        "mum"
+      ],
+      "reason": "formal and familiar synonyms"
+    },
+    {
+      "canonicalTerm": "motorcyclist",
+      "mergedTerms": [
+        "motorcyclists"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“摩托车手”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "mountain",
+      "mergedTerms": [
+        "mountains"
+      ],
+      "reason": "同一中文名称“山”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "mountain range",
+      "mergedTerms": [
+        "mountain ranges"
+      ],
+      "reason": "同一中文名称“山脉”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "mouth",
+      "mergedTerms": [
+        "mouths"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“嘴”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "muscle",
+      "mergedTerms": [
+        "muscles"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“肌肉”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "mushroom",
+      "mergedTerms": [
+        "fungus",
+        "mushrooms"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“蘑菇”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "music band",
+      "mergedTerms": [
+        "band",
+        "music bands"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；同义及单复数重复。；同一中文名称“乐队”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "Music teacher",
+      "mergedTerms": [
+        "music teacher"
+      ],
+      "reason": "non-proper case-only variant；仅大小写及人物版本不同。；修正后中英文名称完全相同（音乐老师）；只保留一个画面"
+    },
+    {
+      "canonicalTerm": "musical note",
+      "mergedTerms": [
+        "musical notes"
+      ],
+      "reason": "同一中文名称“音符”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "nail",
+      "mergedTerms": [
+        "nails"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“钉子”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "nappy",
+      "mergedTerms": [
+        "diapers"
+      ],
+      "reason": "最终同名复核：英美用词及数量变体，都是尿布"
+    },
+    {
+      "canonicalTerm": "nasal spray",
+      "mergedTerms": [
+        "nasal sprays"
+      ],
+      "reason": "同一中文名称“鼻喷雾剂”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "neck",
+      "mergedTerms": [
+        "necks"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“脖子”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "needle",
+      "mergedTerms": [
+        "needles"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“针”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "neighbour",
+      "mergedTerms": [
+        "neighbours"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“邻居”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "nightmare",
+      "mergedTerms": [
+        "nightmares"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“噩梦”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "notebook",
+      "mergedTerms": [
+        "exercise book",
+        "logbook"
+      ],
+      "reason": "当前画面都是通用笔记本；保留用户更容易理解的 notebook。"
+    },
+    {
+      "canonicalTerm": "octopus",
+      "mergedTerms": [
+        "octopuses"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“章鱼”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "olive oil",
+      "mergedTerms": [
+        "oil",
+        "oil bottles",
+        "oil can",
+        "oil tins"
+      ],
+      "reason": "原图明确是橄榄油；将泛称 oil 及其包装变体统一到 olive oil；container and quantity details intentionally ignored；container detail intentionally ignored"
+    },
+    {
+      "canonicalTerm": "olives",
+      "mergedTerms": [
+        "black olive",
+        "black olives",
+        "can of olives",
+        "green olive",
+        "green olives",
+        "olive"
+      ],
+      "reason": "packaging detail intentionally ignored；same category and Chinese label; quantity distinction intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“橄榄”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "onion",
+      "mergedTerms": [
+        "onions"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“洋葱”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "oral sex",
+      "mergedTerms": [
+        "cunnilingus"
+      ],
+      "reason": "后者是过细子型；保留通用临床/成人沟通词。"
+    },
+    {
+      "canonicalTerm": "orange",
+      "mergedTerms": [
+        "a slice of orange"
+      ],
+      "reason": "portion detail intentionally ignored"
+    },
+    {
+      "canonicalTerm": "organ",
+      "mergedTerms": [
+        "organs"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“器官”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "our",
+      "mergedTerms": [
+        "ours"
+      ],
+      "reason": "人工复核：中文同名且画面语义等价；同一中文名称“我们的”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "owl",
+      "mergedTerms": [
+        "owls"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“猫头鹰”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "oxygen",
+      "mergedTerms": [
+        "gas cylinder",
+        "gas cylinders",
+        "oxygen bottle",
+        "oxygen bottles"
+      ],
+      "reason": "container detail intentionally ignored；container and quantity details intentionally ignored；同一中文名称“氧气瓶”的英文单复数重复；同一中文名称“气瓶”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "paddle",
+      "mergedTerms": [
+        "oar"
+      ],
+      "reason": "基础 AAC 不细分桨的子型。"
+    },
+    {
+      "canonicalTerm": "paint",
+      "mergedTerms": [
+        "paint bottle"
+      ],
+      "reason": "container detail intentionally ignored"
+    },
+    {
+      "canonicalTerm": "paintbrush",
+      "mergedTerms": [
+        "paintbrushes"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“画笔”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "palace",
+      "mergedTerms": [
+        "palaces"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“宫殿”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "pansy",
+      "mergedTerms": [
+        "pansies"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“三色堇”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "paper bag",
+      "mergedTerms": [
+        "paper bags"
+      ],
+      "reason": "单复数重复。；同一中文名称“纸袋”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "paper plane",
+      "mergedTerms": [
+        "paper planes"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“纸飞机”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "part",
+      "mergedTerms": [
+        "section"
+      ],
+      "reason": "最终同名复核：紧凑词库统一为部分"
+    },
+    {
+      "canonicalTerm": "party",
+      "mergedTerms": [
+        "celebrations",
+        "parties"
+      ],
+      "reason": "最终同名复核：紧凑词库统一为聚会/庆祝活动；同一中文名称“聚会”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "patient",
+      "mergedTerms": [
+        "patients"
+      ],
+      "reason": "同一中文名称“病人”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "pea",
+      "mergedTerms": [
+        "peas"
+      ],
+      "reason": "同一中文名称“豌豆”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "peanut",
+      "mergedTerms": [
+        "peanuts"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“花生”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "peeler",
+      "mergedTerms": [
+        "peelers"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“削皮器”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "pelvis",
+      "mergedTerms": [
+        "pelves"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面"
+    },
+    {
+      "canonicalTerm": "peni",
+      "mergedTerms": [
+        "penis"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“阴茎”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "penthouse",
+      "mergedTerms": [
+        "penthouses"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“顶层公寓”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "perfume",
+      "mergedTerms": [
+        "perfumes"
+      ],
+      "reason": "同一中文名称“香水”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "perfume maker",
+      "mergedTerms": [
+        "perfume makers"
+      ],
+      "reason": "同一中文名称“香水制造商”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "person",
+      "mergedTerms": [
+        "persons"
+      ],
+      "reason": "同一中文名称“人”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "pet shop",
+      "mergedTerms": [
+        "pet shops"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“宠物店”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "photograph",
+      "mergedTerms": [
+        "pic"
+      ],
+      "reason": "同义词。"
+    },
+    {
+      "canonicalTerm": "physiotherapist",
+      "mergedTerms": [
+        "physiotherapists"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“物理治疗师”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "pickles can",
+      "mergedTerms": [
+        "pickles cans"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“泡菜罐头”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "pig",
+      "mergedTerms": [
+        "hog",
+        "pigs"
+      ],
+      "reason": "最终同名复核：同义词及数量变体，都是猪；同一中文名称“猪”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "pilgrim",
+      "mergedTerms": [
+        "pilgrims"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“朝圣者”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "pillow",
+      "mergedTerms": [
+        "pillows"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“枕头”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "pineapple",
+      "mergedTerms": [
+        "pineapples"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“菠萝”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "pip",
+      "mergedTerms": [
+        "pips"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；两图均为果籽，合并单复数；不与 dot 合并。；同一中文名称“果籽”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "pirate flag",
+      "mergedTerms": [
+        "pirate flags"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“海盗旗”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "pistachio",
+      "mergedTerms": [
+        "pistachios"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“开心果”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "plague",
+      "mergedTerms": [
+        "plagues"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“瘟疫”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "plant",
+      "mergedTerms": [
+        "plants"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“植物”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "platform",
+      "mergedTerms": [
+        "platforms"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“平台”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "play",
+      "mergedTerms": [
+        "to play"
+      ],
+      "reason": "同一动作的词形重复。"
+    },
+    {
+      "canonicalTerm": "plough",
+      "mergedTerms": [
+        "ploughs"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“犁”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "plum",
+      "mergedTerms": [
+        "plums"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“洋李”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "plural",
+      "mergedTerms": [
+        "plurals"
+      ],
+      "reason": "同一中文名称“复数”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "pocket",
+      "mergedTerms": [
+        "pockets"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“口袋”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "podium",
+      "mergedTerms": [
+        "lecterns"
+      ],
+      "reason": "最终同名复核：紧凑词库统一为讲台"
+    },
+    {
+      "canonicalTerm": "police car",
+      "mergedTerms": [
+        "police cars"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“警车”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "polling booth",
+      "mergedTerms": [
+        "polling booths",
+        "polling station",
+        "polling stations"
+      ],
+      "reason": "紧凑词库不再细分投票站和投票亭。；同一中文名称“投票站”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "poncho",
+      "mergedTerms": [
+        "ponchos"
+      ],
+      "reason": "同一中文名称“雨披”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "popcorn",
+      "mergedTerms": [
+        "popcorn boxes"
+      ],
+      "reason": "原爆米花词误配豆类画面，改用装有爆米花的画面",
+      "imageTerm": "popcorn boxes"
+    },
+    {
+      "canonicalTerm": "pork butcher",
+      "mergedTerms": [
+        "pork butchers"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“猪肉屠夫”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "poster",
+      "mergedTerms": [
+        "posters"
+      ],
+      "reason": "同一中文名称“海报”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "postman",
+      "mergedTerms": [
+        "postmen"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面"
+    },
+    {
+      "canonicalTerm": "potato",
+      "mergedTerms": [
+        "potatoes"
+      ],
+      "reason": "同一中文名称“土豆”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "potter",
+      "mergedTerms": [
+        "potters"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“陶工”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "pottery",
+      "mergedTerms": [
+        "potteries"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“陶器”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "poultry",
+      "mergedTerms": [
+        "poultries"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“家禽”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "power wheelchair",
+      "mergedTerms": [
+        "electric wheelchairs",
+        "motor wheelchairs",
+        "motorised wheelchair"
+      ],
+      "reason": "人工复核：中文同名且画面语义等价；最终同名复核：同义词及数量变体，都是电动轮椅；最终同名复核：同义的电动轮椅名称及数量变体"
+    },
+    {
+      "canonicalTerm": "president",
+      "mergedTerms": [
+        "government",
+        "governments",
+        "presidents"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“总统”的英文单复数重复；同一中文名称“政府”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "price",
+      "mergedTerms": [
+        "value"
+      ],
+      "reason": "本组两张图都在表达商品价格；保留更直接的 price。"
+    },
+    {
+      "canonicalTerm": "printer",
+      "mergedTerms": [
+        "printers"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“打印机”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "prison",
+      "mergedTerms": [
+        "prisons"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“监狱”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "profile",
+      "mergedTerms": [
+        "profiles"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“侧面轮廓”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "program",
+      "mergedTerms": [
+        "programs"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“程序”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "puddle",
+      "mergedTerms": [
+        "puddles"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“水坑”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "pulley",
+      "mergedTerms": [
+        "pulleys"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“滑轮”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "pumpkin",
+      "mergedTerms": [
+        "pumpkins"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“南瓜”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "purifier",
+      "mergedTerms": [
+        "purifiers"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“净化器”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "pyramid",
+      "mergedTerms": [
+        "pyramids"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“金字塔”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "quail",
+      "mergedTerms": [
+        "quails"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“鹌鹑”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "quince",
+      "mergedTerms": [
+        "quinces"
+      ],
+      "reason": "同一中文名称“榅桲”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "radio",
+      "mergedTerms": [
+        "portable radio",
+        "portable radios",
+        "radios"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“收音机”的英文单复数重复；同一中文名称“便携式收音机”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "raincoat",
+      "mergedTerms": [
+        "raincoats"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“雨衣”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "raisin",
+      "mergedTerms": [
+        "raisins"
+      ],
+      "reason": "同一中文名称“葡萄干”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "rattle",
+      "mergedTerms": [
+        "rattles"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“拨浪鼓”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "raw material",
+      "mergedTerms": [
+        "raw materials"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“原料”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "receipt",
+      "mergedTerms": [
+        "receipts"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“收据”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "receptionist",
+      "mergedTerms": [
+        "receptionists"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“接待员”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "reel",
+      "mergedTerms": [
+        "reels"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数和有无线轴版本。；同一中文名称“卷轴”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "referee",
+      "mergedTerms": [
+        "umpire",
+        "umpires"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；最终同名复核：紧凑词库统一为裁判员；同一中文名称“裁判员”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "register",
+      "mergedTerms": [
+        "inscription"
+      ],
+      "reason": "人工复核：中文同名且画面语义等价"
+    },
+    {
+      "canonicalTerm": "registered letter",
+      "mergedTerms": [
+        "registered letters"
+      ],
+      "reason": "同一中文名称“挂号信”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "representative",
+      "mergedTerms": [
+        "representatives",
+        "students' representative",
+        "students' representatives"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“代表”的英文单复数重复；同一中文名称“学生代表”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "reptile",
+      "mergedTerms": [
+        "reptiles"
+      ],
+      "reason": "同一中文名称“爬行的”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "reservoir",
+      "mergedTerms": [
+        "reservoirs"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“水库”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "residence",
+      "mergedTerms": [
+        "residences"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“住宅”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "rice",
+      "mergedTerms": [
+        "rice packet",
+        "rice packets"
+      ],
+      "reason": "packaging detail intentionally ignored；packaging and quantity details intentionally ignored"
+    },
+    {
+      "canonicalTerm": "riddle",
+      "mergedTerms": [
+        "riddles"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“谜语”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "road",
+      "mergedTerms": [
+        "paved"
+      ],
+      "reason": "paved 图实际表达铺装道路。"
+    },
+    {
+      "canonicalTerm": "road roller",
+      "mergedTerms": [
+        "road rollers"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“压路机”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "roast",
+      "mergedTerms": [
+        "roasts"
+      ],
+      "reason": "同一中文名称“烤肉”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "rock",
+      "mergedTerms": [
+        "rocks"
+      ],
+      "reason": "同一中文名称“岩石”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "rocket",
+      "mergedTerms": [
+        "rockets"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“火箭”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "rocking chair",
+      "mergedTerms": [
+        "rocking chairs"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“摇椅”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "room",
+      "mergedTerms": [
+        "kitchen",
+        "kitchens",
+        "rooms"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“房间”的英文单复数重复；同一中文名称“厨房”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "root",
+      "mergedTerms": [
+        "roots"
+      ],
+      "reason": "同一中文名称“根”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "rope",
+      "mergedTerms": [
+        "cord"
+      ],
+      "reason": "最终同名复核：紧凑词库统一为绳子"
+    },
+    {
+      "canonicalTerm": "rosary",
+      "mergedTerms": [
+        "rosary beads"
+      ],
+      "reason": "最终同名复核：同一念珠物品的称呼"
+    },
+    {
+      "canonicalTerm": "rouge",
+      "mergedTerms": [
+        "cosmetic",
+        "cosmetics",
+        "make up",
+        "make-up",
+        "rouges"
+      ],
+      "reason": "hyphenation variant；同一中文名称“化妆品”的英文单复数重复；同一中文名称“胭脂”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "rubbish bag",
+      "mergedTerms": [
+        "rubbish bags",
+        "sacks"
+      ],
+      "reason": "最终同名复核：画面均表达垃圾袋；同一中文名称“垃圾袋”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "rubbish truck",
+      "mergedTerms": [
+        "garbage trucks"
+      ],
+      "reason": "最终同名复核：英美用词及数量变体，都是垃圾车"
+    },
+    {
+      "canonicalTerm": "ruby",
+      "mergedTerms": [
+        "rubies"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“红宝石”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "rugby field",
+      "mergedTerms": [
+        "rugby fields"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“橄榄球场”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "saddle",
+      "mergedTerms": [
+        "saddles"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“马鞍”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "safe",
+      "mergedTerms": [
+        "cash registers",
+        "safes"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；最终同名复核：画面均为收银机；合并错误 safe 标签与复数词条；同一中文名称“收银机”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "safety belt",
+      "mergedTerms": [
+        "safety belts"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“安全带”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "saint",
+      "mergedTerms": [
+        "saints"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“圣人”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "salad",
+      "mergedTerms": [
+        "salad bowl"
+      ],
+      "reason": "serving container intentionally ignored"
+    },
+    {
+      "canonicalTerm": "salmon",
+      "mergedTerms": [
+        "salmon slice",
+        "salmon slices"
+      ],
+      "reason": "portion detail intentionally ignored；portion and quantity details intentionally ignored"
+    },
+    {
+      "canonicalTerm": "salt",
+      "mergedTerms": [
+        "salt packet",
+        "salt packets"
+      ],
+      "reason": "packaging detail intentionally ignored；packaging and quantity details intentionally ignored；same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“盐包”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "sandal",
+      "mergedTerms": [
+        "sandals"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“凉鞋”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "sandbox",
+      "mergedTerms": [
+        "sandpit"
+      ],
+      "reason": "regional synonym；美式与英式同义词。"
+    },
+    {
+      "canonicalTerm": "sandwich",
+      "mergedTerms": [
+        "sandwiches"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“三明治”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "sauna",
+      "mergedTerms": [
+        "dry sauna",
+        "Finnish sauna",
+        "saunas"
+      ],
+      "reason": "dry sauna 是 sauna 的过细子型。；最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；最终同名复核：过细地域子型合并为桑拿；同一中文名称“桑拿”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "sausage",
+      "mergedTerms": [
+        "frankfurter",
+        "sausages"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“香肠”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "savoury snack",
+      "mergedTerms": [
+        "savoury snacks"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“咸味小吃”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "scared",
+      "mergedTerms": [
+        "frightened",
+        "terrified"
+      ],
+      "reason": "最终同名复核：紧凑词库统一为害怕"
+    },
+    {
+      "canonicalTerm": "scarf",
+      "mergedTerms": [
+        "scarves"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“围巾”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "school",
+      "mergedTerms": [
+        "schools"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“学校”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "scientist",
+      "mergedTerms": [
+        "scientists"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“科学家”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "screen",
+      "mergedTerms": [
+        "screens",
+        "television",
+        "televisions"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；同一中文名称“屏幕”的英文单复数重复；同一中文名称“电视”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "seesaw",
+      "mergedTerms": [
+        "seesaws"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“跷跷板”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "select",
+      "mergedTerms": [
+        "to pick"
+      ],
+      "reason": "人工复核：中文同名且画面语义等价"
+    },
+    {
+      "canonicalTerm": "shampoo",
+      "mergedTerms": [
+        "shampoos"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“洗发水”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "sharpener",
+      "mergedTerms": [
+        "sharpeners"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“磨刀器”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "shell",
+      "mergedTerms": [
+        "enclosure",
+        "enclosures"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；最终同名复核：紧凑词库统一为外壳；同一中文名称“外壳”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "shop",
+      "mergedTerms": [
+        "shops",
+        "stores"
+      ],
+      "reason": "英式/美式近义；规范为单数 shop。；同一中文名称“商店”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "shop assistant",
+      "mergedTerms": [
+        "shop assistants"
+      ],
+      "reason": "同一中文名称“店员”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "shopping trolley",
+      "mergedTerms": [
+        "shopping trolleys"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“购物车”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "shoulder blade",
+      "mergedTerms": [
+        "shoulder blades"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“肩胛骨”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "show",
+      "mergedTerms": [
+        "display"
+      ],
+      "reason": "最终同名复核：同义的显示动作"
+    },
+    {
+      "canonicalTerm": "shrimp",
+      "mergedTerms": [
+        "shrimps"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“虾”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "sieve",
+      "mergedTerms": [
+        "sieves"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“筛子”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "singer",
+      "mergedTerms": [
+        "singers"
+      ],
+      "reason": "同一中文名称“歌手”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "skewered fruit",
+      "mergedTerms": [
+        "fruit brochettes"
+      ],
+      "reason": "same prepared-food concept"
+    },
+    {
+      "canonicalTerm": "skipping rope",
+      "mergedTerms": [
+        "skipping ropes"
+      ],
+      "reason": "同一中文名称“跳绳”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "slipper",
+      "mergedTerms": [
+        "slippers"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“拖鞋”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "slug",
+      "mergedTerms": [
+        "slugs"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“蛞蝓”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "snail",
+      "mergedTerms": [
+        "snails"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“蜗牛”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "snow ball",
+      "mergedTerms": [
+        "snow balls"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“雪球”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "social integration",
+      "mergedTerms": [
+        "integration"
+      ],
+      "reason": "人工复核：中文同名且画面语义等价"
+    },
+    {
+      "canonicalTerm": "social worker",
+      "mergedTerms": [
+        "social worker (female)"
+      ],
+      "reason": "职业概念不按人物性别重复出图。"
+    },
+    {
+      "canonicalTerm": "sock",
+      "mergedTerms": [
+        "socks"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“袜子”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "sofa",
+      "mergedTerms": [
+        "sofas"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“沙发”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "sole",
+      "mergedTerms": [
+        "soles"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“鳎鱼”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "spaceship",
+      "mergedTerms": [
+        "spaceships"
+      ],
+      "reason": "同一中文名称“宇宙飞船”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "spaghetti",
+      "mergedTerms": [
+        "plate of spaghetti",
+        "spaguetti packet"
+      ],
+      "reason": "serving container intentionally ignored；人工复核：中文同名且画面语义等价"
+    },
+    {
+      "canonicalTerm": "spider",
+      "mergedTerms": [
+        "spiders"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“蜘蛛”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "splint",
+      "mergedTerms": [
+        "splints"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“夹板”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "sponge cake",
+      "mergedTerms": [
+        "sponge cakes"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“海绵蛋糕”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "spoon",
+      "mergedTerms": [
+        "spoons"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“勺子”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "sport",
+      "mergedTerms": [
+        "sports"
+      ],
+      "reason": "单复数重复。；同一中文名称“体育”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "sports car",
+      "mergedTerms": [
+        "sports cars"
+      ],
+      "reason": "同一中文名称“跑车”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "sports shop",
+      "mergedTerms": [
+        "sports shops"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“体育用品店”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "square",
+      "mergedTerms": [
+        "squares"
+      ],
+      "reason": "同一中文名称“正方形”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "squid",
+      "mergedTerms": [
+        "squids"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“鱿鱼”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "squirrel",
+      "mergedTerms": [
+        "squirrels"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“松鼠”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "stall",
+      "mergedTerms": [
+        "stalls"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“摊位”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "street",
+      "mergedTerms": [
+        "streets"
+      ],
+      "reason": "同一中文名称“街道”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "stretcher",
+      "mergedTerms": [
+        "stretchers"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“担架”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "student",
+      "mergedTerms": [
+        "pupils"
+      ],
+      "reason": "最终同名复核：同义词及数量变体，都是学生"
+    },
+    {
+      "canonicalTerm": "sugar",
+      "mergedTerms": [
+        "sugar bowl",
+        "sugar bowls",
+        "sugar packet",
+        "sugar packets"
+      ],
+      "reason": "packaging detail intentionally ignored；serving container intentionally ignored；packaging and quantity details intentionally ignored；serving container and quantity details intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“糖罐”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "sultan",
+      "mergedTerms": [
+        "sultans"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“苏丹”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "sunscreen",
+      "mergedTerms": [
+        "sunscreens",
+        "suntan creams"
+      ],
+      "reason": "最终同名复核：同义词及数量变体，都是防晒霜；同一中文名称“防晒霜”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "support",
+      "mergedTerms": [
+        "supports"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“支持”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "surgeon",
+      "mergedTerms": [
+        "surgeons"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“外科医生”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "surprise",
+      "mergedTerms": [
+        "surprises"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“惊喜”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "swan",
+      "mergedTerms": [
+        "swans"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“天鹅”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "swimsuit",
+      "mergedTerms": [
+        "swim-suit",
+        "swimming costume"
+      ],
+      "reason": "hyphenation variant；same clothing concept"
+    },
+    {
+      "canonicalTerm": "swing",
+      "mergedTerms": [
+        "swings"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“秋千”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "swiss chard",
+      "mergedTerms": [
+        "Swiss chard"
+      ],
+      "reason": "case-only variant; uppercase candidate is blank；大小写重复；保留非空白画面；修正后中英文名称完全相同（甜叶菜）；只保留一个画面"
+    },
+    {
+      "canonicalTerm": "synagogue",
+      "mergedTerms": [
+        "synagogues"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“犹太教堂”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "T-shirt",
+      "mergedTerms": [
+        "T-shirts"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“T恤”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "table",
+      "mergedTerms": [
+        "tables"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“桌子”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "tadpole",
+      "mergedTerms": [
+        "tadpoles"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“蝌蚪”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "tail",
+      "mergedTerms": [
+        "tails"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“尾巴”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "tailor",
+      "mergedTerms": [
+        "tailors"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“裁缝”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "tale",
+      "mergedTerms": [
+        "tales"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“故事”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "tank",
+      "mergedTerms": [
+        "tanks"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“储水罐”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "tea",
+      "mergedTerms": [
+        "instant tea"
+      ],
+      "reason": "人工复核：中文同名且画面语义等价"
+    },
+    {
+      "canonicalTerm": "telephone",
+      "mergedTerms": [
+        "telephones"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；家用电话/公用电话均归到基础 telephone。；同一中文名称“电话”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "tendon",
+      "mergedTerms": [
+        "tendons"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“肌腱”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "tennis court",
+      "mergedTerms": [
+        "tennis courts"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“网球场”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "terrace",
+      "mergedTerms": [
+        "patio"
+      ],
+      "reason": "最终同名复核：紧凑词库统一为露台"
+    },
+    {
+      "canonicalTerm": "theatre",
+      "mergedTerms": [
+        "theatres"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“剧院”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "theme park",
+      "mergedTerms": [
+        "theme parks"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“主题公园”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "therapeutic ball",
+      "mergedTerms": [
+        "therapeutic balls"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“治疗球”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "this one",
+      "mergedTerms": [
+        "this ones"
+      ],
+      "reason": "同一中文名称“这个”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "tile",
+      "mergedTerms": [
+        "floor tile"
+      ],
+      "reason": "同一日常概念；保留更通用、画面更完整的 tile。"
+    },
+    {
+      "canonicalTerm": "to add",
+      "mergedTerms": [
+        "add"
+      ],
+      "reason": "最终同名复核：to+动词与裸动词是同一动作"
+    },
+    {
+      "canonicalTerm": "to argue",
+      "mergedTerms": [
+        "argue"
+      ],
+      "reason": "最终同名复核：to+动词与裸动词是同一争论动作"
+    },
+    {
+      "canonicalTerm": "to ban",
+      "mergedTerms": [
+        "ban",
+        "forbid",
+        "prohibition"
+      ],
+      "reason": "人工复核：中文同名且画面语义等价；同义词。；最终同名复核：动词与名词都表达禁止这一核心概念"
+    },
+    {
+      "canonicalTerm": "to bet",
+      "mergedTerms": [
+        "bet"
+      ],
+      "reason": "最终同名复核：to+动词与裸动词是同一动作"
+    },
+    {
+      "canonicalTerm": "to bite",
+      "mergedTerms": [
+        "bite"
+      ],
+      "reason": "最终同名复核：to+动词与裸动词是同一动作"
+    },
+    {
+      "canonicalTerm": "to camp",
+      "mergedTerms": [
+        "campings"
+      ],
+      "reason": "最终同名复核：同一露营概念的词形变体"
+    },
+    {
+      "canonicalTerm": "to clean",
+      "mergedTerms": [
+        "cleaning"
+      ],
+      "reason": "最终同名复核：同一清洁动作的词形变体"
+    },
+    {
+      "canonicalTerm": "to cooperate",
+      "mergedTerms": [
+        "colaboration",
+        "cooperation"
+      ],
+      "reason": "最终同名复核：同一合作概念的词形变体，并归并上游拼写错误"
+    },
+    {
+      "canonicalTerm": "to crash",
+      "mergedTerms": [
+        "crashes"
+      ],
+      "reason": "最终同名复核：同一崩溃概念的词形和数量变体"
+    },
+    {
+      "canonicalTerm": "to curl",
+      "mergedTerms": [
+        "curl"
+      ],
+      "reason": "最终同名复核：to+动词与裸动词是同一卷曲动作"
+    },
+    {
+      "canonicalTerm": "to cut the bread",
+      "mergedTerms": [
+        "cut the bread"
+      ],
+      "reason": "same action with optional infinitive marker"
+    },
+    {
+      "canonicalTerm": "to distribute",
+      "mergedTerms": [
+        "distribute"
+      ],
+      "reason": "最终同名复核：to+动词与裸动词是同一动作"
+    },
+    {
+      "canonicalTerm": "to drown",
+      "mergedTerms": [
+        "drown"
+      ],
+      "reason": "最终同名复核：to+动词与裸动词是同一动作"
+    },
+    {
+      "canonicalTerm": "to exit",
+      "mergedTerms": [
+        "exit",
+        "exits"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；最终同名复核：to+动词与裸动词是同一退出动作；同一中文名称“退出”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "to fight",
+      "mergedTerms": [
+        "fight"
+      ],
+      "reason": "最终同名复核：to+动词与裸动词是同一动作"
+    },
+    {
+      "canonicalTerm": "to finish",
+      "mergedTerms": [
+        "complete",
+        "finish",
+        "to complete"
+      ],
+      "reason": "人工复核：中文同名且画面语义等价；在基础 AAC 中均表达完成/结束，finish 更直观。；最终同名复核：to+动词与裸动词是同一动作"
+    },
+    {
+      "canonicalTerm": "to float",
+      "mergedTerms": [
+        "float"
+      ],
+      "reason": "人工复核：中文同名且画面语义等价"
+    },
+    {
+      "canonicalTerm": "to fold",
+      "mergedTerms": [
+        "fold"
+      ],
+      "reason": "最终同名复核：to+动词与裸动词是同一动作"
+    },
+    {
+      "canonicalTerm": "to fulfill",
+      "mergedTerms": [
+        "fulfilment"
+      ],
+      "reason": "最终同名复核：同一履行/完成概念的词形变体"
+    },
+    {
+      "canonicalTerm": "to harvest",
+      "mergedTerms": [
+        "to reap"
+      ],
+      "reason": "最终同名复核：明显同义词，都是收获/收割"
+    },
+    {
+      "canonicalTerm": "to heat",
+      "mergedTerms": [
+        "warm"
+      ],
+      "reason": "人工复核：中文同名且画面语义等价"
+    },
+    {
+      "canonicalTerm": "to help",
+      "mergedTerms": [
+        "help"
+      ],
+      "reason": "人工复核：中文同名且画面语义等价"
+    },
+    {
+      "canonicalTerm": "to photocopy",
+      "mergedTerms": [
+        "photocopy"
+      ],
+      "reason": "人工复核：中文同名且画面语义等价"
+    },
+    {
+      "canonicalTerm": "to plow",
+      "mergedTerms": [
+        "to plough"
+      ],
+      "reason": "US and UK spelling；人工复核：中文同名且画面语义等价"
+    },
+    {
+      "canonicalTerm": "to realize",
+      "mergedTerms": [
+        "to realise"
+      ],
+      "reason": "US and UK spelling"
+    },
+    {
+      "canonicalTerm": "to refuse",
+      "mergedTerms": [
+        "to reject"
+      ],
+      "reason": "人工复核：中文同名且画面语义等价"
+    },
+    {
+      "canonicalTerm": "to rest",
+      "mergedTerms": [
+        "rest"
+      ],
+      "reason": "人工复核：中文同名且画面语义等价"
+    },
+    {
+      "canonicalTerm": "to retire",
+      "mergedTerms": [
+        "retirement"
+      ],
+      "reason": "最终同名复核：同一退休概念的词形变体"
+    },
+    {
+      "canonicalTerm": "to return",
+      "mergedTerms": [
+        "return"
+      ],
+      "reason": "人工复核：中文同名且画面语义等价"
+    },
+    {
+      "canonicalTerm": "to rinse",
+      "mergedTerms": [
+        "rinse"
+      ],
+      "reason": "人工复核：中文同名且画面语义等价"
+    },
+    {
+      "canonicalTerm": "to rise",
+      "mergedTerms": [
+        "to ascend"
+      ],
+      "reason": "人工复核：中文同名且画面语义等价"
+    },
+    {
+      "canonicalTerm": "to shake",
+      "mergedTerms": [
+        "shake"
+      ],
+      "reason": "人工复核：中文同名且画面语义等价"
+    },
+    {
+      "canonicalTerm": "to shower",
+      "mergedTerms": [
+        "to have a shower"
+      ],
+      "reason": "同义动作；保留更简洁的 to shower。"
+    },
+    {
+      "canonicalTerm": "to soak",
+      "mergedTerms": [
+        "soak"
+      ],
+      "reason": "最终同名复核：to+动词与裸动词是同一浸泡动作"
+    },
+    {
+      "canonicalTerm": "to squeeze",
+      "mergedTerms": [
+        "squeeze"
+      ],
+      "reason": "最终同名复核：to+动词与裸动词是同一动作"
+    },
+    {
+      "canonicalTerm": "to swim",
+      "mergedTerms": [
+        "breaststroke",
+        "swimming"
+      ],
+      "reason": "蛙泳是游泳的过细子型。；最终同名复核：动词与动名词表达同一游泳动作"
+    },
+    {
+      "canonicalTerm": "to take",
+      "mergedTerms": [
+        "take"
+      ],
+      "reason": "人工复核：中文同名且画面语义等价"
+    },
+    {
+      "canonicalTerm": "to take off",
+      "mergedTerms": [
+        "take off",
+        "take-off"
+      ],
+      "reason": "人工复核：中文同名且画面语义等价；最终同名复核：同一起飞概念的动词和名词形式"
+    },
+    {
+      "canonicalTerm": "to throw",
+      "mergedTerms": [
+        "throw"
+      ],
+      "reason": "最终同名复核：to+动词与裸动词是同一投掷动作"
+    },
+    {
+      "canonicalTerm": "to trim",
+      "mergedTerms": [
+        "prune"
+      ],
+      "reason": "人工复核：中文同名且画面语义等价"
+    },
+    {
+      "canonicalTerm": "to undress",
+      "mergedTerms": [
+        "undress"
+      ],
+      "reason": "人工复核：中文同名且画面语义等价"
+    },
+    {
+      "canonicalTerm": "toilet",
+      "mergedTerms": [
+        "adapted toilet",
+        "adapted toilets",
+        "toilet bowl"
+      ],
+      "reason": "part/whole detail intentionally ignored；同一中文名称“改装厕所”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "toilet brush",
+      "mergedTerms": [
+        "toilet brushes"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“马桶刷”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "tomato sauce",
+      "mergedTerms": [
+        "tomato sauce pack",
+        "tomato sauce packs"
+      ],
+      "reason": "packaging and quantity details intentionally ignored；同一中文名称“番茄酱包”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "tombstone",
+      "mergedTerms": [
+        "tombstones"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“墓碑”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "tool",
+      "mergedTerms": [
+        "tools"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“工具”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "toolbox",
+      "mergedTerms": [
+        "tool boxes"
+      ],
+      "reason": "单复数/拼写形式重复。"
+    },
+    {
+      "canonicalTerm": "toothbrush",
+      "mergedTerms": [
+        "toothbrushes"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“牙刷”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "toothpick",
+      "mergedTerms": [
+        "toothpicks"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“牙签”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "top hat",
+      "mergedTerms": [
+        "top hats"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“高顶礼帽”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "toy",
+      "mergedTerms": [
+        "toy bag",
+        "toys"
+      ],
+      "reason": "container detail intentionally ignored；同一中文名称“玩具”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "toy truck",
+      "mergedTerms": [
+        "toy trucks"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“玩具卡车”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "tracksuit",
+      "mergedTerms": [
+        "tracksuits"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“运动服”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "traffic jam",
+      "mergedTerms": [
+        "traffic jams"
+      ],
+      "reason": "同一中文名称“交通堵塞”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "trampoline",
+      "mergedTerms": [
+        "trampolines"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“蹦床”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "transmission",
+      "mergedTerms": [
+        "transmissions"
+      ],
+      "reason": "同一中文名称“传输”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "trap",
+      "mergedTerms": [
+        "traps"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“陷阱”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "travel",
+      "mergedTerms": [
+        "trip"
+      ],
+      "reason": "基础沟通同义。"
+    },
+    {
+      "canonicalTerm": "travel agency",
+      "mergedTerms": [
+        "travel agencies"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“旅行社”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "traveler",
+      "mergedTerms": [
+        "travelers",
+        "traveller"
+      ],
+      "reason": "US and UK spelling；最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“旅行者”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "tray",
+      "mergedTerms": [
+        "trays"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“托盘”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "tree",
+      "mergedTerms": [
+        "trees"
+      ],
+      "reason": "同一中文名称“树”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "trolley",
+      "mergedTerms": [
+        "carts"
+      ],
+      "reason": "最终同名复核：紧凑词库统一为推车"
+    },
+    {
+      "canonicalTerm": "trunk",
+      "mergedTerms": [
+        "trunks"
+      ],
+      "reason": "同一中文名称“树干”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "tuna",
+      "mergedTerms": [
+        "tunas"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“金枪鱼”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "urn",
+      "mergedTerms": [
+        "urns"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“瓮”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "use",
+      "mergedTerms": [
+        "to use"
+      ],
+      "reason": "最终同名复核：to+动词与裸动词是同一动作"
+    },
+    {
+      "canonicalTerm": "vase",
+      "mergedTerms": [
+        "flower vase"
+      ],
+      "reason": "最终同名复核：均为花瓶；修正旧中文后合并"
+    },
+    {
+      "canonicalTerm": "vasectomy",
+      "mergedTerms": [
+        "vasectomies"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“输精管切除术”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "veal",
+      "mergedTerms": [
+        "veals"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“小牛肉”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "vegetable",
+      "mergedTerms": [
+        "vegetables"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；人工复核：中文同名且画面语义等价；同一中文名称“蔬菜”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "vehicle",
+      "mergedTerms": [
+        "vehicles"
+      ],
+      "reason": "同一中文名称“运载工具”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "verb",
+      "mergedTerms": [
+        "verbs"
+      ],
+      "reason": "同一中文名称“动词”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "vibrator",
+      "mergedTerms": [
+        "vibrators"
+      ],
+      "reason": "同一中文名称“振动器”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "video camera",
+      "mergedTerms": [
+        "video camara",
+        "videocameras"
+      ],
+      "reason": "同义单复数并修正 camara 拼写。"
+    },
+    {
+      "canonicalTerm": "vinegar",
+      "mergedTerms": [
+        "vinegar bottle"
+      ],
+      "reason": "container detail intentionally ignored"
+    },
+    {
+      "canonicalTerm": "viola",
+      "mergedTerms": [
+        "violas"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“中提琴”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "volleyball court",
+      "mergedTerms": [
+        "volleyball courts"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“排球场”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "vulture",
+      "mergedTerms": [
+        "vultures"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“秃鹫”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "waistcoat",
+      "mergedTerms": [
+        "vests"
+      ],
+      "reason": "最终同名复核：紧凑词库统一为背心"
+    },
+    {
+      "canonicalTerm": "wait",
+      "mergedTerms": [
+        "waiting"
+      ],
+      "reason": "最终同名复核：动词与动名词表达同一等待动作"
+    },
+    {
+      "canonicalTerm": "walking stick",
+      "mergedTerms": [
+        "walking sticks"
+      ],
+      "reason": "同一中文名称“手杖”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "wallet",
+      "mergedTerms": [
+        "purse",
+        "wallets"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；最终同名复核：紧凑词库统一为钱包；同一中文名称“钱包”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "war",
+      "mergedTerms": [
+        "wars"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“战争”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "wardrobe",
+      "mergedTerms": [
+        "wardrobes"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“衣柜”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "washer",
+      "mergedTerms": [
+        "washers"
+      ],
+      "reason": "same category and Chinese label; quantity distinction intentionally ignored；单复数重复。；同一中文名称“垫圈”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "water",
+      "mergedTerms": [
+        "drinking water",
+        "glass of water",
+        "water bottles"
+      ],
+      "reason": "合并容器差异，并改用正确的饮用水画面",
+      "imageTerm": "drinking water"
+    },
+    {
+      "canonicalTerm": "waterbed",
+      "mergedTerms": [
+        "water beds"
+      ],
+      "reason": "最终同名复核：连写差异及数量变体，都是水床"
+    },
+    {
+      "canonicalTerm": "waterfall",
+      "mergedTerms": [
+        "falls",
+        "waterfalls"
+      ],
+      "reason": "最终同名复核：同义缩写，都是瀑布；同一中文名称“瀑布”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "we",
+      "mergedTerms": [
+        "us"
+      ],
+      "reason": "人工复核：中文同名且画面语义等价"
+    },
+    {
+      "canonicalTerm": "wedding",
+      "mergedTerms": [
+        "marriage",
+        "marriages",
+        "weddings"
+      ],
+      "reason": "同一中文名称“婚姻”的英文单复数重复；同一中文名称“婚礼”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "whale",
+      "mergedTerms": [
+        "whales"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“鲸鱼”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "wheelchair",
+      "mergedTerms": [
+        "wheelchairs"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“轮椅”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "whisky",
+      "mergedTerms": [
+        "whiskies"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“威士忌”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "white coat",
+      "mergedTerms": [
+        "white coats"
+      ],
+      "reason": "同一中文名称“白大褂”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "white-haired",
+      "mergedTerms": [
+        "white haired"
+      ],
+      "reason": "hyphenation variant"
+    },
+    {
+      "canonicalTerm": "window",
+      "mergedTerms": [
+        "tilt and turn window"
+      ],
+      "reason": "平开上悬窗是窗户的技术子型。"
+    },
+    {
+      "canonicalTerm": "witch",
+      "mergedTerms": [
+        "witches"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“女巫”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "woodcutter",
+      "mergedTerms": [
+        "woodman"
+      ],
+      "reason": "same occupation；同一职业的近义词及人物版本。"
+    },
+    {
+      "canonicalTerm": "workshop",
+      "mergedTerms": [
+        "wood workshop"
+      ],
+      "reason": "木工车间是 workshop 的过细子型。"
+    },
+    {
+      "canonicalTerm": "worm",
+      "mergedTerms": [
+        "worms"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“蠕虫”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "wrench",
+      "mergedTerms": [
+        "monkey wrench"
+      ],
+      "reason": "活动扳手是过细子型，保留通用 wrench。"
+    },
+    {
+      "canonicalTerm": "X-ray",
+      "mergedTerms": [
+        "X-rays"
+      ],
+      "reason": "同一中文名称“X射线”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "year",
+      "mergedTerms": [
+        "years"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“年”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "yes",
+      "mergedTerms": [
+        "Yes!"
+      ],
+      "reason": "case and trailing punctuation variant"
+    },
+    {
+      "canonicalTerm": "your",
+      "mergedTerms": [
+        "yours"
+      ],
+      "reason": "同一中文名称“你的”的英文单复数重复"
+    },
+    {
+      "canonicalTerm": "zebra",
+      "mergedTerms": [
+        "zebras"
+      ],
+      "reason": "最终同名复核：英文单复数或同一概念的数量变体；保留一个代表画面；同一中文名称“斑马”的英文单复数重复"
+    }
+  ],
+  "chineseOverrides": {
+    "'@'sign": "艾特符号",
+    "activity": "活动",
+    "against": "反对",
+    "airliner": "客机",
+    "amount": "数量",
+    "Antarctica": "南极洲",
+    "apple pie": "苹果派",
+    "aqueduct": "高架引水渠",
+    "archbishop": "大主教",
+    "association": "协会",
+    "attic": "阁楼",
+    "avenues": "林荫大道",
+    "badminton": "羽毛球运动",
+    "bag": "塑料袋",
+    "baker": "面包师",
+    "bales": "草捆",
+    "ball": "足球",
+    "balls": "篮球",
+    "barbecues": "烧烤",
+    "bath": "浴缸",
+    "bats": "球棒",
+    "bays": "海湾",
+    "beach towel": "沙滩巾",
+    "bear": "熊",
+    "beards": "络腮胡",
+    "belts": "腰带",
+    "big pig": "大猪",
+    "billiard ball": "台球球",
+    "billiards": "台球运动",
+    "binoculars": "双筒望远镜",
+    "bird food": "鸟食",
+    "birthday cake": "生日蛋糕",
+    "biscuit packet": "一包饼干",
+    "blessing": "祝福",
+    "blouses": "女式衬衫",
+    "boat": "小船",
+    "boobs": "女性乳房",
+    "bore hole": "井孔／钻孔",
+    "box office": "票房",
+    "bread": "面包",
+    "bread loaf": "一条面包",
+    "bread stick": "面包棒",
+    "broccoli": "西兰花",
+    "brood": "孵蛋、育雏",
+    "brush": "给宠物刷毛",
+    "by": "在旁边",
+    "bycicle workshop": "自行车修理铺",
+    "cafeteria": "自助餐厅",
+    "cake": "蛋糕",
+    "can of green olives": "青橄榄罐头",
+    "can of stuffed olives": "夹心橄榄罐头",
+    "canapes": "小点心",
+    "candelabras": "多枝烛台",
+    "capes": "斗篷",
+    "car insurance": "汽车保险",
+    "car race": "赛车比赛",
+    "care": "关心",
+    "cart": "手推车",
+    "castle": "城堡",
+    "cat food": "猫粮",
+    "CD-Rom": "光盘",
+    "checking": "核对",
+    "cheques": "支票",
+    "cherries": "樱桃",
+    "cherry": "樱桃",
+    "chest of drawers": "抽屉柜",
+    "chestnut": "栗色",
+    "chicken breast": "鸡胸肉",
+    "chocolate bar": "巧克力条",
+    "chorizos": "西班牙辣香肠",
+    "Christmas Day": "圣诞节当天",
+    "city wall": "城墙",
+    "cleaner": "室内清洁工",
+    "click": "鼠标点击",
+    "close": "关上",
+    "closed": "已关闭",
+    "clothes peg": "衣夹",
+    "coloured pencils": "彩色铅笔",
+    "compost": "堆肥",
+    "conference": "大会",
+    "Conference Hall": "会议厅",
+    "consistent": "一贯的",
+    "contribution": "贡献／出资",
+    "council chamber": "议事厅",
+    "courgette": "西葫芦",
+    "coves": "小海湾",
+    "crane": "鹤",
+    "cranes": "鹤",
+    "crawl": "自由泳",
+    "crook": "牧羊杖",
+    "crustacean": "甲壳类动物",
+    "crutches": "双拐",
+    "crystal": "水晶",
+    "curler": "卷发筒",
+    "custard apple": "番荔枝",
+    "dark": "暗色／黑暗",
+    "dark green": "深绿色",
+    "darkness": "黑暗",
+    "delivery": "交付／递送",
+    "desks": "书桌",
+    "dining room": "饭厅",
+    "dips": "浸入水中",
+    "discrimination": "歧视",
+    "dishes store": "餐具店",
+    "divorce": "离婚",
+    "dog food": "狗粮",
+    "domestic help": "家政服务",
+    "door-gate": "门",
+    "dot": "圆点",
+    "dressing gowns": "睡袍",
+    "dressing room": "梳妆室",
+    "drink": "饮料",
+    "drinking water": "水",
+    "driving licence": "驾驶证",
+    "dustman": "环卫工",
+    "earflaps": "护耳",
+    "earphones": "入耳式耳机",
+    "elastic": "有弹性的",
+    "electric heater": "电暖器",
+    "elk": "马鹿",
+    "escalator": "自动扶梯",
+    "escaroles": "宽叶菊苣",
+    "exhibitions": "展览",
+    "exposition": "展览会",
+    "facial massage": "面部按摩",
+    "fat": "肥胖的",
+    "fellations": "口交（阴茎）",
+    "fighter": "战斗机",
+    "fingerpaint": "手指画颜料",
+    "fish finger": "鱼条",
+    "fish food": "鱼食",
+    "flexible": "灵活的、柔韧的",
+    "flip-flop": "人字拖",
+    "floor lamp": "落地灯",
+    "flower vase": "花瓶",
+    "food": "食物",
+    "football": "踢足球",
+    "footballs": "足球（球）",
+    "footprint": "脚印",
+    "footsteps": "脚步",
+    "forest": "森林",
+    "french omelette": "法式煎蛋卷",
+    "garbage collector": "垃圾清运工",
+    "gay": "男同性恋／同性恋",
+    "giant turtle": "巨龟",
+    "girdles": "束身带",
+    "glass bank": "玻璃回收箱",
+    "glass of milk": "一杯牛奶",
+    "glass of water": "一杯水",
+    "globe": "地球仪",
+    "good": "好",
+    "goose": "鹅",
+    "grated cheese": "碎奶酪",
+    "green": "绿色",
+    "green pepper": "青椒",
+    "greet": "打招呼",
+    "grill": "烤架",
+    "ground": "地面",
+    "guide": "向导",
+    "guidebook": "指南书",
+    "gulfs": "大型海湾",
+    "hairbrush": "发刷",
+    "hands to your waist": "双手叉腰",
+    "hands up": "举起双手",
+    "handshake": "握手",
+    "hardhat (drink made from tiger nuts)": "虎坚果饮料",
+    "hare": "野兔",
+    "hatch": "破壳",
+    "he": "他（男性）",
+    "headphones": "头戴式耳机",
+    "health insurance": "健康保险",
+    "hiccups": "打嗝",
+    "high": "高（位置）",
+    "hips": "髋部",
+    "home insurance": "家庭保险",
+    "host": "圣饼",
+    "hosts": "圣饼",
+    "how many": "多少个？",
+    "impulse": "冲动",
+    "India": "印度",
+    "it": "它（事物）",
+    "jeans": "牛仔裤",
+    "job centre": "就业服务中心",
+    "jump": "跳",
+    "jungle": "丛林",
+    "ketchup": "番茄沙司",
+    "key holder": "钥匙挂架",
+    "khaki": "柿子",
+    "lamp": "台灯",
+    "land": "土地",
+    "learn": "学会",
+    "leopard": "豹",
+    "lesbian": "女同性恋",
+    "ligament": "韧带",
+    "lingerie": "女式内衣",
+    "list": "清单",
+    "little pig": "小猪",
+    "Loarre castle": "洛阿雷城堡",
+    "loots": "战利品",
+    "lose": "丢失",
+    "lower": "降低、放低",
+    "macaroni": "通心粉",
+    "macaroni packet": "通心粉包装",
+    "maintenance workshop": "维修车间",
+    "maize": "玉米",
+    "medium pig": "中等大小的猪",
+    "menorahs": "犹太烛台",
+    "mixed vegetables": "什锦蔬菜",
+    "model": "模型",
+    "mommy": "木乃伊",
+    "moon eclipse": "月食",
+    "moose": "驼鹿",
+    "motorised wheelchair": "电动轮椅",
+    "moustaches": "小胡子",
+    "mouthwash": "漱口水",
+    "movement": "动作",
+    "mum": "妈妈",
+    "music": "音乐",
+    "national identity document": "身份证",
+    "Nature": "自然",
+    "neckerchief": "颈巾",
+    "nightdresses": "睡裙",
+    "Noah": "挪亚",
+    "Noah's Ark": "挪亚方舟",
+    "noticeboard": "公告板",
+    "oil lamp": "油灯",
+    "ok": "可以、还行",
+    "olive oil": "橄榄油",
+    "ones": "那些（代词）",
+    "optimism": "乐观",
+    "orange": "橙子",
+    "orange juice": "橙汁",
+    "orangeade": "橙味汽水",
+    "organise": "组织（动作）",
+    "organization": "组织（机构）",
+    "organizations": "组织",
+    "oxygen": "氧气",
+    "oxygen bottle": "氧气瓶",
+    "painting": "绘画作品",
+    "panda": "熊猫",
+    "panther": "黑豹",
+    "paper bag": "纸袋",
+    "paper bank": "纸类回收箱",
+    "paperclip": "回形针",
+    "parakeet": "长尾小鹦鹉",
+    "parrot": "鹦鹉",
+    "payment": "付款",
+    "peel": "果皮",
+    "peelings": "削下的果皮",
+    "penthouse": "顶层公寓",
+    "photography": "摄影",
+    "phrase": "短语",
+    "piano keys": "琴键",
+    "pin": "大头针",
+    "pincer": "镊钳",
+    "pinecone": "松果",
+    "pip": "果籽",
+    "pipes": "管道",
+    "pips": "果籽",
+    "plate": "盘子",
+    "plate of spaghetti": "一盘意大利细面",
+    "pliers": "钳子",
+    "plug": "插头",
+    "plumbing": "管道系统",
+    "poker cards": "扑克牌",
+    "poker pieces": "扑克筹码",
+    "polar bear": "北极熊",
+    "poncho": "雨披",
+    "pontifical blessing": "教宗祝福",
+    "popcorn": "爆米花",
+    "post-box": "邮筒",
+    "potter": "陶工",
+    "power wheelchair": "电动轮椅",
+    "presentation": "演示",
+    "press": "报刊",
+    "price tag": "价格标签",
+    "prison officer": "狱警",
+    "profession": "职业",
+    "profile": "侧面轮廓",
+    "profiles": "侧面轮廓",
+    "program": "程序",
+    "programs": "程序",
+    "promotion": "晋升、促销",
+    "pulse": "食用豆",
+    "pulses": "豆类",
+    "pumpkin head": "南瓜头",
+    "puppet": "提线木偶",
+    "puppets": "木偶戏",
+    "purses": "手提包",
+    "pyjama": "睡衣",
+    "quinces": "榅桲",
+    "rabbit": "兔子",
+    "racing cars": "赛车",
+    "ramp": "坡道",
+    "rash": "皮疹",
+    "red pepper": "红椒",
+    "reproduction": "生殖",
+    "restaurant": "餐馆",
+    "roast": "烤肉",
+    "rock": "岩石",
+    "roller": "滚筒刷",
+    "Roman road": "罗马古道",
+    "rubbish bucket": "垃圾桶",
+    "rugby": "橄榄球运动",
+    "rugby ball": "橄榄球（球）",
+    "sack": "睡袋",
+    "sacks": "垃圾袋",
+    "safe": "收银机",
+    "safes": "收银机",
+    "safety pin": "安全别针",
+    "sashes": "绶带",
+    "scheduled appointment": "已预约",
+    "seafood": "海鲜",
+    "season": "冬季",
+    "serve": "提供服务",
+    "service": "服务",
+    "sewage treatment plant": "污水处理厂",
+    "sheet": "叶片",
+    "shelves": "搁板",
+    "ship": "轮船",
+    "shirts": "衬衫",
+    "shopping list": "购物清单",
+    "shower": "淋浴设施",
+    "showers": "淋浴间",
+    "shuttelcock": "羽毛球（球）",
+    "silence": "安静、寂静",
+    "slap": "扇巴掌",
+    "slipper": "拖鞋",
+    "snails": "蜗牛",
+    "soap": "肥皂",
+    "social exclusion": "社会排斥",
+    "sole": "鳎鱼",
+    "soles": "鳎鱼",
+    "soup dish": "汤盘、深盘",
+    "south pole": "南极点",
+    "spaghetti": "意大利细面",
+    "spaguetti packet": "一包意大利细面",
+    "Spanish omelette": "西班牙土豆蛋饼",
+    "sports programme": "体育节目",
+    "sports shop": "体育用品店",
+    "spots": "皮肤斑点",
+    "stadium": "体育场",
+    "stamp": "印章",
+    "staples": "订书钉",
+    "starter": "前菜",
+    "stave": "五线谱",
+    "stew": "炖菜",
+    "stickers": "贴纸",
+    "stop": "公交车站",
+    "strong": "强壮的、强的",
+    "students' representatives": "学生代表",
+    "study": "学习",
+    "sturdy": "坚固的",
+    "subjects": "科目",
+    "such": "这样的",
+    "sugar packet": "一包糖",
+    "sun eclipse": "日食",
+    "sunflower oil": "葵花籽油",
+    "superiority": "优越感",
+    "swan": "天鹅",
+    "T-shirt": "T恤",
+    "table": "桌子",
+    "tables": "桌子",
+    "Taj Mahal": "泰姬陵",
+    "take note": "记下",
+    "tall": "高（身高）",
+    "tank": "储水罐",
+    "tanks": "储水罐",
+    "tap": "轻触、点按",
+    "teat": "乳头／动物乳头",
+    "telescope": "天文望远镜",
+    "tendon": "肌腱",
+    "tennis": "网球运动",
+    "tennis ball": "网球（球）",
+    "tennis table": "乒乓球桌",
+    "tetrahedron": "四面体",
+    "the same": "相同的",
+    "their": "他们的（限定词）",
+    "theirs": "他们的（代词）",
+    "them": "他们（宾格）",
+    "they": "他们（主格）",
+    "thoroughfare": "通道",
+    "those": "那些（限定词）",
+    "thread": "线（手工）",
+    "ticket office": "售票处",
+    "to attend": "出席",
+    "to bake": "烘焙",
+    "to bath": "泡澡",
+    "to burp": "嗳气",
+    "to catch": "接住、抓到",
+    "to close": "关闭（门窗等）",
+    "to crumble": "崩塌",
+    "to descend": "下降",
+    "to draw": "画线稿／绘图",
+    "to get divorced": "办理离婚",
+    "to get tired": "感到疲倦",
+    "to give an appointment": "安排预约",
+    "to go over": "越过",
+    "to grip": "紧握",
+    "to handle": "处理、操作",
+    "to have a shower": "淋浴",
+    "to help up": "扶起",
+    "to hit": "击打",
+    "to hop": "单脚跳",
+    "to incubate": "孵育",
+    "to insurance": "投保",
+    "to lose": "输（比赛）",
+    "to move": "移动（动作）",
+    "to object": "提出异议",
+    "to open": "打开（门窗等）",
+    "to paint": "涂色／绘画",
+    "to pass": "通过",
+    "to perfume": "喷香水",
+    "to plug": "插入插头",
+    "to process": "加工、处理",
+    "to read": "阅读盲文",
+    "to roast": "烤制",
+    "to rock": "摇晃",
+    "to shower": "淋浴（动作）",
+    "to silence": "使安静",
+    "to soap": "涂肥皂",
+    "to to take part": "参加",
+    "to turn off": "关掉（电器等）",
+    "to turn on": "打开（电器等）",
+    "to write": "键盘输入",
+    "tomato sauce": "番茄调味汁",
+    "tongs": "夹钳",
+    "tool set": "工具套装",
+    "tortoise": "陆龟",
+    "tow truck": "清障拖车",
+    "towel": "毛巾",
+    "toy car": "玩具小汽车",
+    "toy train": "玩具火车",
+    "toy truck": "玩具卡车",
+    "trailer": "挂车",
+    "trapezes": "高空秋千",
+    "travel guide": "旅行指南",
+    "trophy": "奖杯",
+    "trousers": "长裤",
+    "Turkey": "土耳其",
+    "turkey": "火鸡",
+    "udder": "乳房（动物）",
+    "udders": "动物乳房",
+    "undershirt": "汗衫、贴身背心",
+    "utility room": "杂物间",
+    "vaccine": "疫苗",
+    "video game": "电子游戏",
+    "wallets": "钱包",
+    "walnut": "核桃",
+    "water": "水",
+    "wedding cake": "婚礼蛋糕",
+    "wheelbarrow": "独轮车",
+    "wheelchair": "轮椅",
+    "white coat": "白大褂",
+    "widow": "寡妇",
+    "widower": "鳏夫",
+    "wooden colour pencils": "木制彩色铅笔",
+    "worktop": "厨房操作台",
+    "worried": "担心",
+    "yearbook": "年鉴",
+    "Zaragoza's Conference Hall": "萨拉戈萨会议厅"
+  },
+  "englishOverrides": {
+    "'@'sign": "at sign",
+    "bycicle lane": "bicycle lane",
+    "bycicle workshop": "bicycle workshop",
+    "door-gate": "door",
+    "hardhat (drink made from tiger nuts)": "horchata / tiger-nut drink",
+    "khaki": "persimmon",
+    "mommy": "mummy",
+    "paints": "coloured pencils",
+    "safe": "cash register"
+  },
+  "categoryOverrides": {
+    "autist": "Accessibility, therapy, and AAC",
+    "bank book": "Work and professions",
+    "barbecues": "Food, drink, and cooking",
+    "bays": "Animals, plants, nature, and weather",
+    "blind": "Accessibility, therapy, and AAC",
+    "blouses": "Clothing and accessories",
+    "bore": "Feelings and states",
+    "breats": "Food, drink, and cooking",
+    "bycicle lane": "Transport, travel, and directions",
+    "bycicle workshop": "Work and professions",
+    "cabins": "Home, furniture, and places",
+    "carbohydrate": "Food, drink, and cooking",
+    "castanet": "Play, sports, arts, music, and media",
+    "castles": "Home, furniture, and places",
+    "CD-Rom": "Objects, tools, and technology",
+    "chicken breast": "Food, drink, and cooking",
+    "coloured pencils": "School, learning, and language",
+    "coves": "Animals, plants, nature, and weather",
+    "door-gate": "Home, furniture, and places",
+    "drummer": "Work and professions",
+    "dungaree": "Clothing and accessories",
+    "euro": "Work and professions",
+    "Ferris wheel": "Play, sports, arts, music, and media",
+    "fisher": "Work and professions",
+    "flip-flop": "Clothing and accessories",
+    "fog": "Animals, plants, nature, and weather",
+    "gas burner": "Objects, tools, and technology",
+    "governor": "Work and professions",
+    "gulfs": "Animals, plants, nature, and weather",
+    "hands to your waist": "Actions and routines",
+    "hands up": "Actions and routines",
+    "hunter": "Work and professions",
+    "lecture": "School, learning, and language",
+    "letter-box": "Home, furniture, and places",
+    "mommy": "Geography, culture, and named entities",
+    "noticeboard": "School, learning, and language",
+    "opening": "Home, furniture, and places",
+    "painting": "Play, sports, arts, music, and media",
+    "plateau": "Animals, plants, nature, and weather",
+    "polling stations": "Home, furniture, and places",
+    "puddle": "Animals, plants, nature, and weather",
+    "purses": "Clothing and accessories",
+    "receptionist": "Work and professions",
+    "roller": "Objects, tools, and technology",
+    "roller coaster": "Play, sports, arts, music, and media",
+    "salt packet": "Food, drink, and cooking",
+    "savoury snack": "Food, drink, and cooking",
+    "seesaw": "Play, sports, arts, music, and media",
+    "sharpener": "Objects, tools, and technology",
+    "sheet": "Animals, plants, nature, and weather",
+    "sheets": "Home, furniture, and places",
+    "shirts": "Clothing and accessories",
+    "snails": "Animals, plants, nature, and weather",
+    "swing": "Play, sports, arts, music, and media",
+    "to get tired": "Feelings and states",
+    "udders": "Animals, plants, nature, and weather",
+    "umpire": "Play, sports, arts, music, and media",
+    "Valley": "Animals, plants, nature, and weather",
+    "work": "Play, sports, arts, music, and media"
+  },
+  "exactVisualCanonicalTerms": [
+    "buttock",
+    "bycicle workshop",
+    "chicken breast",
+    "chocolate bar",
+    "coloured pencils",
+    "cookbook",
+    "door-gate",
+    "glass",
+    "hot",
+    "meat",
+    "mommy",
+    "noticeboard",
+    "olive oil",
+    "painting",
+    "pickles can",
+    "pomegranate",
+    "sugar",
+    "to get tired",
+    "to put on lotion"
+  ],
+  "expectedRetainedVisualCount": 4677
+}

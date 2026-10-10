@@ -1,4 +1,4 @@
-name: Publish ARASAAC unique-visual preview
+name: Publish ARASAAC practical AAC preview
 
 on:
   push:
@@ -6,7 +6,8 @@ on:
       - main
     paths:
       - .github/workflows/publish-arasaac-classified-preview.yml
-      - .github/scripts/generate_arasaac_unique_visuals.py
+      - .github/scripts/generate_arasaac_practical_aac.py
+      - .github/data/arasaac_practical_curation.json
 
 permissions:
   contents: write
@@ -17,10 +18,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - name: Check out the generator
+      - name: Check out the practical AAC generator
         uses: actions/checkout@v4
 
-      - name: Download and verify the existing filtered archive
+      - name: Download and verify the fixed source archive
         env:
           GH_TOKEN: ${{ github.token }}
           SOURCE_NAME: arasaac-one-per-term-colored-flat-128px-2026-10-10-v2.zip
@@ -32,66 +33,107 @@ jobs:
             --dir .
           echo "$SOURCE_SHA256  $SOURCE_NAME" | sha256sum --check
 
-      - name: Build the unique-visual archive
+      - name: Build and verify the practical AAC archive
         env:
           SOURCE_NAME: arasaac-one-per-term-colored-flat-128px-2026-10-10-v2.zip
-          OUTPUT_NAME: arasaac-unique-visuals-colored-flat-128px-2026-10-10-v3.zip
+          OUTPUT_NAME: arasaac-practical-aac-curated-colored-flat-128px-2026-10-10-v4.zip
+          POLICY_PATH: .github/data/arasaac_practical_curation.json
         run: |
-          python3 .github/scripts/generate_arasaac_unique_visuals.py \
+          python3 .github/scripts/generate_arasaac_practical_aac.py \
             "$SOURCE_NAME" \
+            "$POLICY_PATH" \
             "$OUTPUT_NAME"
           unzip -tq "$OUTPUT_NAME"
-          test "$(stat -c %s "$OUTPUT_NAME")" -gt 30000000
-          test "$(stat -c %s "$OUTPUT_NAME")" -lt 35000000
-          sha256sum "$OUTPUT_NAME" | tee unique-visuals-archive.sha256
 
-      - name: Upload the unique-visual archive
+          SUMMARY_MEMBER="$(zipinfo -1 "$OUTPUT_NAME" | grep -E '/SUMMARY\.json$')"
+          test -n "$SUMMARY_MEMBER"
+          test "$(printf '%s\n' "$SUMMARY_MEMBER" | wc -l)" -eq 1
+          unzip -p "$OUTPUT_NAME" "$SUMMARY_MEMBER" > practical-summary.json
+          sha256sum "$OUTPUT_NAME" | tee practical-aac-archive.sha256
+
+          python3 - <<'PY'
+          import json
+          import os
+
+          with open("practical-summary.json", encoding="utf-8") as source:
+              summary = json.load(source)
+
+          fields = {
+              "SOURCE_TERM_COUNT": "sourceTermCount",
+              "SOURCE_UNIQUE_VISUAL_COUNT": "sourceUniqueVisualCount",
+              "RETAINED_VISUAL_COUNT": "retainedPracticalVisualCount",
+              "REMOVED_VISUAL_COUNT": "removedVisualCount",
+              "REMOVED_OR_MERGED_LABEL_COUNT": "removedOrMergedLabelCount",
+              "SEMANTIC_MERGED_LABEL_COUNT": "semanticMergedLabelCount",
+              "EXACT_DUPLICATE_SOURCE_FILE_COUNT": "exactDuplicateSourceFileCount",
+              "DUPLICATE_IMAGES_REMAINING": "exactDuplicateImagesRemaining",
+          }
+          with open(os.environ["GITHUB_ENV"], "a", encoding="utf-8") as environment:
+              for environment_name, summary_name in fields.items():
+                  print(f"{environment_name}={int(summary[summary_name])}", file=environment)
+          PY
+
+      - name: Upload the practical AAC archive
         env:
           GH_TOKEN: ${{ github.token }}
-          OUTPUT_NAME: arasaac-unique-visuals-colored-flat-128px-2026-10-10-v3.zip
+          OUTPUT_NAME: arasaac-practical-aac-curated-colored-flat-128px-2026-10-10-v4.zip
         run: |
           gh release upload "arasaac-classified-preview-2026-10-09" "$OUTPUT_NAME" \
             --repo "$GITHUB_REPOSITORY" \
             --clobber
 
-      - name: Post the corrected result to issue 1
+      - name: Post the practical AAC result to issue 1
         env:
           GH_TOKEN: ${{ github.token }}
-          OUTPUT_NAME: arasaac-unique-visuals-colored-flat-128px-2026-10-10-v3.zip
+          OUTPUT_NAME: arasaac-practical-aac-curated-colored-flat-128px-2026-10-10-v4.zip
         run: |
-          ARCHIVE_SHA256="$(cut -d ' ' -f 1 unique-visuals-archive.sha256)"
+          ARCHIVE_SHA256="$(cut -d ' ' -f 1 practical-aac-archive.sha256)"
           ARCHIVE_SIZE="$(stat -c %s "$OUTPUT_NAME")"
           ARCHIVE_URL="https://github.com/$GITHUB_REPOSITORY/releases/download/arasaac-classified-preview-2026-10-09/$OUTPUT_NAME"
 
           cat > issue-body.md <<EOF
-          已修正上一版“同一画面因英文词条不同而重复出现”的问题，并重新发布 **唯一画面版**：
+          已按“实用 AAC 核心词表”的标准重新筛选、去重、纠错并发布 **v4 精选版**：
 
           下载：[$OUTPUT_NAME]($ARCHIVE_URL)
 
-          - 原词条图片：7,369 张
-          - 保留唯一画面：**5,805 张**
-          - 删除完全相同的重复图片：**1,564 张**
-          - 涉及重复画面的分组：1,233 组
-          - 包内 JPG 内容哈希唯一数：5,805，重复剩余：**0**
-          - 原 7,369 个中英文词条全部保留；被合并词条记录在 \`ALIASES_同图词条.csv\` 和 \`selection-manifest.json\`
-          - 用户指出的 \`sorry/sorry!\`、\`verb/verbs\`、\`congratulations(!)\`、\`very well(!)\`、\`what is that/what's that\`、电子邮件问句重复均已合并
+          以下数字直接读取自包内 \`SUMMARY.json\`：
 
-          文件大小：**$ARCHIVE_SIZE 字节**（约 30.4 MiB）
+          - 原始词条：$SOURCE_TERM_COUNT
+          - 原始唯一画面：$SOURCE_UNIQUE_VISUAL_COUNT
+          - 最终保留实用画面：**$RETAINED_VISUAL_COUNT**
+          - 删除或合并的画面：**$REMOVED_VISUAL_COUNT**
+          - 删除或合并的标签：$REMOVED_OR_MERGED_LABEL_COUNT
+          - 其中跨画面的语义合并标签：$SEMANTIC_MERGED_LABEL_COUNT
+          - 原始完全同图重复文件：$EXACT_DUPLICATE_SOURCE_FILE_COUNT
+          - 包内完全相同图片剩余：**$DUPLICATE_IMAGES_REMAINING**
+
+          本版不再保留“较高置信 / 待人工复核”子目录；图片直接按语义分类。火葬场等明显错分或不适合作为核心 AAC 词汇的条目已移除，并继续清理地方文化、过细物种、冷门食品、专名和冗余包装词。
+
+          包内附完整审计材料：
+
+          - \`INDEX_实用AAC词汇.csv\`：最终保留清单
+          - \`REMOVED_冷门与冗余词条.csv\`：删除及合并原因
+          - \`ALIASES_语义合并.csv\`：不同画面的近义合并
+          - \`ALIASES_完全同图.csv\`：相同原图的词条别名
+          - \`CORRECTIONS_中文与分类.csv\`：翻译和分类修正
+          - \`CURATION_POLICY.json\`：完整筛选规则
+
+          文件大小：**$ARCHIVE_SIZE 字节**
           SHA-256：\`$ARCHIVE_SHA256\`
 
-          这是带标准 UTF-8 文件名标志的普通 ZIP，macOS“归档实用工具”可以直接解压。
+          这是标准 UTF-8 ZIP，macOS“归档实用工具”可直接解压。
 
-          **仓库现在是私有仓库。请先登录有权限的 GitHub 账号再下载。** 未登录时下载到的 9 字节 \`Not Found\` 文件无法解压。
+          **仓库是私有仓库，请先登录有权限的 GitHub 账号再下载。** 未登录时下载到的 \`Not Found\` 文件不能解压。
 
           许可提醒：ARASAAC 原图为 CC BY-NC-SA，本包仅供非商业审核和自制素材规划，不可直接作为 CardChat 商业素材使用。
           EOF
 
           gh issue comment 1 --repo "$GITHUB_REPOSITORY" --body-file issue-body.md
 
-      - name: Mark the unique-visual upload as complete
+      - name: Mark the practical AAC upload as complete
         env:
           GH_TOKEN: ${{ github.token }}
-          SUCCESS_TAG: arasaac-unique-visuals-upload-success-2026-10-10
+          SUCCESS_TAG: arasaac-practical-aac-v4-upload-success-2026-10-10
         run: |
           if gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/$SUCCESS_TAG" >/dev/null 2>&1; then
             gh api --method PATCH "repos/$GITHUB_REPOSITORY/git/refs/tags/$SUCCESS_TAG" \

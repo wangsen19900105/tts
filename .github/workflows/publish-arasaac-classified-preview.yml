@@ -1,4 +1,4 @@
-name: Publish ARASAAC one-per-term filtered preview
+name: Publish ARASAAC macOS-compatible preview
 
 on:
   push:
@@ -16,70 +16,111 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - name: Download and verify filtered archive
-        env:
-          ARCHIVE_URL: https://temp.sh/RVKfx/arasaac-one-per-term-colored-flat-128px-2026-10-10-v2.zip
-          ARCHIVE_SHA256: 5684591cc3774d8353654dd0619f3232bd9be256d20c4b7c1ee5b56841a0255f
-          ARCHIVE_NAME: arasaac-one-per-term-colored-flat-128px-2026-10-10-v2.zip
-        run: |
-          curl --fail --silent --show-error --location --retry 5 --retry-all-errors --request POST "$ARCHIVE_URL" --output "$ARCHIVE_NAME"
-          echo "$ARCHIVE_SHA256  $ARCHIVE_NAME" | sha256sum --check
-
-      - name: Upload filtered archive to the existing release
+      - name: Download and verify the existing filtered archive
         env:
           GH_TOKEN: ${{ github.token }}
-          ARCHIVE_NAME: arasaac-one-per-term-colored-flat-128px-2026-10-10-v2.zip
+          SOURCE_NAME: arasaac-one-per-term-colored-flat-128px-2026-10-10-v2.zip
+          SOURCE_SHA256: 5684591cc3774d8353654dd0619f3232bd9be256d20c4b7c1ee5b56841a0255f
         run: |
-          gh release upload "arasaac-classified-preview-2026-10-09" "$ARCHIVE_NAME" --repo "$GITHUB_REPOSITORY" --clobber
+          gh release download "arasaac-classified-preview-2026-10-09" \
+            --repo "$GITHUB_REPOSITORY" \
+            --pattern "$SOURCE_NAME" \
+            --dir .
+          echo "$SOURCE_SHA256  $SOURCE_NAME" | sha256sum --check
 
-      - name: Update release notes
+      - name: Repackage as a plain macOS-compatible ZIP
+        env:
+          SOURCE_NAME: arasaac-one-per-term-colored-flat-128px-2026-10-10-v2.zip
+          OUTPUT_NAME: arasaac-one-per-term-colored-flat-128px-2026-10-10-macos.zip
+        run: |
+          python3 - <<'PY'
+          import os
+          import zipfile
+
+          source_name = os.environ["SOURCE_NAME"]
+          output_name = os.environ["OUTPUT_NAME"]
+
+          with zipfile.ZipFile(source_name, "r") as source_archive:
+              source_entries = source_archive.infolist()
+              with zipfile.ZipFile(
+                  output_name,
+                  "w",
+                  compression=zipfile.ZIP_DEFLATED,
+                  compresslevel=6,
+                  allowZip64=True,
+              ) as output_archive:
+                  for source_entry in source_entries:
+                      output_entry = zipfile.ZipInfo(
+                          source_entry.filename,
+                          date_time=(2026, 10, 10, 0, 0, 0),
+                      )
+                      output_entry.compress_type = zipfile.ZIP_DEFLATED
+                      output_entry.create_system = 3
+                      if source_entry.is_dir():
+                          output_entry.external_attr = (0o40755 << 16) | 0x10
+                          data = b""
+                      else:
+                          output_entry.external_attr = 0o100644 << 16
+                          data = source_archive.read(source_entry)
+                      output_archive.writestr(output_entry, data)
+
+          with zipfile.ZipFile(output_name, "r") as output_archive:
+              first_error = output_archive.testzip()
+              if first_error is not None:
+                  raise RuntimeError(f"CRC check failed for {first_error}")
+              if output_archive.namelist() != [entry.filename for entry in source_entries]:
+                  raise RuntimeError("Archive entry list changed during repackaging")
+          PY
+
+          unzip -tq "$OUTPUT_NAME"
+          test "$(stat -c %s "$OUTPUT_NAME")" -gt 40000000
+          sha256sum "$OUTPUT_NAME" | tee macos-archive.sha256
+
+      - name: Upload the macOS-compatible archive
         env:
           GH_TOKEN: ${{ github.token }}
-          RELEASE_NOTES: |
-            供手机查看和人工审核的 ARASAAC 分类预览包。
-
-            ## 一词一图、彩色平涂优先版（新增）
-
-            - 从 12,846 张候选中，按 7,369 个区分大小写的英文词条各保留 1 张
-            - 淘汰 5,477 张同词候选；不同英文词共用同一画面的情况保留
-            - 116 个词条经人工复核后，从默认主图切换为更接近彩色平涂风格的候选
-            - 同词有安全替代图时，优先去掉火柴人、通用光头人物和旧线稿
-            - 人物肤色色块只用于候选排序，优先浅肤色或浅黄色调，不据此推断人物种族
-            - 保留图含 5,805 个不同的图片内容
-            - 22 个自动粗分类，目录及图片统一采用“中文@英文原文”命名
-            - 附完整选择清单、淘汰清单、人工 override 记录及 SHA-256
-            - SHA-256: 5684591cc3774d8353654dd0619f3232bd9be256d20c4b7c1ee5b56841a0255f
-
-            ## 原始全量分类预览版
-
-            - 12,846 张最长边不超过 128px 的 JPEG 预览图
-            - 22 个自动粗分类，目录及图片统一采用“中文@英文原文”命名
-            - SHA-256: 605585453ae54c832f89dc7686c115af1c28664fd99c58bf98b163f7df658928
-
-            注意：分类和部分中文名由机器辅助生成，正式制作素材前必须人工复核。
-
-            图形作者：Sergio Palao；来源：ARASAAC（https://arasaac.org/）；许可：CC BY-NC-SA。仅限非商业用途并须署名、相同方式共享。此预览包不代表取得 CardChat 或其他商业软件的使用授权。
+          OUTPUT_NAME: arasaac-one-per-term-colored-flat-128px-2026-10-10-macos.zip
         run: |
-          gh release edit "arasaac-classified-preview-2026-10-09" --repo "$GITHUB_REPOSITORY" --notes "$RELEASE_NOTES"
+          gh release upload "arasaac-classified-preview-2026-10-09" "$OUTPUT_NAME" \
+            --repo "$GITHUB_REPOSITORY" \
+            --clobber
 
-      - name: Post the filtered result to issue 1
+      - name: Post macOS download instructions to issue 1
         env:
           GH_TOKEN: ${{ github.token }}
-          ISSUE_BODY: |
-            已完成“一词一图、彩色平涂优先”筛选版：
-
-            - 保留 **7,369 张**（每个区分大小写的英文词条 1 张）
-            - 淘汰 **5,477 张**同词候选
-            - **116 个词条**经人工复核后更换为彩色平涂候选
-            - 保留图中有 **5,805 个不同图片内容**；同义词或不同词共用画面的情况没有误删
-            - 同词有安全替代图时，优先去掉火柴人、通用光头人物和旧线稿
-            - 人物肤色色块优先浅肤色或浅黄色调，不据此推断人物种族
-            - 目录与图片名继续使用“中文@英文原文”格式，并附完整选择/淘汰清单
-
-            下载：[arasaac-one-per-term-colored-flat-128px-2026-10-10-v2.zip](https://github.com/wangsen19900105/tts/releases/download/arasaac-classified-preview-2026-10-09/arasaac-one-per-term-colored-flat-128px-2026-10-10-v2.zip)
-
-            SHA-256：`5684591cc3774d8353654dd0619f3232bd9be256d20c4b7c1ee5b56841a0255f`
-
-            许可提醒：ARASAAC 原图为 CC BY-NC-SA，本包仅供非商业审核和自制素材规划，不可直接作为 CardChat 商业素材使用。
+          OUTPUT_NAME: arasaac-one-per-term-colored-flat-128px-2026-10-10-macos.zip
         run: |
-          gh issue comment 1 --repo "$GITHUB_REPOSITORY" --body "$ISSUE_BODY"
+          ARCHIVE_SHA256="$(cut -d ' ' -f 1 macos-archive.sha256)"
+          ARCHIVE_SIZE="$(stat -c %s "$OUTPUT_NAME")"
+          ARCHIVE_URL="https://github.com/$GITHUB_REPOSITORY/releases/download/arasaac-classified-preview-2026-10-09/$OUTPUT_NAME"
+
+          cat > issue-body.md <<EOF
+          已重新打包为 **macOS“归档实用工具”兼容版**，移除了旧 ZIP 中的 Java/JAR 元数据：
+
+          下载：[$OUTPUT_NAME]($ARCHIVE_URL)
+
+          - 文件大小：**$ARCHIVE_SIZE 字节**（约 39 MiB）
+          - SHA-256：\`$ARCHIVE_SHA256\`
+          - 内容不变：7,369 张 JPG，并保留选择、淘汰和人工复核清单
+
+          **仓库现在是私有仓库。请先在浏览器中登录有权限的 GitHub 账号，再打开上面的链接。** 未登录时 GitHub 会返回只有 9 字节、内容为 \`Not Found\` 的同名文件；这个文件当然无法解压。下载后也可以先确认文件约为 39 MiB。
+
+          许可提醒：ARASAAC 原图为 CC BY-NC-SA，本包仅供非商业审核和自制素材规划，不可直接作为 CardChat 商业素材使用。
+          EOF
+
+          gh issue comment 1 --repo "$GITHUB_REPOSITORY" --body-file issue-body.md
+
+      - name: Mark the upload as complete
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SUCCESS_TAG: arasaac-macos-upload-success-2026-10-10
+        run: |
+          if gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/$SUCCESS_TAG" >/dev/null 2>&1; then
+            gh api --method PATCH "repos/$GITHUB_REPOSITORY/git/refs/tags/$SUCCESS_TAG" \
+              -f sha="$GITHUB_SHA" \
+              -F force=true
+          else
+            gh api --method POST "repos/$GITHUB_REPOSITORY/git/refs" \
+              -f ref="refs/tags/$SUCCESS_TAG" \
+              -f sha="$GITHUB_SHA"
+          fi

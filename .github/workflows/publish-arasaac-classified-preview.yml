@@ -1,4 +1,4 @@
-name: Publish ARASAAC macOS-compatible preview
+name: Publish ARASAAC unique-visual preview
 
 on:
   push:
@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - .github/workflows/publish-arasaac-classified-preview.yml
+      - .github/scripts/generate_arasaac_unique_visuals.py
 
 permissions:
   contents: write
@@ -16,6 +17,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
+      - name: Check out the generator
+        uses: actions/checkout@v4
+
       - name: Download and verify the existing filtered archive
         env:
           GH_TOKEN: ${{ github.token }}
@@ -28,92 +32,66 @@ jobs:
             --dir .
           echo "$SOURCE_SHA256  $SOURCE_NAME" | sha256sum --check
 
-      - name: Repackage as a plain macOS-compatible ZIP
+      - name: Build the unique-visual archive
         env:
           SOURCE_NAME: arasaac-one-per-term-colored-flat-128px-2026-10-10-v2.zip
-          OUTPUT_NAME: arasaac-one-per-term-colored-flat-128px-2026-10-10-macos.zip
+          OUTPUT_NAME: arasaac-unique-visuals-colored-flat-128px-2026-10-10-v3.zip
         run: |
-          python3 - <<'PY'
-          import os
-          import zipfile
-
-          source_name = os.environ["SOURCE_NAME"]
-          output_name = os.environ["OUTPUT_NAME"]
-
-          with zipfile.ZipFile(source_name, "r") as source_archive:
-              source_entries = source_archive.infolist()
-              with zipfile.ZipFile(
-                  output_name,
-                  "w",
-                  compression=zipfile.ZIP_DEFLATED,
-                  compresslevel=6,
-                  allowZip64=True,
-              ) as output_archive:
-                  for source_entry in source_entries:
-                      output_entry = zipfile.ZipInfo(
-                          source_entry.filename,
-                          date_time=(2026, 10, 10, 0, 0, 0),
-                      )
-                      output_entry.compress_type = zipfile.ZIP_DEFLATED
-                      output_entry.create_system = 3
-                      if source_entry.is_dir():
-                          output_entry.external_attr = (0o40755 << 16) | 0x10
-                          data = b""
-                      else:
-                          output_entry.external_attr = 0o100644 << 16
-                          data = source_archive.read(source_entry)
-                      output_archive.writestr(output_entry, data)
-
-          with zipfile.ZipFile(output_name, "r") as output_archive:
-              first_error = output_archive.testzip()
-              if first_error is not None:
-                  raise RuntimeError(f"CRC check failed for {first_error}")
-              if output_archive.namelist() != [entry.filename for entry in source_entries]:
-                  raise RuntimeError("Archive entry list changed during repackaging")
-          PY
-
+          python3 .github/scripts/generate_arasaac_unique_visuals.py \
+            "$SOURCE_NAME" \
+            "$OUTPUT_NAME"
           unzip -tq "$OUTPUT_NAME"
-          test "$(stat -c %s "$OUTPUT_NAME")" -gt 40000000
-          sha256sum "$OUTPUT_NAME" | tee macos-archive.sha256
+          test "$(stat -c %s "$OUTPUT_NAME")" -gt 30000000
+          test "$(stat -c %s "$OUTPUT_NAME")" -lt 35000000
+          sha256sum "$OUTPUT_NAME" | tee unique-visuals-archive.sha256
 
-      - name: Upload the macOS-compatible archive
+      - name: Upload the unique-visual archive
         env:
           GH_TOKEN: ${{ github.token }}
-          OUTPUT_NAME: arasaac-one-per-term-colored-flat-128px-2026-10-10-macos.zip
+          OUTPUT_NAME: arasaac-unique-visuals-colored-flat-128px-2026-10-10-v3.zip
         run: |
           gh release upload "arasaac-classified-preview-2026-10-09" "$OUTPUT_NAME" \
             --repo "$GITHUB_REPOSITORY" \
             --clobber
 
-      - name: Post macOS download instructions to issue 1
+      - name: Post the corrected result to issue 1
         env:
           GH_TOKEN: ${{ github.token }}
-          OUTPUT_NAME: arasaac-one-per-term-colored-flat-128px-2026-10-10-macos.zip
+          OUTPUT_NAME: arasaac-unique-visuals-colored-flat-128px-2026-10-10-v3.zip
         run: |
-          ARCHIVE_SHA256="$(cut -d ' ' -f 1 macos-archive.sha256)"
+          ARCHIVE_SHA256="$(cut -d ' ' -f 1 unique-visuals-archive.sha256)"
           ARCHIVE_SIZE="$(stat -c %s "$OUTPUT_NAME")"
           ARCHIVE_URL="https://github.com/$GITHUB_REPOSITORY/releases/download/arasaac-classified-preview-2026-10-09/$OUTPUT_NAME"
 
           cat > issue-body.md <<EOF
-          已重新打包为 **macOS“归档实用工具”兼容版**，移除了旧 ZIP 中的 Java/JAR 元数据：
+          已修正上一版“同一画面因英文词条不同而重复出现”的问题，并重新发布 **唯一画面版**：
 
           下载：[$OUTPUT_NAME]($ARCHIVE_URL)
 
-          - 文件大小：**$ARCHIVE_SIZE 字节**（约 39 MiB）
-          - SHA-256：\`$ARCHIVE_SHA256\`
-          - 内容不变：7,369 张 JPG，并保留选择、淘汰和人工复核清单
+          - 原词条图片：7,369 张
+          - 保留唯一画面：**5,805 张**
+          - 删除完全相同的重复图片：**1,564 张**
+          - 涉及重复画面的分组：1,233 组
+          - 包内 JPG 内容哈希唯一数：5,805，重复剩余：**0**
+          - 原 7,369 个中英文词条全部保留；被合并词条记录在 \`ALIASES_同图词条.csv\` 和 \`selection-manifest.json\`
+          - 用户指出的 \`sorry/sorry!\`、\`verb/verbs\`、\`congratulations(!)\`、\`very well(!)\`、\`what is that/what's that\`、电子邮件问句重复均已合并
 
-          **仓库现在是私有仓库。请先在浏览器中登录有权限的 GitHub 账号，再打开上面的链接。** 未登录时 GitHub 会返回只有 9 字节、内容为 \`Not Found\` 的同名文件；这个文件当然无法解压。下载后也可以先确认文件约为 39 MiB。
+          文件大小：**$ARCHIVE_SIZE 字节**（约 30.4 MiB）
+          SHA-256：\`$ARCHIVE_SHA256\`
+
+          这是带标准 UTF-8 文件名标志的普通 ZIP，macOS“归档实用工具”可以直接解压。
+
+          **仓库现在是私有仓库。请先登录有权限的 GitHub 账号再下载。** 未登录时下载到的 9 字节 \`Not Found\` 文件无法解压。
 
           许可提醒：ARASAAC 原图为 CC BY-NC-SA，本包仅供非商业审核和自制素材规划，不可直接作为 CardChat 商业素材使用。
           EOF
 
           gh issue comment 1 --repo "$GITHUB_REPOSITORY" --body-file issue-body.md
 
-      - name: Mark the upload as complete
+      - name: Mark the unique-visual upload as complete
         env:
           GH_TOKEN: ${{ github.token }}
-          SUCCESS_TAG: arasaac-macos-upload-success-2026-10-10
+          SUCCESS_TAG: arasaac-unique-visuals-upload-success-2026-10-10
         run: |
           if gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/$SUCCESS_TAG" >/dev/null 2>&1; then
             gh api --method PATCH "repos/$GITHUB_REPOSITORY/git/refs/tags/$SUCCESS_TAG" \

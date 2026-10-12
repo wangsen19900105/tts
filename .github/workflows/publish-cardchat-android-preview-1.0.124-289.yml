@@ -1,0 +1,88 @@
+name: Publish CardChat Android preview 1.0.124 (289)
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/publish-cardchat-android-preview-1.0.124-289.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Download, reassemble, and verify APK
+        env:
+          APK_NAME: CardChat-1.0.124-289-eye-calibration-preview-arm64.apk
+          APK_SIZE: "446727553"
+          APK_SHA256: 9cf61940f1372f10b2293d15f3d4ebcf1319e8ac5ad27a21fc2c9d70cde78924
+        shell: bash
+        run: |
+          set -euo pipefail
+          part_urls=(
+            "https://litter.catbox.moe/wrf8z5"
+            "https://litter.catbox.moe/bvqxbv"
+            "https://litter.catbox.moe/eujn8n"
+            "https://litter.catbox.moe/z7vusc"
+            "https://litter.catbox.moe/72pf7i"
+            "https://litter.catbox.moe/q09i8v"
+            "https://litter.catbox.moe/mv7y3f"
+            "https://litter.catbox.moe/qw84hu"
+            "https://litter.catbox.moe/qxrrth"
+            "https://litter.catbox.moe/5irqx2"
+            "https://litter.catbox.moe/ufpedf"
+            "https://litter.catbox.moe/cjeht8"
+            "https://litter.catbox.moe/waov5j"
+            "https://litter.catbox.moe/6kov74"
+            "https://litter.catbox.moe/cswyza"
+            "https://litter.catbox.moe/gkveas"
+            "https://litter.catbox.moe/w9itnv"
+            "https://litter.catbox.moe/sladnn"
+            "https://litter.catbox.moe/2h20rk"
+            "https://litter.catbox.moe/i3gc0u"
+            "https://litter.catbox.moe/oemrxx"
+            "https://litter.catbox.moe/uz57cx"
+          )
+          for part_index in "${!part_urls[@]}"; do
+            printf -v part_name 'part-%02d' "$part_index"
+            curl --fail --silent --show-error --location --http1.1 --retry 8 --retry-all-errors --connect-timeout 30 --max-time 600 "${part_urls[$part_index]}" --output "$part_name"
+            expected_part_size=20971520
+            if [ "$part_index" -eq 21 ]; then expected_part_size=6325633; fi
+            test "$(stat -c%s "$part_name")" = "$expected_part_size"
+          done
+          cat part-* > "$APK_NAME"
+          test "$(stat -c%s "$APK_NAME")" = "$APK_SIZE"
+          echo "$APK_SHA256  $APK_NAME" | sha256sum --check
+
+      - name: Publish GitHub prerelease
+        env:
+          GH_TOKEN: ${{ github.token }}
+          APK_NAME: CardChat-1.0.124-289-eye-calibration-preview-arm64.apk
+          RELEASE_TAG: cardchat-android-preview-1.0.124-289
+          RELEASE_TITLE: CardChat Android Preview 1.0.124 (289) — 眼控校准体验优化包
+          RELEASE_NOTES: |
+            Android MediaPipe 眼控校准体验真机验证包。
+
+            - 版本：1.0.124 (289)
+            - 包名：com.cardchat.app
+            - ABI：仅 arm64-v8a
+            - 渠道：preview / cn
+            - 文件大小：446,727,553 bytes（426.03 MiB）
+            - APK SHA-256：9cf61940f1372f10b2293d15f3d4ebcf1319e8ac5ad27a21fc2c9d70cde78924
+            - 签名证书 SHA-256：4fcc595c5747b69bcd5156df62c6e976384f344ac5b0aca4f638b8565aca3294
+
+            本包优化眼控校准体验：校准开始前按设备类型提示推荐距离（手机 35–50 cm，优先约 40 cm；平板 50–70 cm，优先约 55–60 cm）；MediaPipe 边缘验收按屏幕可见端点和向内欠量计算；圆球内圈收缩按阶段时长匀速推进；第二阶段实时眼睛反馈降低对比度，减少干扰。
+
+            校准完成后仍记录误差指标，但精度不足不再阻止保存和进入眼控；无有效样本、相机中断等基础失败仍会提示重试。安装后建议重新完成一次九点校准，并在校准与使用期间保持相同距离。
+
+            源码已本地提交：651aed0e（另含 ae5de27a、b101b681）；尚未推送 CardChat 远程仓库。本地已通过 TypeScript、眼控算法、i18n、APK v2 签名、ZIP 完整性、包名/版本号、单 ABI 及内置模型哈希校验。
+
+            这是开发测试包，不是应用商店正式发布版本；实际手感以 Android 手机/平板真机验收为准。
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh release create "$RELEASE_TAG" "$APK_NAME" --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --title "$RELEASE_TITLE" --notes "$RELEASE_NOTES" --prerelease

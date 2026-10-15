@@ -1,0 +1,238 @@
+name: Publish CardChat Android preview 1.0.124 (312)
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/publish-cardchat-android-preview-1.0.124-312.yml"
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: publish-cardchat-android-preview-1.0.124-312
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Confirm release tag is unused
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: cardchat-android-preview-1.0.124-312
+        shell: bash
+        run: |
+          set -euo pipefail
+          if gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "Release already exists: $RELEASE_TAG" >&2
+            exit 1
+          fi
+          if gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/$RELEASE_TAG" >/dev/null 2>&1; then
+            echo "Tag already exists: $RELEASE_TAG" >&2
+            exit 1
+          fi
+
+      - name: Download, reassemble, and verify APK
+        env:
+          APK_NAME: cardchat-1.0.124-312-preview-arm64.apk
+          APK_SIZE: "447040585"
+          APK_SHA256: adc7dc0c2b471f1c945f80f0ef2308990948be7d1e54a6e38318f03a836a2075
+        shell: bash
+        run: |
+          set -euo pipefail
+          part_specs=(
+            "POST https://temp.sh/JIchH/part-aa 20971520 9c45fa1fc5f7ab7673de4feaffa7baf043540ccc5d7f80d8aa039de7234120c6"
+            "POST https://temp.sh/ROAzp/part-ab 20971520 803a0f0d3a60a6ab9bbee854dad495b8f2d77ffd067cb88c83cc9c9faec0132e"
+            "POST https://temp.sh/RabBs/part-ac 20971520 c43127714fc16a9ca32683b4714d7c2ffb95249c303fa9236add31a650386fb8"
+            "POST https://temp.sh/HTPSD/part-ad 20971520 02a6fb2cfc18b3c6179c1a36e87ca947d771c136eab97de9e084648243554b81"
+            "POST https://temp.sh/GaYhz/part-ae 20971520 c1e782552c50833436171a32896c9c8389010bc1f94ab448a3689c1bc639b5c5"
+            "POST https://temp.sh/FVRAL/part-af 20971520 8d78ac426938f900b205a0acaf57bfae5e26f23ed47c8f95e5c9acc3c331c9d9"
+            "POST https://temp.sh/WrFDF/part-ag 20971520 af70e62b7e80c519c9cbc86faf4f15f57f235d6b73b19c4d34519e08ac16994c"
+            "POST https://temp.sh/UhOoA/part-ah 20971520 7203b40de757015ba8c69f484e30bbdf126cbe076a05097a7cc7e18f3bd8e358"
+            "POST https://temp.sh/KEBdJ/part-ai 20971520 78f6d64eb97106e693e5f8a22f559e537039a47f9819c3f84165c83934687735"
+            "POST https://temp.sh/iyXjp/part-aj 20971520 101875ad757f9b34e6912e43e590ca25a99c8978738069f86bd6cfb56ceb1d85"
+            "POST https://temp.sh/pNFUH/part-ak 20971520 44a8b1e8d9d533b50661e78b9b0432b504f1b63485896e2889ca66ff542d3b99"
+            "POST https://temp.sh/seKgI/part-al 20971520 b6fc7ff9c733862fcc366a3e0df28775f9310d59c1a9bb09340a3a6edff3a4df"
+            "POST https://temp.sh/CsGog/part-am 20971520 fcfbfb539348ecae74f972e5c6f842660d185cdcc8b0be1531add6adc3b9753a"
+            "POST https://temp.sh/uAtVk/part-an 20971520 d8523177c30bb00b2b42c54f9eb5d4d6468c17598992cb6a774e4cade3574495"
+            "POST https://temp.sh/UlewC/part-ao 20971520 ea11b38ec60aef7767d89490beacad99060d9d13c1d5a609c995ae5d1503fc09"
+            "POST https://temp.sh/QFyLf/part-ap 20971520 c8c9e08523a9aea811901b8e2aba55858d214c8ef089fb6e3370145b25a85c62"
+            "POST https://temp.sh/NOBPt/part-aq 20971520 3a3c17869c7170900abfd02c03dfacfd4f7f1d23b8b39fc0218476542c8c9c2e"
+            "POST https://temp.sh/PyRVy/part-ar 20971520 0a888c1a076bfef4490f9a069edd396f23b6084403a7243a3047a5aad2f7f85c"
+            "POST https://temp.sh/KnSTF/part-as 20971520 769e425ef40bc183a3503da8ed74ff51839f3e42863569bc50d422e83719add7"
+            "POST https://temp.sh/XDBYz/part-at 20971520 92972dd8ee446771740dfbc7bd1c9c4b82925a3d98bcd2afc8801e72836d5b7c"
+            "POST https://temp.sh/XarKj/part-au 20971520 4c374592a90790da8fccb178b7f6112fb27e4c902e187a649686bee15e4173ff"
+            "POST https://temp.sh/eMfLH/part-av 6638665 c2a63b7acdfccefa59042b98666cf96ba1778bac794ee30aa60c3be1df568143"
+          )
+
+          if printf '%s\n' "${part_specs[@]}" | grep -q '__PART_'; then
+            echo "Staging URLs have not been filled in" >&2
+            exit 1
+          fi
+
+          for part_index in "${!part_specs[@]}"; do
+            read -r part_method part_url expected_part_size expected_part_sha256 <<< "${part_specs[$part_index]}"
+            printf -v part_name 'part-%02d' "$part_index"
+            curl \
+              --fail \
+              --silent \
+              --show-error \
+              --location \
+              --http1.1 \
+              --retry 8 \
+              --retry-all-errors \
+              --connect-timeout 30 \
+              --max-time 900 \
+              --request "$part_method" \
+              "$part_url" \
+              --output "$part_name"
+            test "$(stat -c%s "$part_name")" = "$expected_part_size"
+            echo "$expected_part_sha256  $part_name" | sha256sum --check
+          done
+
+          cat part-* > "$APK_NAME"
+          test "$(stat -c%s "$APK_NAME")" = "$APK_SIZE"
+          echo "$APK_SHA256  $APK_NAME" | sha256sum --check
+
+      - name: Create draft, upload APK, verify, and publish prerelease
+        env:
+          GH_TOKEN: ${{ github.token }}
+          APK_NAME: cardchat-1.0.124-312-preview-arm64.apk
+          APK_SIZE: "447040585"
+          APK_SHA256: adc7dc0c2b471f1c945f80f0ef2308990948be7d1e54a6e38318f03a836a2075
+          RELEASE_TAG: cardchat-android-preview-1.0.124-312
+          RELEASE_TITLE: CardChat Android Preview 1.0.124 (312) — 眼控方向与扫描反馈最终验证包
+          RELEASE_NOTES: |
+            CardChat 1.0.124 build 312 是本轮最终 Android Preview 验证包，替代 build 309；请以本包进行后续 Android 验收。
+
+            - 版本：1.0.124 (312)
+            - 包名：com.cardchat.app
+            - ABI：仅 arm64-v8a
+            - 渠道：preview / cn
+            - 文件大小：447,040,585 bytes（426.33 MiB）
+            - APK SHA-256：adc7dc0c2b471f1c945f80f0ef2308990948be7d1e54a6e38318f03a836a2075
+
+            相较 build 309，本版完善开关扫描手动移动提示音：只有焦点确实移动时才播放，一次移动一次提示；提示音独立串行排队，不阻塞连续导航。关闭扫描声音、停用扫描或退出时会让旧提示队列失效，避免延迟提示、重叠播放和关闭后仍响。
+
+            “声音”设置中的文本语言与音色选择器现在会结合容器宽度、窗口宽度、系统字体倍率及翻译标签宽度自动同行或换行，改善窄屏、大字体和长语言下的挤压与溢出。眼控姿态语音默认改为关闭，只有用户明确开启后才播放；已有显式设置继续保留。
+
+            同一源码提交还修复了 iOS 17+ RGB/MediaPipe 眼控的前摄方向处理，保留不同传感器的安装角偏移与旧系统回退逻辑；该 iOS 修复仍待 iPad Air 真机覆盖竖屏、横屏、方向锁定及运行中旋转，Android APK 不能替代这项验证。
+
+            构建源码提交：07b2f2d2cfc18b23df43e1eb81a1047747b928fd
+            APK 归档提交：49e337a8ece694bb923a47ca37eca81c56db5253
+
+            已验证 TypeScript、iOS 方向算法、眼控算法、设置布局与开关扫描输入策略测试，以及 APK v2 签名、arm64 ABI、ZIP 完整性和精确 SHA-256。
+
+            这是开发测试包，不是应用商店正式发布版本；最终交互与辅助操作手感以 Android 手机/平板真机验收为准。
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh release create "$RELEASE_TAG" \
+            --repo "$GITHUB_REPOSITORY" \
+            --target "$GITHUB_SHA" \
+            --title "$RELEASE_TITLE" \
+            --notes "$RELEASE_NOTES" \
+            --draft \
+            --prerelease \
+            --latest=false
+
+          gh release upload "$RELEASE_TAG" "$APK_NAME" --repo "$GITHUB_REPOSITORY"
+
+          remote_size=""
+          remote_digest=""
+          remote_state=""
+          for verify_attempt in $(seq 1 12); do
+            remote_size=$(gh api "repos/$GITHUB_REPOSITORY/releases/tags/$RELEASE_TAG" --jq ".assets[] | select(.name == \"$APK_NAME\") | .size")
+            remote_digest=$(gh api "repos/$GITHUB_REPOSITORY/releases/tags/$RELEASE_TAG" --jq ".assets[] | select(.name == \"$APK_NAME\") | .digest")
+            remote_state=$(gh api "repos/$GITHUB_REPOSITORY/releases/tags/$RELEASE_TAG" --jq ".assets[] | select(.name == \"$APK_NAME\") | .state")
+            if [ "$remote_size" = "$APK_SIZE" ] && \
+               [ "$remote_digest" = "sha256:$APK_SHA256" ] && \
+               [ "$remote_state" = "uploaded" ]; then
+              break
+            fi
+            sleep 5
+          done
+          test "$remote_size" = "$APK_SIZE"
+          test "$remote_digest" = "sha256:$APK_SHA256"
+          test "$remote_state" = "uploaded"
+
+          gh release edit "$RELEASE_TAG" \
+            --repo "$GITHUB_REPOSITORY" \
+            --draft=false \
+            --prerelease \
+            --latest=false
+
+          test "$(gh api "repos/$GITHUB_REPOSITORY/releases/tags/$RELEASE_TAG" --jq .draft)" = "false"
+          test "$(gh api "repos/$GITHUB_REPOSITORY/releases/tags/$RELEASE_TAG" --jq .prerelease)" = "true"
+
+      - name: Create a fresh build 312 test issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          APK_NAME: cardchat-1.0.124-312-preview-arm64.apk
+          RELEASE_TAG: cardchat-android-preview-1.0.124-312
+          ISSUE_TITLE: CardChat Android Preview 最终测试包（眼控方向与扫描反馈，1.0.124 / build 312）
+        shell: bash
+        run: |
+          set -euo pipefail
+          release_url="https://github.com/$GITHUB_REPOSITORY/releases/tag/$RELEASE_TAG"
+          apk_url="https://github.com/$GITHUB_REPOSITORY/releases/download/$RELEASE_TAG/$APK_NAME"
+          action_url="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          old_issue_url="https://github.com/$GITHUB_REPOSITORY/issues/7"
+          cat > issue-body.md <<EOF
+          > **build 312 已替代 build 309。** 后续 Android 验收请使用本页的新包；[旧 Issue #7 / build 309]($old_issue_url) 仅保留作历史记录。
+
+          ## 下载
+
+          - [直接下载 APK（426.33 MiB）]($apk_url)
+          - [查看 GitHub Prerelease 说明]($release_url)
+          - [查看 GitHub Actions 发布校验]($action_url)
+
+          ## 相较 build 309 的调整
+
+          - 完善开关扫描手动移动提示音：仅在焦点确实移动后播放，一次移动一次提示；提示音独立串行排队，不因音频准备阻塞连续导航。
+          - 修复扫描提示音的生命周期竞争：关闭扫描声音、停用扫描或退出时旧队列立即失效，避免延迟提示、重叠播放或关闭后仍响。
+          - 优化“声音”设置布局：文本语言与音色选择器按容器宽度、实时窗口宽度、系统字体倍率和翻译标签宽度自动同行或换行，改善窄屏、大字体和长语言下的挤压、裁切与溢出。
+          - 眼控姿态语音默认改为关闭；只有用户明确开启后才播放，已有显式设置继续保留。
+          - 同一源码提交修复 iOS 17+ RGB/MediaPipe 眼控的前摄方向处理，使用 RotationCoordinator 保留不同传感器的安装角偏移，并保留旧系统回退逻辑。
+
+          ## 建议重点验证
+
+          1. 验证开关扫描手动连续移动、自动扫描、分类/页面切换及提示音开关：每次真实焦点移动只响一次，无重叠、无卡住，关闭后无残留提示音。
+          2. 在窄屏、横竖屏切换、较大系统字体和长语言下检查“文本/音色”选择器，确认没有截断、遮挡或横向溢出。
+          3. 确认眼控姿态语音默认不播报，手动开启后可正常播报且重启后保持。
+          4. 回归 build 309 已覆盖的深色主题、卡片/分类字体颜色、手机与平板列数、外接按钮、眨眼确认、防抖和长按后退。
+
+          ## 尚待真机验证
+
+          - iPad Air 的 RGB 眼控方向修复仍待真机验证：需覆盖竖屏、横屏、方向锁定和运行中旋转，并确认准星/视线轴及左右上下提示没有倒置。
+          - 本页 Android APK 无法替代上述 iPad Air 验证；发布结论不得写成该项已经通过真机。
+
+          ## 包信息
+
+          - 版本：1.0.124
+          - 构建号：312
+          - 包名：com.cardchat.app
+          - ABI：仅 arm64-v8a
+          - 渠道：preview / cn
+          - 文件大小：447,040,585 bytes（426.33 MiB）
+          - 源码分支：codex/mediapipe-eye-control
+          - 构建源码提交：07b2f2d2cfc18b23df43e1eb81a1047747b928fd
+          - APK 归档提交：49e337a8ece694bb923a47ca37eca81c56db5253
+
+          ## 校验
+
+          - APK SHA-256：adc7dc0c2b471f1c945f80f0ef2308990948be7d1e54a6e38318f03a836a2075
+          - 签名证书 SHA-256：4fcc595c5747b69bcd5156df62c6e976384f344ac5b0aca4f638b8565aca3294
+          - 已通过：TypeScript、iOS 方向算法、眼控算法、设置布局、开关扫描输入策略、APK v2 签名、arm64 ABI 与 ZIP 完整性。
+          - GitHub Actions 发布前会重新核验每个分块、完整 APK 的精确字节数与 SHA-256；上传后再次核对资产大小、状态和 digest。
+
+          这是一个全新的 build 312 测试 Issue，不覆盖旧 Issue #7 的历史记录。
+
+          > 这是开发测试包，不是应用商店正式发布版本；最终交互与辅助操作手感以 Android 手机/平板真机验收为准。
+          EOF
+          issue_url=$(gh issue create --repo "$GITHUB_REPOSITORY" --title "$ISSUE_TITLE" --body-file issue-body.md)
+          printf 'Release: %s\nAPK: %s\nIssue: %s\n' "$release_url" "$apk_url" "$issue_url" >> "$GITHUB_STEP_SUMMARY"

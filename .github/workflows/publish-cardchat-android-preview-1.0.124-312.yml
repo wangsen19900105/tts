@@ -71,32 +71,60 @@ jobs:
             "POST https://temp.sh/eMfLH/part-av 6638665 c2a63b7acdfccefa59042b98666cf96ba1778bac794ee30aa60c3be1df568143"
           )
 
-          if printf '%s\n' "${part_specs[@]}" | grep -q '__PART_'; then
-            echo "Staging URLs have not been filled in" >&2
-            exit 1
-          fi
+          test "${#part_specs[@]}" -eq 22
+          part_dir="$(mktemp -d "${RUNNER_TEMP}/cardchat-312-release-parts.XXXXXX")"
 
-          for part_index in "${!part_specs[@]}"; do
-            read -r part_method part_url expected_part_size expected_part_sha256 <<< "${part_specs[$part_index]}"
+          download_part() {
+            local part_index="$1"
+            local part_spec="$2"
+            local part_method part_url expected_part_size expected_part_sha256 part_name destination
+            read -r part_method part_url expected_part_size expected_part_sha256 <<< "$part_spec"
             printf -v part_name 'part-%02d' "$part_index"
+            destination="$part_dir/$part_name"
             curl \
               --fail \
               --silent \
               --show-error \
               --location \
               --http1.1 \
-              --retry 8 \
+              --retry 15 \
               --retry-all-errors \
+              --retry-delay 5 \
               --connect-timeout 30 \
-              --max-time 900 \
+              --max-time 1200 \
               --request "$part_method" \
               "$part_url" \
-              --output "$part_name"
-            test "$(stat -c%s "$part_name")" = "$expected_part_size"
-            echo "$expected_part_sha256  $part_name" | sha256sum --check
+              --output "$destination"
+            test "$(stat -c '%s' "$destination")" = "$expected_part_size"
+            printf '%s  %s\n' "$expected_part_sha256" "$destination" |
+              sha256sum --check --status
+          }
+
+          pids=()
+          for part_index in "${!part_specs[@]}"; do
+            download_part "$part_index" "${part_specs[$part_index]}" &
+            pids+=("$!")
+            if test "${#pids[@]}" -eq 4; then
+              batch_failed=0
+              for pid in "${pids[@]}"; do
+                if ! wait "$pid"; then
+                  batch_failed=1
+                fi
+              done
+              test "$batch_failed" -eq 0
+              pids=()
+            fi
           done
 
-          cat part-* > "$APK_NAME"
+          batch_failed=0
+          for pid in "${pids[@]}"; do
+            if ! wait "$pid"; then
+              batch_failed=1
+            fi
+          done
+          test "$batch_failed" -eq 0
+
+          cat "$part_dir"/part-* > "$APK_NAME"
           test "$(stat -c%s "$APK_NAME")" = "$APK_SIZE"
           echo "$APK_SHA256  $APK_NAME" | sha256sum --check
 
